@@ -39,7 +39,7 @@
 .hamicon:hover {
     opacity: 1;
     cursor: pointer;
-    border: 2px solid rgb(8,188,124);
+    border: 1px solid rgb(8,188,124);
 }
 
 .dropdown {
@@ -54,7 +54,7 @@
 }
 .dropdown a {
     text-decoration: none;
-    border: 2px solid rgb(8,188,124);
+    border: 1px solid rgb(8,188,124);
     color: white;
     padding: 10px;
     margin-right: 5px;
@@ -114,10 +114,9 @@
     margin-top: 50px;
 }
 .newsfeed div {
-    /*border-top: 2px solid rgb(7, 224, 148);
-    border-bottom: 2px solid rgb(7, 224, 148);
-    border-left: 2px solid rgb(7, 224, 148);
-    */
+    border-top: 1px solid rgb(7, 224, 148);
+    border-bottom: 1px solid rgb(7, 224, 148);
+    border-left: 1px solid rgb(7, 224, 148);
     align-items: left;
     display: flex;
     overflow-y: auto;
@@ -174,8 +173,8 @@
 
 
 .newsfeed div::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
+    width: 1px;
+    height: 1px;
 }
   /* Track */
   .newsfeed div::-webkit-scrollbar-track {
@@ -194,7 +193,7 @@ background: cyan;
 
 
 .dropdown::-webkit-scrollbar {
-    width: 2px;
+    width: 1px;
 }
   /* Track */
 .dropdown::-webkit-scrollbar-track {
