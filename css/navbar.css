@@ -31,7 +31,6 @@
 }
 
 .hamicon{
-    border: 2px solid rgba(8, 188, 125, 0);
     height: 30px;
     position: relative;
     opacity: .7;
@@ -39,7 +38,6 @@
 .hamicon:hover {
     opacity: 1;
     cursor: pointer;
-    border: 1px solid rgb(8,188,124);
 }
 
 .dropdown {
@@ -52,16 +50,28 @@
     overflow-y: auto;
     height: 350px;
 }
+
+.dropdown-boxes {
+    border: 1px solid rgb(8,188,124);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-right: 5px;
+}
+
+.dropdown img {
+    width: 25px;
+    padding: 5px;
+}
+
 .dropdown a {
     text-decoration: none;
-    border: 1px solid rgb(8,188,124);
+    border: 1px none rgb(8,188,124);
     color: white;
     padding: 10px;
-    margin-right: 5px;
     display: block;
     font-size: 13px;
 }
-
 .dropdown a:hover {
     background-color: rgb(8,188,124);
     color: black;
@@ -78,6 +88,7 @@
     height: 40px;
     margin: 0;
 }
+
 @media (max-width: 450px) {
     .logogif {
       height: 25px;
@@ -87,6 +98,12 @@
     }
     .latest {
         font-size: 13px;
+    }
+    .dropdown a {
+        font-size: 10px;
+    }
+    .dropdown img {
+        width: 20px;
     }
 }
 
@@ -114,9 +131,9 @@
     margin: 50px 10px 10px 10px;
 }
 .newsfeed div {
-    border-top: 1px solid rgb(7, 224, 148);
-    border-bottom: 1px solid rgb(7, 224, 148);
-    border-left: 1px solid rgb(7, 224, 148);
+    border-top: 1px solid rgb(0, 98, 64);
+    border-bottom: 1px solid rgb(0, 98, 64);
+    /* border-left: 1px solid rgb(7, 224, 148); */
     align-items: left;
     display: flex;
     overflow-y: auto;
