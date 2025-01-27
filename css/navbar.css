@@ -1,7 +1,6 @@
 .header {
     border: 2px none red;
     display: flex;
-    width: 99.5%;
     height: 70px;
     z-index: 1;
     align-items: center;
@@ -11,15 +10,15 @@
 .navbar {
     border: 2px none rgb(8,188,124);
     display: flex;
-    align-items:center;
-    width: 90%;
+    align-items: center;
+    width: 97%;
+    padding: 10px;
     justify-content: space-between;
-    background-color: (30, 30, 30);
 }
 
 .navbar a {
+    border: 2px none yellow;
     text-decoration: none;
-    margin-right: 10px;
     color: white;
     font-family: "DM mono", serif;
     opacity: .7;
@@ -31,9 +30,9 @@
 }
 
 .hamicon{
+    border: 2px none yellow;
     height: 30px;
     opacity: .7;
-    transition: opacity 0.5s;
 }
 .hamicon:hover {
     opacity: 1;
@@ -41,68 +40,75 @@
 }
 
 .logogif {
+    border: 2px none yellow;
+    width: auto;
     height: 40px;
-    border: 2px none rgb(7, 224, 148);
-    padding-left: 5px;
-}
-
-.binary {
-    border: 2px none blue;
-    width: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    column-gap: 0;
-    margin-top: 30px;
-}
-
-.binary p {
-    border: 2px none red;
     margin: 0;
-    color: rgb(7, 224, 148);
-    opacity: .7;
-    transition: font-size .2s, opacity .2s;
 }
-.binary p:hover {
-    font-size: 15px;
-    opacity: 1;
-    color: rgb(7, 224, 148);
+@media (max-width: 450px) {
+    .logogif {
+      height: 25px;
+    }
+    .hamicon {
+        height: 25px;
+    }
+    .navbar a {
+        font-size: 12px;
+    }
 }
+
+
+
+.logo-div {
+    border: 2px none blue;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.logo-div img {
+    height: 300px;
+    border: .5px solid rgb(7, 224, 148); 
+}
+
+
 
 .newsfeed {
-    border: 2px none blue;
+    border: 2px none green;
     align-items: center;
     display: flex;
     justify-content: center;
-    column-gap: 0;
     margin-top: 50px;
 }
 .newsfeed div {
-    border: 2px none green;
+    /*border-top: 2px solid rgb(7, 224, 148);
+    border-bottom: 2px solid rgb(7, 224, 148);
+    border-left: 2px solid rgb(7, 224, 148);
+    */
     align-items: left;
     display: flex;
     overflow-y: auto;
     flex-direction: column;
     box-sizing: inherit;
-    padding: 20px;
-    height: 400px;
+    padding: 20px 10px 20px 10px;
+    height: 350px;
 }
 
 .newsfeed a {
     text-decoration: none;
-    margin: 0;
+    margin-top: 10px;
     text-align: left;
     color: rgb(29, 255, 176);
     opacity: 1;
-    padding-right: 10px;
-    transition: opacity .2s;
+    padding: 2px;
 }
 .newsfeed a:hover {
-    opacity: .7;
+    background-color: rgb(0, 255, 166);
+    color: black;
 }
 
 .newsfeed p {
-    margin: 4px;
+    margin-top: 10px;
     text-align: left;
     color:white;
     opacity: .7;
@@ -128,5 +134,18 @@ background: cyan;
 .footer {
     border: 2px none red;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer img {
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+.footer p {
+    margin: 2px;
+    font-size: 10px;
 }
