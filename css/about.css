@@ -1,0 +1,159 @@
+.header {
+    border: 2px none red;
+    display: flex;
+    height: 70px;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    border: 2px none rgb(8,188,124);
+    display: flex;
+    align-items: center;
+    width: 97%;
+    padding: 10px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.latest {
+    border: 2px none yellow;
+    text-decoration: none;
+    color: white;
+    font-family: "DM mono", serif;
+    padding: 2px;
+}
+.latest:hover {
+    cursor: pointer;
+    background-color: rgb(234, 234, 234);
+    color: black;
+}
+
+.hamicon{
+    height: 30px;
+    position: relative;
+    opacity: .7;
+}
+.hamicon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.dropdown {
+    background-color: rgb(15, 15, 15);
+    border: 2px none red;
+    position: absolute;
+    display: none;
+    top: 75%;
+    z-index: 1;
+    overflow-y: auto;
+    height: 350px;
+}
+
+.dropdown-boxes {
+    border: 1px solid rgb(8,188,124);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-right: 5px;
+}
+
+.dropdown img {
+    width: 25px;
+    padding: 5px;
+}
+
+.dropdown a {
+    text-decoration: none;
+    border: 1px none rgb(8,188,124);
+    color: white;
+    padding: 10px;
+    display: block;
+    font-size: 13px;
+}
+.dropdown a:hover {
+    background-color: rgb(8,188,124);
+    color: black;
+    cursor: pointer;
+}
+
+.hamicon:hover + .dropdown, .dropdown:hover {
+    display: block;
+}
+
+.logogif {
+    border: 2px none yellow;
+    width: auto;
+    height: 40px;
+    margin: 0;
+}
+
+@media (max-width: 450px) {
+    .logogif {
+      height: 25px;
+    }
+    .hamicon {
+        height: 25px;
+    }
+    .latest {
+        font-size: 13px;
+    }
+    .dropdown a {
+        font-size: 10px;
+    }
+    .dropdown img {
+        width: 20px;
+    }
+}
+
+
+
+.logo-div {
+    border: 2px none blue;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.logo-div img {
+    height: 150px;
+    border: .5px solid rgb(7, 224, 148); 
+}
+
+
+
+.about-me {
+    border: 2px none red;
+    font-family: "DM mono", serif;
+    display: flex;
+    justify-content: center;
+}
+
+.about-me div {
+    border: 2px none green;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.about-me a {
+    text-decoration: none;
+    color: rgb(3, 183, 120);
+}
+
+.about-me h1 {
+    color: rgb(7, 224, 148); 
+    font-size: 20px;
+}
+
+.about-me p {
+    font-size: 15px;
+}
+
+@media (max-width: 450px) {
+    .about-me div {
+        padding: 10px;
+    }
+}
