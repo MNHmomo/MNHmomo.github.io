@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="media/architecturelogo.png">
+    <title>bashbreach</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: rgb(15, 15, 15);
+        color: white;
+        font-family: "DM mono", serif;
+        scroll-behavior: smooth;
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        border: 2px none red;
+        display: flex;
+        height: 70px;
+        z-index: 1;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar {
+        border: 2px none rgb(8,188,124);
+        display: flex;
+        align-items: center;
+        width: 97%;
+        padding: 10px;
+        justify-content: space-between;
+        position: relative;
+    }
+    .latest {
+        border: 2px none yellow;
+        text-decoration: none;
+        color: white;
+        font-family: "DM mono", serif;
+        padding: 2px;
+    }
+    .latest:hover {
+        cursor: pointer;
+        background-color: rgb(234, 234, 234);
+        color: black;
+    }
+    .hamicon{
+        height: 30px;
+        position: relative;
+        opacity: .7;
+    }
+    .hamicon:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .dropdown {
+        background-color: rgb(15, 15, 15);
+        border: 2px none red;
+        position: absolute;
+        display: none;
+        top: 75%;
+        z-index: 1;
+        overflow-y: auto;
+        height: 350px;
+    }
+    .dropdown-boxes {
+        border: 1px solid rgb(8,188,124);
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-right: 5px;
+    }
+    .dropdown img {
+        width: 25px;
+        padding: 5px;
+    }
+    .dropdown a {
+        text-decoration: none;
+        border: 1px none rgb(8,188,124);
+        color: white;
+        padding: 10px;
+        display: block;
+        font-size: 13px;
+    }
+    .dropdown a:hover {
+        background-color: rgb(8,188,124);
+        color: black;
+        cursor: pointer;
+    }
+    .hamicon:hover + .dropdown, .dropdown:hover {
+        display: block;
+    }
+    .logogif {
+        border: 2px none yellow;
+        width: auto;
+        height: 40px;
+        margin: 0;
+    }
+    @media (max-width: 450px) {
+        .logogif {
+          height: 25px;
+        }
+        .hamicon {
+            height: 25px;
+        }
+        .latest {
+            font-size: 13px;
+        }
+        .dropdown a {
+            font-size: 10px;
+        }
+        .dropdown img {
+            width: 20px;
+        }
+    }
+    .logo-div {
+        border: 2px none blue;
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+    .logo-div img {
+        height: 150px;
+        border: .5px solid rgb(7, 224, 148); 
+    }
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title h1 {
+        color: rgb(7, 224, 148);
+        margin-left: 10px;
+    }
+    .about-me {
+        border: 2px none red;
+        font-family: "DM mono", serif;
+        display: flex;
+        justify-content: center;
+    }
+    .about-me div {
+        border: 2px none green;
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+    }
+    .about-me a {
+        text-decoration: none;
+        color: rgb(3, 183, 120);
+    }
+    .about-me a:hover {
+        color: white;
+    }
+    .about-me h1 {
+        color: rgb(7, 224, 148); 
+        font-size: 20px;
+    }
+    .about-me p {
+        font-size: 15px;
+    }
+    @media (max-width: 450px) {
+        .about-me div {
+            padding: 10px;
+        }
+        .figure img {
+            width: 160px;
+        }
+    }
+    .dropdown::-webkit-scrollbar {
+        width: 1px;
+    }
+      /* Track */
+    .dropdown::-webkit-scrollbar-track {
+    background: #00000000;
+    }
+    /* Handle */
+    .dropdown::-webkit-scrollbar-thumb {
+    background: rgb(0, 255, 166);
+    border-radius: 0px;
+    }
+    /* Handle on hover */
+    .dropdown::-webkit-scrollbar-thumb:hover {
+    background: cyan;
+    }
+    .figure {
+        border: 2px solid blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .figure img {
+        width: 350px;
+        border: .5px solid rgb(7, 224, 148); 
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="navbar">
+        <img src="media/hamicon.png" class="hamicon">
+        <div class="dropdown">
+          <div class="dropdown-boxes">
+            <img src="media/icons/home.png">
+            <a href="https://www.bashbreach.com/">Home</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/about.png">
+            <a href="about.html">About</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/projects.png">
+            <a href="projects.html">Projects</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/github.png">
+            <a href="https://github.com/MNHmomo" target="_blank">Github</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/linkedin.png">
+            <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/resume.png">
+            <a href="resume.html">Resume</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/now.png">
+            <a href="now.html">Now</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/interests.png">
+            <a href="interests.html">Interests</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/architecture.png">
+            <a href="architecture.html">Architecture</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/statboard.png">
+            <a href="statboard.html">Statboard</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/licdis.png">
+            <a href="licdis.html">Lic & Dis</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/privacy.png">
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+        <a href="https://bashbreach.com"><img src="media/logogif.gif" class="logogif"></a>
+        <a href="" class="latest"></a>
+      </div>
+    </div>
+
+    <div class="logo-div">
+      <img src="media/entrymedia/entry1logo.png">
+    </div>
+
+    <div class="title">
+      <h1>Exploring Network Sandboxes</h1>
+    </div>
+
+    <div class="about-me">
+        <div>
+            <h1>Overview</h1>
+            <p>
+                Network sandboxes are an underrated yet powerful cybersecurity tool. Much like virtual machines isolate malware, 
+                network sandboxes safely analyze suspicious files before they reach a user’s system. By executing potential threats 
+                in a controlled environment, they help detect and block malware without risking real systems. 
+                This article explores their function, role in cybersecurity, and why they deserve more attention.
+            </p>
+            <br><br>
+            <h1>Virtual Machines</h1>
+            <p>
+                We all know what virtual machines are and what they do. But if you don’t, think of them like emulators—except 
+                instead of running a game like Kingdom Hearts on a PS2 emulator, a virtual machine (VM) emulates an entire 
+                operating system on your computer. <br><br>
+                Using software like VirtualBox, you can load an .iso file of an OS—Ubuntu, Debian, Windows XP, etc.—and run it 
+                inside your main system. You also get full control over resources, deciding how much storage, memory, and CPU 
+                power the VM can use. <br><br>
+                A common cybersecurity use case for virtual machines (VMs) is malware analysis—testing, reverse-engineering, 
+                and studying malware in a controlled environment. The reason? You definitely don’t want to run malware on your 
+                personal computer. <br><br>
+                Now, can malware escape a virtual machine? Technically no, but in rare cases, yes. <br><br>
+                Malware cannot break out of a VM on its own—it requires an exploit. For example, if you have a shared folder between 
+                your VM and host machine, malware could use it to squeeze through and escape. Otherwise, if your VM gets infected, 
+                you can simply shut it down or restore a clean snapshot, leaving your main system unharmed. More information about 
+                the likelihood of malware escaping your VM can be found 
+                <a href="https://security.stackexchange.com/questions/222502/how-concerned-should-i-be-about-vm-escapes" target="_blank">here</a>.
+                However do not take it as professional advice, as it is from an infosec forum. 
+            </p>
+            <br><br>
+            <h1>Network Sandboxes</h1>
+            <p>
+                Now, apply that same logic to network security. If a network service detects suspicious activity—say, a 
+                potentially harmful file download—it can sandbox the file inside an isolated "virtual machine" environment. 
+                If the file turns out to be malicious, the service closes, preventing the malware from ever reaching the actual 
+                system. This is what a network sandbox does. <br><br>
+                A network sandbox is an isolated testing environment that allows security teams to observe, analyze, detect, 
+                and block suspicious activity on a network. It serves as an additional layer of defense against previously 
+                unknown attack vectors. By running potentially malicious files in a controlled, segregated environment that 
+                mimics a real operating system, security teams can conduct advanced malware analysis without risking the 
+                integrity of the actual network.<sup><a href="https://www.vmware.com/topics/network-sandbox" target="_blank">1</a></sup> <br><br>
+            </p>
+            <br><br>
+            <h1>In Action</h1>
+            <ol>
+                <li value="1"><p style="margin-left: 10px;">A user downloads a file from the internet. This could be an email attachment, a software installer, or any other type of file.</p></li>
+                <li>
+                    <p style="margin-left: 10px;">Before the file reaches the user’s device, the data is intercepted by a network 
+                    security gateway. A network security gateway is a device that acts as the entry point to a network, filtering and 
+                    inspecting all incoming and outgoing traffic. Examples can be a firewall, IDS, or IPS.<sup><a href="https://www.paloaltonetworks.com/cyberpedia/firewall-vs-ids-vs-ips" target="_blank">2</a></sup> 
+                    </p>
+                </li>
+                <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+                    <p style="margin-left: 10px; opacity: 0.7;">A firewall sets the boundaries for network traffic, blocking or allowing data based on predetermined protocols. 
+                        An IDS watches over network activities, flagging any irregularities for review, without directly affecting 
+                        data flow. An IPS plays an assertive role, not just detecting, but also preventing identified threats 
+                        from compromising the network.
+                    </p>
+                </div>
+                <li><p style="margin-left: 10px;">The file data is then redirected and sent to a network sandbox, which then executes an isolated virtual environment 
+                    designed to safely run and analyze files. The sandbox monitors the file’s behavior, checking for signs of malware, 
+                    such as suspicious system modifications, network connections to malicious servers, or attempts to alter files or 
+                    processes.<sup><a href="https://www.checkpoint.com/cyber-hub/threat-prevention/what-is-sandboxing/" target="_blank">3</a></sup>
+                    </p>
+                </li>
+                <li>
+                    <p style="margin-left: 10px;">If the file behaves normally, it’s flagged as safe and continues to the main system. 
+                    If the file behaves maliciously, it blocks it from reaching the user. On top of blocking the file, a network sandbox 
+                    also creates reports on its malicious activity and can take measures to alert the security team, log details about 
+                    the threat, or send the malware to cybersecurity researchers for further analysis.
+                    <sup><a href="https://www.crowdstrike.com/en-us/cybersecurity-101/threat-intelligence/cybersecurity-sandboxing/#:~:text=Bart%20Lenaerts%2DBergmans%20%2D%20September%2011,Let's%20get%20started" target="_blank">4</a></sup>
+                    </p>
+                </li>
+                <li>
+                    <p style="margin-left: 10px;">Even if the malware tries to execute harmful actions inside the sandbox, 
+                        it remains contained because the sandbox is isolated from the real system. Once analysis is complete, 
+                        the sandbox environment is reset or deleted, ensuring that no traces of the malware persist. 
+                    </p>
+                </li>
+            </ol>
+
+            <div class="figure">
+                <img src="media/entrymedia/entry1figure1.png">
+            </div>
+
+            <br><br>
+            <h1>Sandbox Tools</h1>
+            <p>
+                Several security tools leverage network sandboxing to detect and analyze threats before they reach a 
+                user’s system. These tools execute suspicious files in isolated environments, observing their behavior to 
+                determine if they are malicious. Here are some notable network sandboxing technologies:
+            </p>
+            <ul>
+                <li><p style="margin-left: 10px;"><b>Cuckoo Sandbox</b></p></li>
+                <ul>
+                    <li>
+                        <p style="margin-left: 10px;">A Cuckoo Sandbox is a free and open-source application that allows malware to be 
+                            launched in a safe and isolated environment. The concept is that the sandbox tricks the virus into 
+                            believing it has infected a real host. After that, the sandbox will log the malware's activities 
+                            and provide a report detailing the things the virus tried to accomplish in this safe setting. 
+                            <sup><a href="https://www.varonis.com/blog/cuckoo-sandbox#:~:text=A%20Cuckoo%20Sandbox%20is%20an,Last%20updated%20June%2023%2C%202023" target="_blank">5</a></a></sup>
+                        </p>
+                    </li>
+                </ul>
+                <li><p style="margin-left: 10px;"><b>VMRay Analyzer</b></p></li>
+                <ul>
+                    <li>
+                        <p style="margin-left: 10px;">Uses hypervisor-based monitoring for advanced malware detection without 
+                            modifying the analyzed sample. VMRay allows security teams to filter out the noise and 
+                            respond to the real malware threats faster. Contextual threat intelligence provided by 
+                            VMRay Analyzer also allows you to start automated threat hunting in seconds.
+                            <sup><a href="https://www.paloaltonetworks.com/blog/security-operations/use-vmray-analyzers-contextual-threat-intelligence-for-automated-threat-hunting-in-cortex-xsoar/" target="_blank">6</a></a></sup>
+                        </p>
+                    </li>
+                </ul>
+                <li><p style="margin-left: 10px;"><b>FireEye Malware Analysis</b></p></li>
+                <ul>
+                    <li>
+                        <p style="margin-left: 10px;">An independent malware sandbox engine that enables files and URLs to be submitted for 
+                            explosion within the virtual environment. It can identify whether the submitted file or URL is malicious by 
+                            using certain behavioral and statistical analysis.
+                            <sup><a href="https://fireeye.market/apps/219180#:~:text=FireEye%20Malware%20Analysis%20(AX)%20is,File%20or%20URL%20is%20malicious." target="_blank">7</a></a></sup>
+                        </p>
+                    </li>
+                </ul>
+                <li><p style="margin-left: 10px;"><b>Checkpoint Sandblast</b></p></li>
+                <ul>
+                    <li>
+                        <p style="margin-left: 10px;">Uses sandboxing to prevent zero-day attacks before they reach endpoints. 
+                            Utilizing a combination of threat emulation, AI engines, and threat extraction, it essentially 
+                            acts as a preemptive defense against unknown malware and exploits, including phishing, social engineering, 
+                            and ransomware, before they can enter a network or reach users.
+                            <sup><a href="https://www.checkpoint.com/downloads/products/sandblast-threat-emulation-appliances-datasheet.pdf" target="_blank">8</a></a></sup>
+                        </p>
+                    </li>
+                </ul>
+                <li><p style="margin-left: 10px;"><b>Crowdstrike Falcon Sandbox</b></p></li>
+                <ul>
+                    <li>
+                        <p style="margin-left: 10px;">an automated malware analysis tool that uses a sophisticated sandbox environment 
+                            to deeply analyze suspicious files, including unknown and evasive threats, to identify malicious 
+                            <sup><a href="https://www.crowdstrike.com/products/threat-intelligence/falcon-sandbox-malware-analysis/faq/" target="_blank">9</a></a></sup>
+                        </p>
+                    </li>
+                </ul>
+            </ul>
+            <p>
+                These technologies play a crucial role in modern cybersecurity, allowing security teams to preemptively neutralize 
+                threats before they can compromise a network.
+            </p>
+            <br><br>
+            <h1>Conclusion</h1>
+            <p>
+                Network sandboxing is a powerful yet often overlooked cybersecurity tool. Similar to how virtual machines 
+                contain malware in a controlled environment, network sandboxes isolate and analyze suspicious files
+                before they reach a system. By acting as a proactive defense layer, they help security teams detect and 
+                neutralize threats before they can cause harm. Despite their effectiveness, network sandboxes don’t 
+                receive as much attention as traditional security measures like firewalls and antivirus software. 
+                Hopfully you've learned a few things about network sandboxing and how it helps protect a network.
+            </p>
+            <br><br>
+            <h1>References</h1>
+            <ol>
+                <li value="1"><a href="https://www.vmware.com/topics/network-sandbox" target="_blank"><i>VMWare: What is a Network Sandbox?</i></a></li>
+                <li><a href="https://www.paloaltonetworks.com/cyberpedia/firewall-vs-ids-vs-ips" target="_blank"><i>IPS. vs. IDS vs. Firewall: What Are the Differences?</i></a></li>
+                <li><a href="https://www.checkpoint.com/cyber-hub/threat-prevention/what-is-sandboxing/" target="_blank"><i>What is Sandboxing?</i></a></li>
+                <li><a href="https://www.crowdstrike.com/en-us/cybersecurity-101/threat-intelligence/cybersecurity-sandboxing/#:~:text=Bart%20Lenaerts%2DBergmans%20%2D%20September%2011,Let's%20get%20started" target="_blank"><i>Crowdstrike: What is Cybersecurity Sandboxing?</i></a></li>
+                <li><a href="https://www.varonis.com/blog/cuckoo-sandbox#:~:text=A%20Cuckoo%20Sandbox%20is%20an,Last%20updated%20June%2023%2C%202023" target="_blank"><i>Cuckoo Sandbox Overiew -- Varonis</i></a></li>
+                <li><a href="https://www.paloaltonetworks.com/blog/security-operations/use-vmray-analyzers-contextual-threat-intelligence-for-automated-threat-hunting-in-cortex-xsoar/" target="_blank"><i>Use VMRay Analyzer’s Contextual Threat Intelligence for Automated Threat Hunting </i></a></li>
+                <li><a href="https://fireeye.market/apps/219180#:~:text=FireEye%20Malware%20Analysis%20(AX)%20is,File%20or%20URL%20is%20malicious." target="_blank"><i>FireEye Malware Analysis Plug-in</i></a></li>
+                <li><a href="https://www.checkpoint.com/downloads/products/sandblast-threat-emulation-appliances-datasheet.pdf" target="_blank"><i>SandBlast: Threat Emulation Appliances</i></a></li>
+                <li><a href="https://www.crowdstrike.com/products/threat-intelligence/falcon-sandbox-malware-analysis/faq/" target="_blank"><i>CrowdStrike Falcon® Sandbox FAQ</i></a></li>
+            </ol>
+        </div>
+    </div>
+  </body>
+
+</html>

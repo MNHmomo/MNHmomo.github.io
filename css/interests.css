@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: center;
 }
-
 .navbar {
     border: 2px none rgb(8,188,124);
     display: flex;
@@ -16,7 +15,6 @@
     justify-content: space-between;
     position: relative;
 }
-
 .latest {
     border: 2px none yellow;
     text-decoration: none;
@@ -29,7 +27,6 @@
     background-color: rgb(234, 234, 234);
     color: black;
 }
-
 .hamicon{
     height: 30px;
     position: relative;
@@ -39,7 +36,6 @@
     opacity: 1;
     cursor: pointer;
 }
-
 .dropdown {
     background-color: rgb(15, 15, 15);
     border: 2px none red;
@@ -50,7 +46,6 @@
     overflow-y: auto;
     height: 350px;
 }
-
 .dropdown-boxes {
     border: 1px solid rgb(8,188,124);
     display: flex;
@@ -58,12 +53,10 @@
     justify-content: start;
     margin-right: 5px;
 }
-
 .dropdown img {
     width: 25px;
     padding: 5px;
 }
-
 .dropdown a {
     text-decoration: none;
     border: 1px none rgb(8,188,124);
@@ -77,18 +70,15 @@
     color: black;
     cursor: pointer;
 }
-
 .hamicon:hover + .dropdown, .dropdown:hover {
     display: block;
 }
-
 .logogif {
     border: 2px none yellow;
     width: auto;
     height: 40px;
     margin: 0;
 }
-
 @media (max-width: 450px) {
     .logogif {
       height: 25px;
@@ -106,9 +96,6 @@
         width: 20px;
     }
 }
-
-
-
 .logo-div {
     border: 2px none blue;
     display: flex;
@@ -116,28 +103,22 @@
     margin-bottom: 20px;
     justify-content: center;
 }
-
 .logo-div img {
     height: 150px;
     border: .5px solid rgb(7, 224, 148); 
 }
-
-
-
 .about-me {
     border: 2px none red;
     font-family: "DM mono", serif;
     display: flex;
     justify-content: center;
 }
-
 .about-me div {
     border: 2px none green;
     display: flex;
     flex-direction: column;
     padding: 25px;
 }
-
 .about-me a {
     text-decoration: none;
     color: rgb(3, 183, 120);
@@ -145,18 +126,32 @@
 .about-me a:hover {
     color: white;
 }
-
 .about-me h1 {
     color: rgb(7, 224, 148); 
     font-size: 20px;
 }
-
 .about-me p {
     font-size: 15px;
 }
-
 @media (max-width: 450px) {
     .about-me div {
         padding: 10px;
     }
+}
+
+.dropdown::-webkit-scrollbar {
+    width: 1px;
+}
+  /* Track */
+.dropdown::-webkit-scrollbar-track {
+background: #00000000;
+}
+/* Handle */
+.dropdown::-webkit-scrollbar-thumb {
+background: rgb(0, 255, 166);
+border-radius: 0px;
+}
+/* Handle on hover */
+.dropdown::-webkit-scrollbar-thumb:hover {
+background: cyan;
 }

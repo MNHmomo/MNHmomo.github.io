@@ -164,3 +164,20 @@
 .education {
     text-indent: 20px;
 }
+
+.dropdown::-webkit-scrollbar {
+    width: 1px;
+}
+  /* Track */
+.dropdown::-webkit-scrollbar-track {
+background: #00000000;
+}
+/* Handle */
+.dropdown::-webkit-scrollbar-thumb {
+background: rgb(0, 255, 166);
+border-radius: 0px;
+}
+/* Handle on hover */
+.dropdown::-webkit-scrollbar-thumb:hover {
+background: cyan;
+}
