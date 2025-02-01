@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="media/architecturelogo.png">
+    <title>bashbreach</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: rgb(20, 20, 20);
+        color: white;
+        font-family: "DM mono", serif;
+        scroll-behavior: smooth;
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        border: 2px none red;
+        display: flex;
+        height: 70px;
+        z-index: 1;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar {
+        border: 2px none rgb(8,188,124);
+        display: flex;
+        align-items: center;
+        width: 97%;
+        padding: 10px;
+        justify-content: space-between;
+        position: relative;
+    }
+    .latest {
+        border: 2px none yellow;
+        text-decoration: none;
+        color: white;
+        font-family: "DM mono", serif;
+        padding: 2px;
+    }
+    .latest:hover {
+        cursor: pointer;
+        background-color: rgb(234, 234, 234);
+        color: black;
+    }
+    .hamicon{
+        height: 30px;
+        position: relative;
+        opacity: .7;
+    }
+    .hamicon:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .dropdown {
+        background-color: rgb(15, 15, 15);
+        border: 2px none red;
+        position: absolute;
+        display: none;
+        top: 75%;
+        z-index: 1;
+        overflow-y: auto;
+        height: 350px;
+    }
+    .dropdown-boxes {
+        border: 1px solid rgb(8,188,124);
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-right: 5px;
+    }
+    .dropdown img {
+        width: 25px;
+        padding: 5px;
+    }
+    .dropdown a {
+        text-decoration: none;
+        border: 1px none rgb(8,188,124);
+        color: white;
+        padding: 10px;
+        display: block;
+        font-size: 13px;
+    }
+    .dropdown a:hover {
+        background-color: rgb(8,188,124);
+        color: black;
+        cursor: pointer;
+    }
+    .hamicon:hover + .dropdown, .dropdown:hover {
+        display: block;
+    }
+    .logogif {
+        border: 2px none yellow;
+        width: auto;
+        height: 40px;
+        margin: 0;
+    }
+    @media (max-width: 450px) {
+        .logogif {
+          height: 25px;
+        }
+        .hamicon {
+            height: 25px;
+        }
+        .latest {
+            font-size: 13px;
+        }
+        .dropdown a {
+            font-size: 10px;
+        }
+        .dropdown img {
+            width: 20px;
+        }
+    }
+    .logo-div {
+        border: 2px none blue;
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+    .logo-div img {
+        height: 150px;
+        border: .5px solid rgb(7, 224, 148); 
+    }
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title h1 {
+        color: rgb(7, 224, 148);
+        margin-left: 10px;
+    }
+    .about-me {
+        border: 2px none red;
+        font-family: "DM mono", serif;
+        display: flex;
+        justify-content: center;
+    }
+    .about-me div {
+        border: 2px none green;
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+    }
+    .about-me a {
+        text-decoration: none;
+        color: rgb(3, 183, 120);
+    }
+    .about-me a:hover {
+        color: white;
+    }
+    .about-me h1 {
+        color: rgb(7, 224, 148); 
+        font-size: 20px;
+        padding: 5px;
+    }
+    .about-me p {
+        font-size: 15px;
+        padding: 5px;
+    }
+    @media (max-width: 450px) {
+        .about-me div {
+            padding: 10px;
+        }
+        .figure img {
+            width: 160px;
+        }
+    }
+    .dropdown::-webkit-scrollbar {
+        width: 1px;
+    }
+      /* Track */
+    .dropdown::-webkit-scrollbar-track {
+    background: #00000000;
+    }
+    /* Handle */
+    .dropdown::-webkit-scrollbar-thumb {
+    background: rgb(0, 255, 166);
+    border-radius: 0px;
+    }
+    /* Handle on hover */
+    .dropdown::-webkit-scrollbar-thumb:hover {
+    background: cyan;
+    }
+    .figure {
+        border: 2px solid blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .figure img {
+        width: 400px;
+        border: .5px solid rgb(7, 224, 148); 
+    }
+    .about-me li p {
+      margin-left: 10px;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="navbar">
+        <img src="media/hamicon.png" class="hamicon">
+        <div class="dropdown">
+          <div class="dropdown-boxes">
+            <img src="media/icons/home.png">
+            <a href="https://www.bashbreach.com/">Home</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/about.png">
+            <a href="about.html">About</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/projects.png">
+            <a href="projects.html">Projects</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/github.png">
+            <a href="https://github.com/MNHmomo" target="_blank">Github</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/linkedin.png">
+            <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/resume.png">
+            <a href="resume.html">Resume</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/now.png">
+            <a href="now.html">Now</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/interests.png">
+            <a href="interests.html">Interests</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/architecture.png">
+            <a href="architecture.html">Architecture</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/statboard.png">
+            <a href="statboard.html">Statboard</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/licdis.png">
+            <a href="licdis.html">Lic & Dis</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/privacy.png">
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+        <a href="https://bashbreach.com"><img src="media/logogif.gif" class="logogif"></a>
+        <a href="" class="latest"></a>
+      </div>
+    </div>
+
+    <div class="logo-div">
+      <img src="media/entrymedia/entry2logo.png">
+    </div>
+
+    <div class="title">
+      <h1>Security Mechanisms: Firewalls, IDS, and IPS</h1>
+    </div>
+
+    <div class="about-me">
+      <div>
+        <h1>TL;DR</h1>
+        <p>
+          Network security systems like firewalls, IDS (Intrusion Detection Systems), and IPS (Intrusion Prevention Systems) work together 
+          to protect your network. Firewalls filter incoming and outgoing traffic based on security rules. IDS monitors network activity 
+          to detect suspicious behavior and alerts administrators, while IPS goes a step further by actively blocking malicious traffic on
+          top of detecting it. 
+          Firewalls are great at blocking unauthorized access, IDS helps identify potential threats, and IPS can stop attacks before 
+          they cause harm. Together, they provide multi-layered defense for your network.<br><br> 
+          This site, <a href="https://www.bashbreach.com/">bashbreach.com</a>, actually uses some other security measures such as:
+          <ul style="margin: 0;">
+            <li><p><b>HTTPS</b></p>
+              <ul>
+                <li><p>Protects data in transit between visitors and your website.</p></li>
+                <li><p>Prevents man-in-the-middle attacks where hackers could intercept sensitive information.</p></li>
+              </ul>
+            </li>
+            <li><p><b>GitHub Pages General security</b></p>
+              <ul>
+                <li><p>DDoS protection (since GitHub is backed by Cloudflare).</p></li>
+                <li><p>No direct access to servers, reducing attack vectors like SQL injection.</p></li>
+              </ul>
+            </li>
+          </ul>
+          <br>
+        </p>
+        <p>With these measures in place, <a href="https://www.bashbreach.com/">bashbreach.com</a> stays secure. I hope... </p>
+        <br><br>
+        <h1>Firewalls</h1>
+        <p>
+          A firewall is a network security device that separates your internal network from an external network that might be deemed 
+          untrustworthy. Think of firewalls as a physical security gate in your house that decides what comes in and what doesn’t. 
+          It monitors incoming and outgoing traffic, based on protocols. Simply, firewalls examine and control traffic by allowing or 
+          denying it appropriately with pre-established security rules. 
+        </p>
+        <p>
+          Think of firewalls as the TSA. They work as a checkpoint between you and the internet, they analyze data packets being sent 
+          over the network, and then according to the rules they determine what's allowed and what isn’t, for your safety. <br>
+          Firewalls do things like block unauthorized access while allowing legitimate traffic, filter data packets based on security 
+          rules, prevent malware and hackers from exploiting vulnerabilities, and can be configured to allow or deny specific applications, 
+          services, or IP addresses.<sup><a href="https://www.fortinet.com/resources/cyberglossary/what-does-a-firewall-do" target="_blank">1</a></sup>
+        </p>
+
+        <div class="figure">
+          <img src="media/entrymedia/entry2figure1.png">
+        </div>
+
+        <p>
+          There are also different types of firewalls such as:  
+          <ul>
+
+            <li>
+              <p>
+                <b>Packet-Filtering Firewalls</b> - Packet filters evaluate packet data to carry out firewall operations. 
+                Every packet of data that reaches the network edge is separated. It examines individual data packets and 
+                decides whether to allow or block them based on predefined rules (IP address, port, protocol). 
+                Although it is fast and lightweight, it lacks deep inspection (can't analyze packet contents).<sup><a href="https://nordlayer.com/learn/firewall/packet-filtering/#how-packet-filtering-works" target="_blank">2</a></sup>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <b>Stateful Packet Inspection Firewalls</b> - Early firewalls used static rules to allow or block packets 
+                based only on factors like IP address, port number, and protocol. However, they couldn’t track whether a 
+                packet belonged to a valid, ongoing connection. This made them vulnerable to attacks like DDoS amplification, 
+                where a victim is flooded with unsolicited responses from legitimate services. A stateful inspection firewall 
+                (also called a stateful firewall) doesn’t just look at individual packets—it keeps track of active connections 
+                and only allows responses that match a valid request. SPI’s offer dynamic packet filtering, scalability and performance, 
+                logging and monitoring, and security integration.<sup><a href="https://www.checkpoint.com/cyber-hub/network-security/firewall-as-a-service-fwaas/what-is-a-stateful-packet-inspection-firewall/" target="_blank">3</a></sup>
+              </p>
+              <ul style="opacity: 0.7;">
+                <li>
+                  <p>Dynamic Packet Filtering: The main differentiating feature between stateless and stateful firewalls is dynamic 
+                    packet filtering. The ability to track the state of a network connection and permit or block packets based on it 
+                    enables these firewalls to identify malicious traffic that a stateless firewall would miss. 
+                  </p>
+                </li>
+                <li>
+                  <p>Scalability and Performance: Performing stateful inspection of network traffic requires more resources than a stateless firewall. SPI firewalls should have the resources required to analyze and secure corporate network traffic at scale while minimizing latency and performance impacts. </p>
+                </li>
+                <li>
+                  <p>Logging and Monitoring: Firewalls have vital visibility into the traffic attempting to enter or leave an organization’s network. SPI firewalls should provide logging and monitoring capabilities to enable security teams to detect attempted intrusions.  </p>
+                </li>
+                <li>
+                  <p>Security Integration: Firewalls are one component of a corporate security architecture. They should integrate with other security solutions to enhance threat prevention capabilities and simplify security management. </p>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <p>
+                <b>Proxy Firewalls (Application-Level)</b> - Proxy firewalls operate at the application layer, filtering traffic 
+                between the network and external sources. Instead of allowing direct communication between a client and a server, 
+                they act as an intermediary (proxy) to inspect all incoming and outgoing data. Proxy firewalls operate at the 
+                application layer, filtering traffic by acting as an intermediary between the network and external sources. 
+                Instead of allowing direct communication, they establish a connection, inspect the TCP handshake and packet 
+                contents for threats like malware, and only forward approved data. By masking internal devices, proxy firewalls 
+                enhance security and anonymity. However, their deep inspection process can slow down data transfer. 
+                Positioned at the network edge, they analyze application protocol headers and payloads to decide whether to 
+                permit or block data, offering stronger protection than traditional firewalls.<sup><a href="https://ijeast.com/papers/363-365,Tesma501,IJEAST.pdf" target="_blank">4</a></sup>
+              </p>
+            </li>
+
+            <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+              <p style="margin-left: 10px; opacity: 0.7;">For reference, when we say a security mechanism operates 
+                at the application level, 	we mean it functions at the Application Layer (Layer 7) of the OSI model. 
+                This is the 	topmost layer where human-computer interactions happen, and applications can 	access network services. 
+              </p>
+            </div>
+
+            <li>
+              <p>
+                <b>Next Generation Firewalls</b> - A Next-Generation Firewall (NGFW) enhances traditional firewall capabilities by 
+                integrating intrusion prevention, malware filtering, and advanced traffic control. Unlike conventional firewalls that 
+                primarily examine network ports and protocols, NGFWs focus on applications and data by deeply inspecting packet payloads 
+                before deciding whether to allow or block traffic. A key feature of NGFWs is Application Intelligence, which enables 
+                them to identify specific applications within network traffic, regardless of port, protocol, or evasion techniques. 
+                This deeper level of security provides greater control and protection against modern cyber threats.<sup><a href="https://www.researchgate.net/profile/Andrea-Ofori-Boadu/publication/308599266_An_Integrated_Construction_Management_Approach_for_Addressing_LEED_Project_Challenges/links/59e53377a6fdcc1b1d8d2c0c/An-Integrated-Construction-Management-Approach-for-Addressing-LEED-Project-Challenges.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail&_rtd=e30%3D#page=37" target="_blank">5</a></sup>
+              </p>
+            </li>
+
+          </ul>
+        </p>
+
+        <h1>Intrusion Detection System (IDS)</h1>
+        <p>
+          An Intrusion Detection System (IDS) monitors network activity to identify potential threats and vulnerabilities. 
+          It analyzes traffic without interfering, alerting administrators to suspicious behavior. 
+        </p>
+        <p>Intrusion detection involves monitoring and analyzing events in a computer system or network to identify attempts to 
+          compromise its confidentiality, integrity, or availability, or bypass security measures. These intrusions can come from 
+          external attackers, authorized users trying to gain unauthorized privileges, or those who misuse their granted access. 
+          Intrusion Detection Systems (IDSs) are tools—either software or hardware—that automate the monitoring and analysis 
+          process to detect such suspicious activities.<sup><a href="http://all.net/books/standards/NIST-CSRC/csrc.nist.gov/publications/nistpubs/800-31/sp800-31.pdf" target="_blank">6</a></sup>
+        </p>
+        <p>
+          Having an IDS and a firewall on a network can add extra network security because of how they complement each other. 
+          While a firewall acts as the first line of defense by blocking unauthorized traffic, an IDS works alongside it by analyzing 
+          that traffic that passes through, identifying suspicious activity.
+
+          <ol>
+            <li value="1">
+              <p>The firewall follows the network's security rules, allowing or blocking data passing through based on IP addresses, 
+                ports, and protocols. But firewalls do have they're limits. They're unable to inspect the incoming traffic deeply 
+                for anything suspicious/malicious. Meaning malware can possibly enter.
+              </p>
+            </li>
+
+            <li>
+              <p>Now its the IDS's job to analyze the traffic that passes through the firewall. It examines patterns
+                to recognize malware, brute force attacks, or unusual data transfers. Once malicious behavior is detected,
+                it can take the necessary precautions to document it and alert administrators. 
+              </p>
+            </li>
+          </ol>
+        </p>
+
+        <div class="figure">
+          <img src="media/entrymedia/entry2figure2.png">
+        </div>
+
+        <p>You can see how a firewall alone may not detect attacks that exploit legitimate traffic. But when paired with an IDS, it identifies those hidden threats. 
+          Now it doesn't really have to go in that order. It could be the IDS goes first and inspects the traffic, and then it goes through
+          the firewall. But I feel it makes much more sense for it to go after the firewall.
+        </p>
+
+        <p>
+          Many Intrusion Detection Systems (IDSs) are built around three core components: Information sources, analysis, and response.
+          Information sources are the various sources of event data used to determine if an intrusion has occurred. 
+          Common sources include network, host, and application monitoring. Analysis is the process organizes the data from information
+          sources to identify potential intrusions. The two primary analysis methods are misuse detection, which looks for known attack 
+          patterns, and anomaly detection, which flags unusual behavior. And finally response is where once an intrusion is detected, 
+          the system takes action. Active measures involve automated responses (such as blocking traffic), while passive measures 
+          involve generating reports for human review, who then decide on further actions. These responses are all seperate and not a built-in 
+          function with intrusion detection systems.
+        </p>
+        <br><br>
+
+        <h1>Intrusion Prevention System (IPS)</h1>
+        <p>
+          An Intrusion Prevention System (IPS) is like a proactive security guard for your network. It actively scans traffic for 
+          malicious activity, stopping threats before they can cause harm. This helps reduce the workload for security teams by 
+          attacks before they even reach the network defenses. And unlike an Intrusion Detection System (IDS), which just watches 
+          and alerts, an IPS sits directly in the traffic path to take action in real-time. Usually placed just after the firewall, 
+          it examines incoming traffic and can block harmful data, issue alerts, block suspicious sources, or even reset connections 
+          to prevent further attacks.<br><br>
+          
+          <b>IDS vs IPS?</b> I'd honestly think that IPS is a much better option. It combines the knowledge of IDS in an automated manner.
+          Not only will it detect malicious patterns, but take the necessary actions to prevent them. It can even alert secruity teams.
+          An IDS is only for detecting and monitering intrusions. It won't take any action on its own.
+          Not only that but an IDS needs help from a human, or a seperate automated system to interpret the results.
+          An IPS can decide whether to accept or reject packets (based on rules). Although both analyze traffic and compare it to known
+          threats, I believe that IPS is a much better option for network security.<sup><a href="https://researchmanuscripts.com/May2013/1.pdf" target="_blank">7</a></sup>
+          <br><br>
+        </p>
+
+        <div class="figure">
+          <img src="media/entrymedia/entry2figure3.png">
+        </div>
+
+        <p>
+          To keep things running smoothly, IPS systems use techniques like signature-based detection, 
+          anomaly-based detection, and stateful protocol analysis. 
+          Modern IPS tools are often part of next-generation firewalls (NGFWs) and cloud security services, adding an extra layer of 
+          protection to keep your network safe.
+        </p>
+
+        <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+          <p style="margin-left: 10px; opacity: 0.7;">
+            <b>Signature-based detection</b> - Signature-based detection works by comparing observed events to pre-defined patterns, or 
+            "signatures," of known threats. It’s fast, easy to set up, and excels at identifying known attacks. However, it struggles 
+            with new or modified threats, especially those using evasion techniques, making it less effective against unknown or 
+            variant attacks. Despite these limitations, a signature-based IDS can still be highly accurate when it comes to detecting 
+            recognized threats.
+            <br><br>
+            <b>Anomaly-based detection</b> - Anomaly-based detection involves comparing observed activity against predefined profiles of "normal" behavior, such as 
+            typical user actions, network connections, or application usage. These profiles are created by monitoring standard activity
+            over time. The main advantage of this technique is its ability to identify unknown or unusual threats. For example, an 
+            anomaly-based IDS might flag a malformed IP packet as suspicious, not because it matches a known attack pattern, but
+            because it deviates from expected behavior. This makes anomaly-based detection effective at spotting new or unexpected 
+            types of malicious activity.
+            <br><br>
+            <b>Stateful protocol analysis</b> - Stateful protocol analysis involves comparing observed network traffic against predefined profiles of normal 
+            behavior for each protocol state. It looks for deviations from accepted patterns to identify potential threats. 
+            While it shares similarities with anomaly-based detection, stateful protocol inspection goes further by analyzing 
+            traffic at the network and transport layers, as well as vendor-specific traffic at the application layer—areas that 
+            anomaly-based detection typically cannot examine. This makes stateful analysis a more comprehensive approach to 
+            detecting unusual traffic.
+          </p>
+        </div>
+        <br><br>
+
+        <h1>The Breach</h1>
+        <p>
+          Next time when discussing network security, tools like firewalls, IDS, or IPS should come in mind. 
+          These mechanisms form the backbone of strong network architectures, each serving a unique purpose in protecting data,
+          systems, and users from threats that continuously evolve. Whether it's blocking unauthorized access, identifying 
+          suspicious activity, or preventing harmful traffic, they work together to build a layered and secure defense.
+        </p>
+        <br><br>
+
+        <h1>References</h1>
+        <ol>
+          <li value="1"><a href="https://www.fortinet.com/resources/cyberglossary/what-does-a-firewall-do" target="_blank">What Does a Firewall Do?</a></li>
+          <li><a href="https://nordlayer.com/learn/firewall/packet-filtering/#how-packet-filtering-works" target="_blank">Packet Filtering Firewall</a></li>
+          <li><a href="https://www.checkpoint.com/cyber-hub/network-security/firewall-as-a-service-fwaas/what-is-a-stateful-packet-inspection-firewall/" target="_blank">What Is a Stateful Packet Inspection Firewall?</a></li>
+          <li><a href="https://ijeast.com/papers/363-365,Tesma501,IJEAST.pdf" target="_blank">A Survery on the Different Technologies</a></li>
+          <li><a href="https://www.researchgate.net/profile/Andrea-Ofori-Boadu/publication/308599266_An_Integrated_Construction_Management_Approach_for_Addressing_LEED_Project_Challenges/links/59e53377a6fdcc1b1d8d2c0c/An-Integrated-Construction-Management-Approach-for-Addressing-LEED-Project-Challenges.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail&_rtd=e30%3D#page=37" target="_blank">Network Security and Next-Generation Firewalls</a></li>
+          <li><a href="http://all.net/books/standards/NIST-CSRC/csrc.nist.gov/publications/nistpubs/800-31/sp800-31.pdf" target="_blank">Intrusion Detection Systems</a></li>
+          <li><a href="https://researchmanuscripts.com/May2013/1.pdf" target="_blank">Intrusion Detection System and Intrusion Prevention System: A Comparative Study</a></li>
+        </ol>
+      </div>
+    </div>
+  </body>
+
+</html>

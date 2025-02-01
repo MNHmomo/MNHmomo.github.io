@@ -14,7 +14,7 @@
 
     <style>
       body {
-        background-color: rgb(15, 15, 15);
+        background-color: rgb(20, 20, 20);
         color: white;
         font-family: "DM mono", serif;
         scroll-behavior: smooth;
@@ -197,7 +197,7 @@
         align-items: center;
     }
     .figure img {
-        width: 350px;
+        width: 400px;
         border: .5px solid rgb(7, 224, 148); 
     }
     </style>
@@ -273,12 +273,13 @@
 
     <div class="about-me">
         <div>
-            <h1>Overview</h1>
+            <h1>TL;DR</h1>
             <p>
                 Network sandboxes are an underrated yet powerful cybersecurity tool. Much like virtual machines isolate malware, 
                 network sandboxes safely analyze suspicious files before they reach a user’s system. By executing potential threats 
-                in a controlled environment, they help detect and block malware without risking real systems. 
-                This article explores their function, role in cybersecurity, and why they deserve more attention.
+                in a controlled environment, they help detect and block malware without risking real systems. Network sandboxes are 
+                isolated environments used to safely test potentially malicious files over network traffic without affecting the rest of your 
+                system.
             </p>
             <br><br>
             <h1>Virtual Machines</h1>
@@ -371,7 +372,7 @@
                             launched in a safe and isolated environment. The concept is that the sandbox tricks the virus into 
                             believing it has infected a real host. After that, the sandbox will log the malware's activities 
                             and provide a report detailing the things the virus tried to accomplish in this safe setting. 
-                            <sup><a href="https://www.varonis.com/blog/cuckoo-sandbox#:~:text=A%20Cuckoo%20Sandbox%20is%20an,Last%20updated%20June%2023%2C%202023" target="_blank">5</a></a></sup>
+                            <sup><a href="https://www.varonis.com/blog/cuckoo-sandbox#:~:text=A%20Cuckoo%20Sandbox%20is%20an,Last%20updated%20June%2023%2C%202023" target="_blank">5</a></sup>
                         </p>
                     </li>
                 </ul>
@@ -382,7 +383,7 @@
                             modifying the analyzed sample. VMRay allows security teams to filter out the noise and 
                             respond to the real malware threats faster. Contextual threat intelligence provided by 
                             VMRay Analyzer also allows you to start automated threat hunting in seconds.
-                            <sup><a href="https://www.paloaltonetworks.com/blog/security-operations/use-vmray-analyzers-contextual-threat-intelligence-for-automated-threat-hunting-in-cortex-xsoar/" target="_blank">6</a></a></sup>
+                            <sup><a href="https://www.paloaltonetworks.com/blog/security-operations/use-vmray-analyzers-contextual-threat-intelligence-for-automated-threat-hunting-in-cortex-xsoar/" target="_blank">6</a></sup>
                         </p>
                     </li>
                 </ul>
@@ -422,7 +423,7 @@
                 threats before they can compromise a network.
             </p>
             <br><br>
-            <h1>Conclusion</h1>
+            <h1>The Breach</h1>
             <p>
                 Network sandboxing is a powerful yet often overlooked cybersecurity tool. Similar to how virtual machines 
                 contain malware in a controlled environment, network sandboxes isolate and analyze suspicious files
