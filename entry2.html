@@ -150,7 +150,7 @@
         border: 2px none green;
         display: flex;
         flex-direction: column;
-        padding: 5px;
+        margin-left: 10px;
     }
     .about-me a {
         text-decoration: none;
@@ -162,18 +162,22 @@
     .about-me h1 {
         color: rgb(7, 224, 148); 
         font-size: 20px;
-        padding: 5px;
     }
     .about-me p {
         font-size: 15px;
-        padding: 5px;
     }
     @media (max-width: 450px) {
-        .about-me div {
-            padding: 10px;
-        }
         .figure img {
-            width: 160px;
+            width: 150px;
+        }
+        .about-me p {
+          font-size: 13px;
+        }
+        .about-me div {
+          margin-left: 5px;
+        }
+        .title h1 {
+            font-size: 23px;
         }
     }
     .dropdown::-webkit-scrollbar {
@@ -199,7 +203,7 @@
         align-items: center;
     }
     .figure img {
-        width: 400px;
+        width: 370px;
         border: .5px solid rgb(7, 224, 148); 
     }
     .about-me li p {
