@@ -12,203 +12,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/entry2.css">
+
     <style>
       body {
-        background-color: rgb(20, 20, 20);
-        color: white;
+        background-color: rgb(25, 25, 25);
+        color:white;
         font-family: "DM mono", serif;
         scroll-behavior: smooth;
         font-weight: 100;
         margin: 0;
         padding: 0;
       }
-      .header {
-        border: 2px none red;
-        display: flex;
-        height: 70px;
-        z-index: 1;
-        align-items: center;
-        justify-content: center;
-    }
-    .navbar {
-        border: 2px none rgb(8,188,124);
-        display: flex;
-        align-items: center;
-        width: 97%;
-        padding: 10px;
-        justify-content: space-between;
-        position: relative;
-    }
-    .latest {
-        border: 2px none yellow;
-        text-decoration: none;
-        color: white;
-        font-family: "DM mono", serif;
-        padding: 2px;
-    }
-    .latest:hover {
-        cursor: pointer;
-        background-color: rgb(234, 234, 234);
-        color: black;
-    }
-    .hamicon{
-        height: 30px;
-        position: relative;
-        opacity: .7;
-    }
-    .hamicon:hover {
-        opacity: 1;
-        cursor: pointer;
-    }
-    .dropdown {
-        background-color: rgb(15, 15, 15);
-        border: 2px none red;
-        position: absolute;
-        display: none;
-        top: 75%;
-        z-index: 1;
-        overflow-y: auto;
-        height: 350px;
-    }
-    .dropdown-boxes {
-        border: 1px solid rgb(8,188,124);
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        margin-right: 5px;
-    }
-    .dropdown img {
-        width: 25px;
-        padding: 5px;
-    }
-    .dropdown a {
-        text-decoration: none;
-        border: 1px none rgb(8,188,124);
-        color: white;
-        padding: 10px;
-        display: block;
-        font-size: 13px;
-    }
-    .dropdown a:hover {
-        background-color: rgb(8,188,124);
-        color: black;
-        cursor: pointer;
-    }
-    .hamicon:hover + .dropdown, .dropdown:hover {
-        display: block;
-    }
-    .logogif {
-        border: 2px none yellow;
-        width: auto;
-        height: 40px;
-        margin: 0;
-    }
-    @media (max-width: 450px) {
-        .logogif {
-          height: 25px;
-        }
-        .hamicon {
-            height: 25px;
-        }
-        .latest {
-            font-size: 13px;
-        }
-        .dropdown a {
-            font-size: 10px;
-        }
-        .dropdown img {
-            width: 20px;
-        }
-    }
-    .logo-div {
-        border: 2px none blue;
-        display: flex;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        justify-content: center;
-    }
-    .logo-div img {
-        height: 150px;
-        border: .5px solid rgb(7, 224, 148); 
-    }
-    .title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .title h1 {
-        color: rgb(7, 224, 148);
-        margin-left: 10px;
-    }
-    .about-me {
-        border: 2px none red;
-        font-family: "DM mono", serif;
-        display: flex;
-        justify-content: center;
-    }
-    .about-me div {
-        border: 2px none green;
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-    }
-    .about-me a {
-        text-decoration: none;
-        color: rgb(3, 183, 120);
-    }
-    .about-me a:hover {
-        color: white;
-    }
-    .about-me h1 {
-        color: rgb(7, 224, 148); 
-        font-size: 20px;
-    }
-    .about-me p {
-        font-size: 15px;
-    }
-    @media (max-width: 450px) {
-        .figure img {
-            width: 150px;
-        }
-        .about-me p {
-          font-size: 13px;
-        }
-        .about-me div {
-          margin-left: 5px;
-        }
-        .title h1 {
-            font-size: 23px;
-        }
-    }
-    .dropdown::-webkit-scrollbar {
-        width: 1px;
-    }
-      /* Track */
-    .dropdown::-webkit-scrollbar-track {
-    background: #00000000;
-    }
-    /* Handle */
-    .dropdown::-webkit-scrollbar-thumb {
-    background: rgb(0, 255, 166);
-    border-radius: 0px;
-    }
-    /* Handle on hover */
-    .dropdown::-webkit-scrollbar-thumb:hover {
-    background: cyan;
-    }
-    .figure {
-        border: 2px solid blue;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .figure img {
-        width: 370px;
-        border: .5px solid rgb(7, 224, 148); 
-    }
-    .about-me li p {
-      margin-left: 10px;
-    }
     </style>
   </head>
 
@@ -273,7 +88,7 @@
     </div>
 
     <div class="logo-div">
-      <img src="media/entrymedia/entry2logo.png">
+      <img src="media/entrymedia/entry2logo.png" alt="entry2-logo">
     </div>
 
     <div class="title">
@@ -282,7 +97,7 @@
 
     <div class="about-me">
       <div>
-        <h1>TL;DR</h1>
+        <h2>TL;DR</h2>
         <p>
           Network security systems like firewalls, IDS (Intrusion Detection Systems), and IPS (Intrusion Prevention Systems) work together 
           to protect your network. Firewalls filter incoming and outgoing traffic based on security rules. IDS monitors network activity 
@@ -291,6 +106,7 @@
           Firewalls are great at blocking unauthorized access, IDS helps identify potential threats, and IPS can stop attacks before 
           they cause harm. Together, they provide multi-layered defense for your network.<br><br> 
           This site, <a href="https://www.bashbreach.com/">bashbreach.com</a>, actually uses some other security measures such as:
+
           <ul style="margin: 0;">
             <li><p><b>HTTPS</b></p>
               <ul>
@@ -305,11 +121,13 @@
               </ul>
             </li>
           </ul>
-          <br>
+
         </p>
         <p>With these measures in place, <a href="https://www.bashbreach.com/">bashbreach.com</a> stays secure. I hope... </p>
+
         <br><br>
-        <h1>Firewalls</h1>
+
+        <h2>Firewalls</h2>
         <p>
           A firewall is a network security device that separates your internal network from an external network that might be deemed 
           untrustworthy. Think of firewalls as a physical security gate in your house that decides what comes in and what doesn’t. 
@@ -405,7 +223,7 @@
           </ul>
         </p>
 
-        <h1>Intrusion Detection System (IDS)</h1>
+        <h2>Intrusion Detection System (IDS)</h2>
         <p>
           An Intrusion Detection System (IDS) monitors network activity to identify potential threats and vulnerabilities. 
           It analyzes traffic without interfering, alerting administrators to suspicious behavior. 
@@ -436,6 +254,7 @@
               </p>
             </li>
           </ol>
+
         </p>
 
         <div class="figure">
@@ -457,9 +276,10 @@
           involve generating reports for human review, who then decide on further actions. These responses are all seperate and not a built-in 
           function with intrusion detection systems.
         </p>
+
         <br><br>
 
-        <h1>Intrusion Prevention System (IPS)</h1>
+        <h2>Intrusion Prevention System (IPS)</h2>
         <p>
           An Intrusion Prevention System (IPS) is like a proactive security guard for your network. It actively scans traffic for 
           malicious activity, stopping threats before they can cause harm. This helps reduce the workload for security teams by 
@@ -513,7 +333,7 @@
         </div>
         <br><br>
 
-        <h1>The Breach</h1>
+        <h2>The Breach</h2>
         <p>
           Next time when discussing network security, tools like firewalls, IDS, or IPS should come in mind. 
           These mechanisms form the backbone of strong network architectures, each serving a unique purpose in protecting data,
@@ -522,7 +342,7 @@
         </p>
         <br><br>
 
-        <h1>References</h1>
+        <h2>References</h2>
         <ol>
           <li value="1"><a href="https://www.fortinet.com/resources/cyberglossary/what-does-a-firewall-do" target="_blank">What Does a Firewall Do?</a></li>
           <li><a href="https://nordlayer.com/learn/firewall/packet-filtering/#how-packet-filtering-works" target="_blank">Packet Filtering Firewall</a></li>

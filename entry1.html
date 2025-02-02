@@ -12,200 +12,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/entry1.css">
+
     <style>
       body {
-        background-color: rgb(20, 20, 20);
-        color: white;
+        background-color: rgb(25, 25, 25);
+        color:white;
         font-family: "DM mono", serif;
         scroll-behavior: smooth;
         font-weight: 100;
         margin: 0;
         padding: 0;
       }
-      .header {
-        border: 2px none red;
-        display: flex;
-        height: 70px;
-        z-index: 1;
-        align-items: center;
-        justify-content: center;
-    }
-    .navbar {
-        border: 2px none rgb(8,188,124);
-        display: flex;
-        align-items: center;
-        width: 97%;
-        padding: 10px;
-        justify-content: space-between;
-        position: relative;
-    }
-    .latest {
-        border: 2px none yellow;
-        text-decoration: none;
-        color: white;
-        font-family: "DM mono", serif;
-        padding: 2px;
-    }
-    .latest:hover {
-        cursor: pointer;
-        background-color: rgb(234, 234, 234);
-        color: black;
-    }
-    .hamicon{
-        height: 30px;
-        position: relative;
-        opacity: .7;
-    }
-    .hamicon:hover {
-        opacity: 1;
-        cursor: pointer;
-    }
-    .dropdown {
-        background-color: rgb(15, 15, 15);
-        border: 2px none red;
-        position: absolute;
-        display: none;
-        top: 75%;
-        z-index: 1;
-        overflow-y: auto;
-        height: 350px;
-    }
-    .dropdown-boxes {
-        border: 1px solid rgb(8,188,124);
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        margin-right: 5px;
-    }
-    .dropdown img {
-        width: 25px;
-        padding: 5px;
-    }
-    .dropdown a {
-        text-decoration: none;
-        border: 1px none rgb(8,188,124);
-        color: white;
-        padding: 10px;
-        display: block;
-        font-size: 13px;
-    }
-    .dropdown a:hover {
-        background-color: rgb(8,188,124);
-        color: black;
-        cursor: pointer;
-    }
-    .hamicon:hover + .dropdown, .dropdown:hover {
-        display: block;
-    }
-    .logogif {
-        border: 2px none yellow;
-        width: auto;
-        height: 40px;
-        margin: 0;
-    }
-    @media (max-width: 450px) {
-        .logogif {
-          height: 25px;
-        }
-        .hamicon {
-            height: 25px;
-        }
-        .latest {
-            font-size: 13px;
-        }
-        .dropdown a {
-            font-size: 10px;
-        }
-        .dropdown img {
-            width: 20px;
-        }
-    }
-    .logo-div {
-        border: 2px none blue;
-        display: flex;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        justify-content: center;
-    }
-    .logo-div img {
-        height: 150px;
-        border: .5px solid rgb(7, 224, 148); 
-    }
-    .title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .title h1 {
-        color: rgb(7, 224, 148);
-        margin-left: 10px;
-    }
-    .about-me {
-        border: 2px none red;
-        font-family: "DM mono", serif;
-        display: flex;
-        justify-content: center;
-    }
-    .about-me div {
-        border: 2px none green;
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-    }
-    .about-me a {
-        text-decoration: none;
-        color: rgb(3, 183, 120);
-    }
-    .about-me a:hover {
-        color: white;
-    }
-    .about-me h1 {
-        color: rgb(7, 224, 148); 
-        font-size: 20px;
-    }
-    .about-me p {
-        font-size: 15px;
-    }
-    @media (max-width: 450px) {
-        .about-me div {
-            margin-left: 5px;
-        }
-        .figure img {
-            width: 150px;
-        }
-        .title h1 {
-            font-size: 23px;
-        }
-        .about-me p {
-            font-size: 13px;
-          }
-    }
-    .dropdown::-webkit-scrollbar {
-        width: 1px;
-    }
-      /* Track */
-    .dropdown::-webkit-scrollbar-track {
-    background: #00000000;
-    }
-    /* Handle */
-    .dropdown::-webkit-scrollbar-thumb {
-    background: rgb(0, 255, 166);
-    border-radius: 0px;
-    }
-    /* Handle on hover */
-    .dropdown::-webkit-scrollbar-thumb:hover {
-    background: cyan;
-    }
-    .figure {
-        border: 2px solid blue;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .figure img {
-        width: 370px;
-        border: .5px solid rgb(7, 224, 148); 
-    }
     </style>
   </head>
 
@@ -270,7 +88,7 @@
     </div>
 
     <div class="logo-div">
-      <img src="media/entrymedia/entry1logo.png">
+      <img src="media/entrymedia/entry1logo.png" alt="entry1-logo">
     </div>
 
     <div class="title">
@@ -279,7 +97,7 @@
 
     <div class="about-me">
         <div>
-            <h1>TL;DR</h1>
+            <h2>TL;DR</h2>
             <p>
                 Network sandboxes are an underrated yet powerful cybersecurity tool. Much like virtual machines isolate malware, 
                 network sandboxes safely analyze suspicious files before they reach a user’s system. By executing potential threats 
@@ -288,7 +106,7 @@
                 system.
             </p>
             <br><br>
-            <h1>Virtual Machines</h1>
+            <h2>Virtual Machines</h2>
             <p>
                 We all know what virtual machines are and what they do. But if you don’t, think of them like emulators—except 
                 instead of running a game like Kingdom Hearts on a PS2 emulator, a virtual machine (VM) emulates an entire 
@@ -308,7 +126,7 @@
                 However do not take it as professional advice, as it is from an infosec forum. 
             </p>
             <br><br>
-            <h1>Network Sandboxes</h1>
+            <h2>Network Sandboxes</h2>
             <p>
                 Now, apply that same logic to network security. If a network service detects suspicious activity—say, a 
                 potentially harmful file download—it can sandbox the file inside an isolated "virtual machine" environment. 
@@ -321,7 +139,7 @@
                 integrity of the actual network.<sup><a href="https://www.vmware.com/topics/network-sandbox" target="_blank">1</a></sup> <br><br>
             </p>
             <br><br>
-            <h1>In Action</h1>
+            <h2>In Action</h2>
             <ol>
                 <li value="1"><p style="margin-left: 10px;">A user downloads a file from the internet. This could be an email attachment, a software installer, or any other type of file.</p></li>
                 <li>
@@ -364,7 +182,7 @@
             </div>
 
             <br><br>
-            <h1>Sandbox Tools</h1>
+            <h2>Sandbox Tools</h2>
             <p>
                 Several security tools leverage network sandboxing to detect and analyze threats before they reach a 
                 user’s system. These tools execute suspicious files in isolated environments, observing their behavior to 
@@ -428,8 +246,10 @@
                 These technologies play a crucial role in modern cybersecurity, allowing security teams to preemptively neutralize 
                 threats before they can compromise a network.
             </p>
+
             <br><br>
-            <h1>The Breach</h1>
+
+            <h2>The Breach</h2>
             <p>
                 Network sandboxing is a powerful yet often overlooked cybersecurity tool. Similar to how virtual machines 
                 contain malware in a controlled environment, network sandboxes isolate and analyze suspicious files
@@ -439,7 +259,7 @@
                 Hopfully you've learned a few things about network sandboxing and how it helps protect a network.
             </p>
             <br><br>
-            <h1>References</h1>
+            <h2>References</h2>
             <ol>
                 <li value="1"><a href="https://www.vmware.com/topics/network-sandbox" target="_blank"><i>VMWare: What is a Network Sandbox?</i></a></li>
                 <li><a href="https://www.paloaltonetworks.com/cyberpedia/firewall-vs-ids-vs-ips" target="_blank"><i>IPS. vs. IDS vs. Firewall: What Are the Differences?</i></a></li>

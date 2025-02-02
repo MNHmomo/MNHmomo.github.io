@@ -1,0 +1,13 @@
+# Allow all web crawlers to index everything
+User-agent: *
+Disallow: /private/
+
+# Prevent crawlers from accessing specific resources
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Allow search engines to index all HTML pages
+Allow: *.html
+
+# Sitemap location (important for better indexing)
+Sitemap: https://bashbreach.com/sitemap.xml
