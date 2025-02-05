@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="media/architecturelogo.png">
+    <title>bashbreach</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/entry3.css">
+
+    <style>
+      body {
+        background-color: rgb(25, 25, 25);
+        color:white;
+        font-family: "DM mono", serif;
+        scroll-behavior: smooth;
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+      }
+      body.dark-mode {
+        background-color: white;
+        color: black;
+      }
+      body.dark-mode p {
+        color: black;
+      }
+      body.dark-mode a {
+        color: rgb(3, 183, 120);
+      }
+      body.dark-mode .dropdown a {
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="navbar">
+
+        <img src="media/hamicon.png" class="hamicon">
+
+        <div class="dropdown">
+          <div class="dropdown-boxes">
+            <img src="media/icons/home.png">
+            <a href="https://www.bashbreach.com/">Home</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/about.png">
+            <a href="about.html">About</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/projects.png">
+            <a href="projects.html">Projects</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/github.png">
+            <a href="https://github.com/MNHmomo" target="_blank">Github</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/linkedin.png">
+            <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/resume.png">
+            <a href="resume.html">Resume</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/now.png">
+            <a href="now.html">Now</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/interests.png">
+            <a href="interests.html">Interests</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/architecture.png">
+            <a href="architecture.html">Architecture</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/statboard.png">
+            <a href="statboard.html">Statboard</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/licdis.png">
+            <a href="licdis.html">Lic & Dis</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/privacy.png">
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+
+        <a href="https://bashbreach.com"><img src="media/logogif.gif" class="logogif"></a>
+
+        <img src="media/icons/now copy.png" class="dark" id="dark">
+
+      </div>
+    </div>
+
+    <div class="logo-div">
+      <img src="media/entrymedia/entry3logo.png" alt="entry2-logo">
+    </div>
+
+    <div class="title">
+      <h1>Know Your OSI Model</h1>
+    </div>
+
+    <div class="about-me">
+      <div>
+
+        <h2>TL;DR</h2>
+        <p>
+          The OSI model stands for Open Systems Interconnections, a model explaining how
+          different systems of computers communicate by dividing the communication process into
+          seven distinct layers, each with its own function. This allows for standardized
+          communication between various devices and software across different networks. It’s
+          basically a blueprint for protocols in network communication. The layers go: 
+        </p>
+        <ul>
+          <li><p>[7] Application Layer: Human and computer interaction, user interface applications.</p></li>
+          <li><p>[6] Presentation Layer: Ensures data encryption, compression, and is in usable format.</p></li>
+          <li><p>[5] Session Layer: Establishes, maintains, and terminates sessions and ports.</p></li>
+          <li><p>[4] Transport Layer: Transmits data using protocols; including TCP and UDP</p></li>
+          <li><p>[3] Network Layer: Routes data packets using IP addresses.</p></li>
+          <li><p>[2] Data Link Layer: Ensures reliable node-to-node data transfer.</p></li>
+          <li><p>[1] Physical Layer: Transmits raw bits over a physical medium.</p></li>
+        </ul>
+
+        <h2>OSI Model</h2>
+        <p>
+          The OSI model (Open Systems Interconnection) is like a postal system, where the Physical
+          Layer is the roads and trucks transporting letters, the Data Link Layer ensures the right
+          recipient using an address on the envelope, the Network Layer routes mail through sorting
+          centers like IP addresses, the Transport Layer decides delivery reliability like registered or
+          regular mail, the Session Layer opens the mailbox to receive messages, the Presentation
+          Layer translates foreign languages like encryption and decryption, and the Application
+          Layer is where the recipient finally reads the letter.
+          <br><br>
+          Essentially the OSI (Open Systems Interconnection) model was created to be a blueprint
+          for how computer systems would talk to each other over the internet. The term "open
+          systems" means that the OSI model is publicly available for anyone to use. While it was
+          originally meant to replace all older networking standards, today, it is a helpful guide for
+          understanding how network communication works. Now the OSI model is important
+          because it organizes network communication into layers. Where each layer handles a
+          specific task. This is helpful because it breaks down communication into smaller and
+          manageable tasks.<sup><a href="https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/" target="_blank">1</a></sup>
+        </p>
+
+        <div class="figure">
+            <img src="media/entrymedia/entry3figure1.png">
+        </div>
+
+        <h2>[7] Application Layer</h2>
+        <p>
+          This is the layer that interacts with the user through applications and user interfaces, just
+            as you are interacting with this website. Clicking all its links and opening images in a new
+            tab. Many protocols run at this layer, such as <b>DNS, FTP, HTTP, HTTPS, NFS, POP3, SMTP,
+            and SSH</b>. We’ll go more into depth on those protocols in a future blog.<sup><a href="https://ieeexplore.ieee.org/abstract/document/4317616" target="_blank">2</a></sup>
+            <br><br>
+            <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+              <p style="margin-left: 10px; opacity: 0.7;">
+                <b>DNS - </b>Translates human-readable domain names (such as <a href="https://www.bashbreach.com/">bashbreach.com</a>) into IP addresses for network routing.
+                <br><br>
+                <b>FTP - </b>Transfers files between a client and a server over a network, often used for website management.
+                <br><br>
+                <b>HTTP - </b>The foundation of web communication, allowing the transfer of web pages and resources.
+                <br><br>
+                <b>HTTPS - </b>A secure version of HTTP that encrypts data using SSL/TLS to protect user privacy.
+                <br><br>
+                <b>NFS - </b>Enables remote access to shared files over a network, commonly used in UNIX/Linux environments.
+                <br><br>
+                <b>POP3 - </b>Retrieves emails from a mail server to a local client and typically deletes them from the server afterward.
+                <br><br>
+                <b>SMTP - </b>Sends and relays emails between mail servers and from clients to servers.
+                <br><br>
+                <b>SSH - </b>Provides secure remote access to systems and encrypted communication over a network.
+              </p>
+            </div>
+        </p>
+        <p>
+          The Application Layer is the closest to the end user, providing services and interfaces that
+          enable applications to communicate over the network. It directly interacts with software
+          applications. When you open a web browser to visit a website, like bashbreach.com, the
+          application layer uses HTTP to send your request to the server, and the server responds
+          back with the requested data. This top layer basically provides network services for user
+          interface applications, such as email, file transfer, or web browsing.
+        </p>
+
+        <div class="figure">
+          <img src="media/entrymedia/entry3figure2.png">
+        </div>
+        
+        <p>
+          In terms of cybersecurity, the Application Layer ensures that data is properly formatted,
+          encrypted, and authenticated, in addition to just communication. It is very important for
+          secure browsing, remote access, and file sharing. This layer deals with user interaction,
+          while the underlying layers handle the transport and delivery of data.<sup><a href="https://www.f5.com/glossary/application-layer-security" target="_blank">3</a></sup>
+        </p>
+
+        <br><br>
+        <h2>[6] Presentation Layer</h2>
+        <p>
+          The Presentation Layer ensures that data sent from one system's Application Layer can be
+          properly understood by another. It handles formatting, translation, encryption, and
+          compression to facilitate seamless communication. It acts as a bridge between the raw
+          data and its meaningful representation for applications. 
+          <br><br>
+          You can think of this layer as the
+          translator of the OSI model. It is where the human-readable programming languages are
+          translated into machine code instructions used by the lower layers. Just like in its name,
+          it’s responsible for how that data is presented to lower-level machines. Data that's coming
+          from the network applications, like sending an email, clicking a button link, downloading a
+          file, or loading the latest BashBreach blog. 
+        </p>
+        <p>
+          When formatting and encoding happens in this layer, data is converted into a standard
+          format (e.g., converting text files between ASCII and Unicode) so different systems can
+          interpret it correctly. Data compression can also happen here, where file sizes are reduced
+          for faster transmission, commonly used in media streaming and file transfers (e.g., MP3,
+          JPEG, PNG). Data is also secured by encrypting it before transmission and decrypting it
+          upon arrival (e.g., SSL/TLS used in HTTPS).<sup><a href="https://ieeexplore.ieee.org/abstract/document/6014631" target="_blank">4</a></sup>
+        </p>
+
+        <div class="figure">
+          <img src="media/entrymedia/entry3figure3.png">
+        </div>
+
+        <p>
+          In general, the work of the Presentation Layer is data formatting/compression, security
+          encryption, and converting computer code to network formatted code so systems can
+          know what the heck to do
+        </p>
+
+        <br><br>
+        <h2>[5] Session Layer</h2>
+        <p>
+          The Session Layer will establish, maintain, and terminate the communication session
+          between devices. It ensures data exchanges occur in an orderly fashion. This enables
+          applications to be continuously connected and not interfered with. Authentication can also occur at the start of a session, allowing all subsequent
+          communication within that session to be trusted without requiring constant reauthentication. Additionally, the session layer can include checkpoints in data
+          transmission, so if data is lost or corrupted, only the portion after the last checkpoint
+          needs to be resent—minimizing retransmissions and shielding higher layers from network
+          disruptions. <sup><a href="https://d1wqtxts1xzle7.cloudfront.net/37556683/THE_OSI_MODEL_OVERVIEW_ON_THE_SEVEN_LAYERS-607-libre.pdf?1430932201=&response-content-disposition=inline%3B+filename%3DTHE_OSI_MODEL_OVERVIEW_ON_THE_SEVEN_LAYE.pdf&Expires=1738718333&Signature=M17N0kPxtyQ-WenzSi8NOPb2WiWZ~O5D2XwKqeH9UvXw5cnifBdDyjA~bWohaI3OUThmZ-MA2HiI8CRJFwm7affGuSnlmdFsBLSGDKM0Y8inB98iCrmjXKpTvrszHhpw~K7gNcrrEsgrFTdOwI~AvIdfGQP1Z4Y8dsNomXWTGCDpjZawJOF4lGozYa49xZVAlDaQHOPS34gmcEBUSO9z7cCQup9jTuHlckyKO3UwqYnHRkUCqZtRQUusJsrJo8EJCZDT9lw7h2Dx745wxL8GLmUUeSVs0XlFFK5GIEEHXoUwxpm4pwWQj2jCGnKaRB0DuUm2XHzSFBhL~6VvkMgyAw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA" target="_blank">5</a></sup>
+        </p>
+
+        <div class="figure">
+          <img src="media/entrymedia/entry3figure4.png">
+        </div>
+
+        <p>
+          Consider two guests at a party to better understand the session layer. Usually, they would
+          greet one another at the beginning of the gathering, which would start a lengthy
+          conversation between them. One session would be the duration of the chat between their
+          hello's and goodbye’s. The transport layer, which we’ll discuss later, would be the 
+          sentences they exchange. Even a single session could be briefly interrupted. For example,
+          one person might pause to speak to someone else, then resume the chat with the original
+          person without starting a new conversation, like when you pause and resume a download.
+          The session would come to an end when they said their goodbyes. Perhaps they will run
+          into each other later and then say hello again, starting a new session
+          <br>
+          <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+            <p style="margin-left: 10px; opacity: 0.7;">
+              The session layer can also be associated with cookies. Imagine walking into a
+              grocery store (the website), picking up items (user actions), and placing them in
+              your cart (session data); even if you step away for a moment (reload the page), the
+              cart still holds your items because the store (session layer) remembers your
+              session, but if you leave for too long (session timeout), the cart is emptied, requiring
+              you to start over unless you log in (persistent session), which allows the store to
+              save your cart even if you return later.
+            </p>
+          </div>
+        </p>
+
+        <br><br>
+        <h2>[4] Transport Layer</h2>
+        <p>
+          The transport layer is responsible for delivering data across the network reliably and
+          efficiently. It ensures that data is transferred correctly between devices, regardless of how
+          it is broken down or routed. This layer manages segmentation, flow control, error
+          detection, and retransmission to ensure data arrives intact and in order.
+        </p>
+
+        <ul>
+          <li><p>Segmentation: Breaks large data into smaller packets to fit network limits and ensures correct reassembly at the receiver.</p></li>
+          <li><p>Flow Control: Regulates the rate of data transmission to prevent overwhelming the receiver.</p></li>
+          <li><p>Error Detection: Checks data integrity using checksums to identify and handle corrupted packets.</p></li>
+          <li><p>Retransmission: Resends lost or corrupted data to ensure successful delivery.</p></li>
+        </ul>
+        <p>Think of this layer as a pizza delivery. Once the pizza has been made, packaged with all its toppings, and cooked, it gets sent off to where its supposed to go.</p>
+
+        <div class="figure">
+          <img src="media/entrymedia/entry3figure5.png">
+        </div>
+
+        <p>
+          During the transport layer, two main protocols are used depending on what’s being sent
+          and how it’s being sent. <b>TCP (Transmission Control Protocol)</b>, which provides reliable, connection-oriented
+          communication, ensuring all data is received correctly and in sequence. If packets
+          are lost or arrive out of order, TCP requests retransmission. This is used for
+          applications like web browsing, emails, and file transfers. <b>UDP (User Datagram Protocol)</b>, a faster, connectionless protocol that does not
+          guarantee delivery or order but reduces latency. It is used for real-time applications
+          like online gaming, voice calls, and video streaming.<sup><a href="https://d1wqtxts1xzle7.cloudfront.net/105429634/IJCTT-V7P151-libre.pdf?1693549236=&response-content-disposition=inline%3B+filename%3DOSI_Reference_Model_An_Overview.pdf&Expires=1738718680&Signature=UkVaOdBAGCowAunaG99sIVlwW4enFYQWaCkN1-OQE9s1W4QSQhjmskfoNR~RbKMj35CX1HKhEB7IfNKUkdXzV5Njaz5SDYp1IIhfVCMCy2qiK3um9cKF~N1~HaS5g8iXJKGiFqXX8ZQL~sPhpC7gFzLBtshMYC4HOA4kK~0wFg1WMGHkm7Q4EQtadlTZeyC9kJ0RTUAzJk3jDf-IBLtjXhZs3Kd49yNOKVAOznK~DZJkVzdj8NUoZ8S7U8-FfGn9ZJR6UncCENSe0GEG3I9mN7zo6MVPpTPRGMZd7MAv1lz7rlwJ9qCnN816FaCimufP50-E~byD5T8w0-rsr46VAw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA" target="_blank">6</a></sup>
+          <br><br>
+          When viewing websites, like this one, the TCP protocol is often used to ensure that all web
+          page elements (text, images, scripts) are correctly received before displaying them to you.
+        </p>
+
+        <br><br>
+        <h2>[3] Network Layer</h2>
+        <p>
+          The internet works because of network-to-network connections. It is responsible for
+          routing data between devices across different networks. It makes sure that data packets
+          find the best path from the source to the destination, even if the devices are on separate
+          networks. This layer is essential for large-scale communication, allowing data to travel
+          across multiple interconnected networks, such as the Internet. It essentially handles the
+          routing of data between different networks.<sup><a href="https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=fde021097ce7440a44ecf61470778d72f99e307f" target="_blank">7</a></sup>
+        </p>
+
+        <p>
+          Key protocols at this layer include the Internet Protocol (IP), which is important for routing
+          and addressing, Internet Control Message Protocol (ICMP) for diagnostic and errorreporting purposes, and routing protocols like Routing Information Protocol (RIP) that
+          manage the routing of data across networks.
+        </p>
+        <ul>
+          <li><p>Internet Protocol (IP) handles addressing and routing data packets across networks. It assigns unique IP addresses to devices and determines the best path for data but does not guarantee delivery or order.</p></li>
+          <li><p>Internet Control Message Protocol (ICMP) is used for network diagnostics and error reporting, sending messages when issues like unreachable destinations or packet loss happen. It's useful for tools like ping and traceroute.</p></li>
+          <li><p>Routing Information Protocol (RIP) helps routers determine the best path for data by sharing routing tables with other routers. It uses hop count as a metric, with a limit of 15 hops, making it suitable for small networks but inefficient for large ones.</p></li>
+        </ul>
+
+        <div class="figure">
+          <img src="media/entrymedia/entry3figure6.png">
+        </div>
+
+        <p>The network layer basically determines the best routing path to make sure the data reaches its destination.</p>
+
+        <br><br>
+        <h2>[2] Data Link Layer</h2>
+        <p>
+          The Data Link Layer provides reliable data transfer between devices on the same network.
+          It ensures that framing, addressing, and error-checking are done correctly before sending
+          out the data packet to the next device. It is subdivided into two sublayers; 
+          <b>Logical Link Control (LLC) </b>manages error detection, flow control, and frame synchronization; 
+          <b>Media Access Control (MAC) </b>Handles physical addressing and controls access to the shared network medium using unique MAC addresses.
+        </p>
+        <p>
+          In this layer, zero's and one’s travel between physically connected points, also known as
+          nodes. And with these nodes, the data link layer ensures reliable none-to-node transfer.
+        </p>
+
+        <div class="figure">
+          <img src="media/entrymedia/entry3figure7.png">
+        </div>
+
+        <p>
+          The Data Link Layer is also a key target for cyberattacks since it handles the framing of data
+          for transmission. Each frame contains a header, body, and trailer, and if attackers can
+          intercept or alter these frames, they can compromise network security. Threats at this
+          layer include MAC address spoofing, MAC flooding, VLAN hopping, and ARP poisoning, all
+          of which can lead to unauthorized access, data interception, or network disruption.<sup><a href="https://dl.acm.org/doi/pdf/10.1145/62546.62572" target="_blank">8</a></sup>
+          <br>
+          <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+            <p style="margin-left: 10px; opacity: 0.7;">
+              <b>MAC Address Spoofing: </b>An attacker changes their device's MAC address to
+              impersonate a trusted device, gaining unauthorized network access.
+              <b>MAC Flooding: </b>An attacker overwhelms a switch with fake MAC addresses, forcing
+              it into hub mode, which allows data to be intercepted.
+              <b>VLAN Hopping: </b>An attacker exploits misconfigurations to jump between VLANs,
+              gaining access to restricted network segments.
+              <b>ARP Poisoning: </b>An attacker sends fake ARP messages, linking their MAC address to
+              a legitimate IP, allowing them to intercept or manipulate network traffic. 
+            </p>
+          </div>
+        </p>
+        <p>
+          From a cybersecurity perspective, securing the Data Link Layer is essential to prevent
+          these threats and administrators use port security, dynamic ARP inspection, and VLAN
+          segmentation to mitigate these threats and protect network integrity.
+        </p>
+
+        <br><br>
+        <h2>[1] Physical Layer</h2>
+        <p>
+          The Physical Layer of the OSI model is the foundational layer of the OSI model and is
+          responsible for transmitting raw data bits over a physical medium. Physical medium
+          meaning cables, fiber optics, or wireless connections. This layer handles the electrical,
+          mechanical, and procedural parts of the physical connection between devices, including
+          the transmission of binary data in the form of electrical signals. It defines how the bits are
+          physically transmitted, the cables and connectors used, and the voltage levels or radio
+          frequencies that represent binary ones and zeros. And in case you don’t know, when dealing
+          with computers or electrical circuits and wires, it all boils down to the flow of electricity.
+          The ones and zeros you always hear about are just on and off switches of electricity. Those
+          on and off switches, or 1’s and 0’s, or binary, hold data which is what it being transferred.
+        </p>
+        <p>
+          For bit transmission, the physical layer converts data into a form that can be transmitted
+          across the network. It transmits individual bits by encoding them into electrical pulses,
+          light signals, or radio waves. For example, Ethernet cables use electrical signals, while
+          fiber optic cables use light signals
+        </p>
+        <p>
+          For data transmission Media, it determines the physical medium over which data is sent,
+          such as copper wires (for Ethernet), fiber optics (for high-speed connections), or airwaves
+          (for wireless connections like Wi-Fi or cellular networks).
+          For signal timing and synchronization, the physical layer also times the transmission of
+          signals. It ensures that devices can interpret when one bit ends and the next begins. It also
+          includes clock synchronization, ensuring that the sender and receiver remain in sync.
+          For data rate control, it determines the speed at which data is transmitted, also called the
+          bit rate (measured in bits per second, bps), and controls the flow of data to prevent
+          collisions and overload.
+        </p>
+
+        <div class="figure">
+          <img src="media/entrymedia/entry3figure8.png">
+        </div>
+
+        <p>
+          From a cybersecurity standpoint, the physical layer can also be vulnerable since it deals
+          directly with the transmission of data. A significant attack that can happen in signal
+          jamming or any interference with wireless communication. This can lead to a denial-ofservice attack (DoS).<sup><a href="https://www.pnas.org/doi/abs/10.1073/pnas.1618130114" target="_blank">9</a></sup>
+        </p>
+
+        <br><br>
+        <h2>The Breach</h2>
+        <p>
+          The OSI Model is a standard model that segregates network communication into seven
+          layers, each of which has functions specific to it. The Application Layer, Layer 7, makes it
+          possible for users to interact with networked applications through HTTP, FTP, and SMTP
+          protocols. The Presentation Layer, Layer 6, ensures that the data is well-formatted,
+          encrypted, and compressed for the recipient system, hence character encoding and
+          encryption. The Session Layer, Layer 5, establishes, maintains, and terminates sessions
+          while providing synchronization and error recovery. The Transport Layer, Layer 4, provides
+          for reliable data transfer through segmentation, flow control, and error detection, using
+          protocols such as TCP and UDP. The Network Layer, Layer 3, provides routing and
+          addressing of data packets across networks through the use of IP, making sure that data is
+          routed to its destination through proper routing and addressing. Layer 2, the Data Link
+          Layer, provides a reliable means of communication between devices on the same network
+          by framing data for transmission and may address error detection and flow control. Lastly,
+          the Physical Layer, Layer 1, defines the raw bit transmission across a physical medium,
+          including cables, wireless, and connectors, and is thus the very foundational layer of all
+          data communication. 
+        </p>
+
+        <h2>References</h2>
+        <ol>
+          <li value="1"><a href="https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/" target="_blank">What is the OSI Model?</a></li>
+          <li><a href="https://ieeexplore.ieee.org/abstract/document/4317616" target="_blank">A survey of application-layer multicast protocols</a></li>
+          <li><a href="https://www.f5.com/glossary/application-layer-security" target="_blank">What is Application Layer Security?</a></li>
+          <li><a href="https://ieeexplore.ieee.org/abstract/document/6014631" target="_blank">Research based on OSI model</a></li>
+          <li><a href="https://d1wqtxts1xzle7.cloudfront.net/37556683/THE_OSI_MODEL_OVERVIEW_ON_THE_SEVEN_LAYERS-607-libre.pdf?1430932201=&response-content-disposition=inline%3B+filename%3DTHE_OSI_MODEL_OVERVIEW_ON_THE_SEVEN_LAYE.pdf&Expires=1738718333&Signature=M17N0kPxtyQ-WenzSi8NOPb2WiWZ~O5D2XwKqeH9UvXw5cnifBdDyjA~bWohaI3OUThmZ-MA2HiI8CRJFwm7affGuSnlmdFsBLSGDKM0Y8inB98iCrmjXKpTvrszHhpw~K7gNcrrEsgrFTdOwI~AvIdfGQP1Z4Y8dsNomXWTGCDpjZawJOF4lGozYa49xZVAlDaQHOPS34gmcEBUSO9z7cCQup9jTuHlckyKO3UwqYnHRkUCqZtRQUusJsrJo8EJCZDT9lw7h2Dx745wxL8GLmUUeSVs0XlFFK5GIEEHXoUwxpm4pwWQj2jCGnKaRB0DuUm2XHzSFBhL~6VvkMgyAw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA" target="_blank">THE OSI MODEL: OVERVIEW ON THE SEVEN LAYERS OF COMPUTER NETWORKS</a></li>
+          <li><a href="https://d1wqtxts1xzle7.cloudfront.net/105429634/IJCTT-V7P151-libre.pdf?1693549236=&response-content-disposition=inline%3B+filename%3DOSI_Reference_Model_An_Overview.pdf&Expires=1738718680&Signature=UkVaOdBAGCowAunaG99sIVlwW4enFYQWaCkN1-OQE9s1W4QSQhjmskfoNR~RbKMj35CX1HKhEB7IfNKUkdXzV5Njaz5SDYp1IIhfVCMCy2qiK3um9cKF~N1~HaS5g8iXJKGiFqXX8ZQL~sPhpC7gFzLBtshMYC4HOA4kK~0wFg1WMGHkm7Q4EQtadlTZeyC9kJ0RTUAzJk3jDf-IBLtjXhZs3Kd49yNOKVAOznK~DZJkVzdj8NUoZ8S7U8-FfGn9ZJR6UncCENSe0GEG3I9mN7zo6MVPpTPRGMZd7MAv1lz7rlwJ9qCnN816FaCimufP50-E~byD5T8w0-rsr46VAw__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA" target="_blank">OSI Reference Model: An Overview</a></li>
+          <li><a href="https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=fde021097ce7440a44ecf61470778d72f99e307f" target="_blank">OSI Reference Model – A Seven Layered Architecture of OSI Model</a></li>
+          <li><a href="https://dl.acm.org/doi/pdf/10.1145/62546.62572" target="_blank">The Data Link Layer: Two Impossibility Results</a></li>
+          <li><a href="https://www.pnas.org/doi/abs/10.1073/pnas.1618130114" target="_blank">Wireless physical layer security</a></li>
+        </ol>
+
+      </div>
+    </div>
+  </body>
+
+  <script>
+    document.getElementById("dark").addEventListener("click", function () {
+      let icon = this;
+      let body = document.body;
+      
+      // Toggle dark mode class
+      body.classList.toggle("dark-mode");
+  
+      // Change icon based on mode
+      icon.src = body.classList.contains("dark-mode")
+          ? "media/icons/privacy copy.png"
+          : "media/icons/now copy.png";
+  });
+  </script>
+
+</html>

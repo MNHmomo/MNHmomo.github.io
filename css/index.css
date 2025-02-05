@@ -89,11 +89,22 @@
     margin: 0;
 }
 
+.dark {
+    height: 30px;
+    opacity: .7;
+}
+.dark:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 450px) {
     .logogif {
       height: 25px;
     }
     .hamicon {
+        height: 25px;
+    }
+    .dark {
         height: 25px;
     }
     .latest {
@@ -118,7 +129,7 @@
 
 .logo-div img {
     height: 300px;
-    border: .5px solid rgb(7, 224, 148); 
+    border: 2px solid rgb(7, 224, 148); 
 }
 
 

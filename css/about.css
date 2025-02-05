@@ -89,6 +89,14 @@
     margin: 0;
 }
 
+.dark {
+    height: 30px;
+    opacity: .7;
+}
+.dark:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 450px) {
     .logogif {
       height: 25px;
@@ -98,6 +106,9 @@
     }
     .latest {
         font-size: 13px;
+    }
+    .dark {
+        height: 25px;
     }
     .dropdown a {
         font-size: 10px;
@@ -119,7 +130,7 @@
 
 .logo-div img {
     height: 150px;
-    border: .5px solid rgb(7, 224, 148); 
+    border: 2px solid rgb(7, 224, 148); 
 }
 
 
@@ -136,6 +147,7 @@
     display: flex;
     flex-direction: column;
     padding: 25px;
+    max-width: 1000px;
 }
 
 .about-me a {
@@ -143,7 +155,7 @@
     color: rgb(3, 183, 120);
 }
 .about-me a:hover {
-    color: white;
+    opacity: .7;
 }
 
 .about-me h1 {

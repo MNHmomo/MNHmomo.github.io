@@ -24,6 +24,19 @@
         margin: 0;
         padding: 0;
       }
+      body.dark-mode {
+        background-color: white;
+        color: black;
+      }
+      body.dark-mode p {
+        color: black;
+      }
+      body.dark-mode a {
+        color: rgb(3, 183, 120);
+      }
+      body.dark-mode .dropdown a {
+        color: white;
+      }
     </style>
   </head>
 
@@ -35,7 +48,7 @@
         <div class="dropdown">
           <div class="dropdown-boxes">
             <img src="media/icons/latest.png">
-            <a href="entry2.html">Latest</a>
+            <a href="entry3.html">Latest</a>
           </div>
           <div class="dropdown-boxes">
             <img src="media/icons/home.png">
@@ -87,7 +100,7 @@
           </div>
         </div>
         <a href="https://bashbreach.com"><img src="media/logogif.gif" class="logogif"></a>
-        <a href="" class="latest"></a>
+        <img src="media/icons/now copy.png" class="dark" id="dark">
       </div>
     </div>
 
@@ -106,5 +119,20 @@
     </div>
 
   </body>
+
+  <script>
+    document.getElementById("dark").addEventListener("click", function () {
+      let icon = this;
+      let body = document.body;
+      
+      // Toggle dark mode class
+      body.classList.toggle("dark-mode");
+  
+      // Change icon based on mode
+      icon.src = body.classList.contains("dark-mode")
+          ? "media/icons/privacy copy.png"
+          : "media/icons/now copy.png";
+  });
+  </script>
 
 </html>

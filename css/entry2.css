@@ -88,6 +88,15 @@ body {
     height: 40px;
     margin: 0;
 }
+
+.dark {
+    height: 30px;
+    opacity: .7;
+}
+.dark:hover {
+    cursor: pointer;
+}
+
 .logo-div {
     border: 2px none blue;
     display: flex;
@@ -97,7 +106,7 @@ body {
 }
 .logo-div img {
     height: 150px;
-    border: .5px solid rgb(7, 224, 148); 
+    border: 2px solid rgb(7, 224, 148); 
 }
 .title {
     display: flex;
@@ -118,12 +127,13 @@ body {
     font-family: "DM mono", serif;
     display: flex;
     justify-content: center;
+    margin-bottom: 400px;
 }
 .about-me div {
     border: 2px none green;
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
+    padding: 10px;
     width: 1000px;
 }
 .about-me a {
@@ -131,7 +141,7 @@ body {
     color: rgb(3, 183, 120);
 }
 .about-me a:hover {
-    color: white;
+    opacity: .7;
 }
 .about-me h1 {
     color: rgb(7, 224, 148); 
@@ -149,8 +159,9 @@ body {
 }
 .figure img {
     width: 370px;
-    border: .5px solid rgb(7, 224, 148); 
-    margin-bottom: 30px;
+    border: 2px solid rgb(7, 224, 148);
+    margin-top: 30px;
+    margin-bottom: 30px; 
 }
 
 
@@ -187,6 +198,9 @@ body {
     }
     .about-me p {
         font-size: 13px;
+    }
+    .dark {
+        height: 25px;
     }
 }
 
