@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="media/architecturelogo.png">
+    <title>bashbreach</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/entry4.css">
+
+    <style>
+      body {
+        background-color: rgb(25, 25, 25);
+        color:white;
+        font-family: "DM mono", serif;
+        scroll-behavior: smooth;
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+      }
+      body.dark-mode {
+        background-color: white;
+        color: black;
+      }
+      body.dark-mode p {
+        color: black;
+      }
+      body.dark-mode a {
+        color: rgb(3, 183, 120);
+      }
+      body.dark-mode .dropdown a {
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="navbar">
+
+        <img src="media/hamicon.png" class="hamicon">
+
+        <div class="dropdown">
+          <div class="dropdown-boxes">
+            <img src="media/icons/home.png">
+            <a href="https://www.bashbreach.com/">Home</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/about.png">
+            <a href="about.html">About</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/projects.png">
+            <a href="projects.html">Projects</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/github.png">
+            <a href="https://github.com/MNHmomo" target="_blank">Github</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/linkedin.png">
+            <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/resume.png">
+            <a href="resume.html">Resume</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/now.png">
+            <a href="now.html">Now</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/interests.png">
+            <a href="interests.html">Interests</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/architecture.png">
+            <a href="architecture.html">Architecture</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/statboard.png">
+            <a href="statboard.html">Statboard</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/licdis.png">
+            <a href="licdis.html">Lic & Dis</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/privacy.png">
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+
+        <a href="https://bashbreach.com"><img src="media/logogif.gif" class="logogif"></a>
+
+        <img src="media/icons/now copy.png" class="dark" id="dark">
+
+      </div>
+    </div>
+
+    <div class="logo-div">
+      <img src="media/entrymedia/entry4logo.png" alt="entry2-logo">
+    </div>
+
+    <div class="title">
+      <h1>Understanding Network Ports</h1>
+    </div>
+
+    <div class="about-me">
+      <div>
+
+        <h2>TL;DR</h2>
+        <p>Network ports are ways by which various devices can communicate over the internet. The total number of ports is 65,535, 
+            which are divided into three categories; 
+            <br>
+            <b>Well-known (0-1023), registered (1024-49151), and dynamic (49152-65535). </b>
+            <br>
+            <br>
+            Some of the most important are 22-SSH for access to a server from a distance, 53-DNS for resolving domains, 80-HTTP & 
+            443-HTTPS for web surfing, 3389-RDP for remote desktop, and 3306 (MySQL) & 5432 (PostgreSQL) for database. 
+            Hackers exploit open ports by port scanning, brute-force attacks, and many other vulnerabilities. 
+            It is very important to close unused ports, implement firewalls, or monitor traffic between ports. 
+            This entry will also show you how you can make your own simple port scanner using Python.
+        </p>
+        <br><br>
+
+        <h2>What Are Network Ports</h2>
+        <p>Think of a network as a house, and ports as its windows. An open window (port) makes it easier for an intruder to enter, 
+            while a closed window adds some protection but isn’t foolproof. An attacker can still break the glass (brute-force the port) 
+            to get inside. Just like a secure house needs locked windows, alarms, and reinforced glass, a network needs firewalls, 
+            intrusion detection, and strong authentication to stay protected. 
+        </p>
+        <p>
+            There is a fixed number of ports on a network. 65,535. Why? Can we add one more? Can we remove one? Can I make my own?
+            <br>
+            <br>
+            <b>No.</b> Ports cannot go beyond 65,535, because ports are defined by a 16-bit number (2¹⁶ = 65,536 total values, 
+            but since numbering starts from 0, the highest port is 65,535). This limit is set by the TCP/IP protocol and 
+            cannot be expanded without fundamentally changing how networking works.   
+        </p>
+        <p>
+            Different ports do different things, but the functionality of a port depends on whether it is being used in a TCP or 
+            UDP network. TCP is connection-oriented, meaning that a connection is established and guaranteed delivery of data in
+            the correct order takes place, making it suitable for applications such as web browsing (HTTP), email (SMTP), and file 
+            transfers (FTP). On the other hand, UDP is connectionless, favors speed over reliability, and guarantees neither delivery 
+            nor order of the data packets. Because of this, UDP would be appropriate for streaming, online gaming, and DNS. Quite simply, 
+            TCP ports are utilized by protocols that require data to be delivered reliably, while UDP ports are used by faster, 
+            less reliable protocols. Basically TCP is more reliable, while UDP is faster.
+        </p>
+        <br><br>
+
+        <h2>Ports You Should Know</h2>
+        <ul>
+            <li><p><b>Port 22 (TCP) – SSH (Secure Shell):</b> Used for secure remote access and encrypted file transfers. </p></li>
+            <li><p><b>Port 23 (TCP) – Telnet:</b> Allows remote login but is unencrypted, making it highly insecure. </p></li>
+            <li><p><b>Port 25 (TCP) – SMTP (Simple Mail Transfer Protocol):</b> Used for sending emails. </p></li>
+            <li><p><b>Port 53 (TCP/UDP) – DNS (Domain Name System):</b> Translates domain names to IP addresses. </p></li>
+            <li><p><b>Port 80 (TCP) – HTTP (Hypertext Transfer Protocol):</b> Used for unencrypted web browsing.</p></li>
+            <li><p><b>Port 110 (TCP) – POP3 (Post Office Protocol v3):</b> Retrieves emails from a mail server.</p></li>
+            <li><p><b>Port 143 (TCP) – IMAP (Internet Message Access Protocol):</b> Retrieves emails while keeping them stored on the server.</p></li>
+            <li><p><b>Port 443 (TCP) – HTTPS (Hypertext Transfer Protocol Secure):</b> Secure web browsing using encryption (TLS/SSL).</p></li>
+            <li><p><b>Port 445 (TCP) – SMB (Server Message Block):</b> Used for file sharing in Windows networks.</p></li>
+            <li><p><b>Port 3389 (TCP) – RDP (Remote Desktop Protocol):</b> Provides remote desktop access to Windows systems.</p></li>
+        </ul>
+        <p>
+            These are some of the most used, and often targeted, ports on a network. Should you absolutely know all 65,535 ports 
+            if you’re in cybersecurity?  Not at all. But you should somewhat know what these common ports are, as they can come 
+            up when getting certificates or even asked in a technical interview. 
+        </p>
+        <br><br>
+
+        <h2>Exploiting Ports</h2>
+        <p>
+            An open port on your network is a vulnerability. Open ports are how computers and services communicate with each other, 
+            but that also means an attacker can wiggle their way through if no security is implemented. Attackers use tools like 
+            Nmap and scan networks looking for open ports to identify vulnerabilities. Once a port is discovered, they may attempt 
+            various attacks depending on the service running on it. We’ll discuss cybersecurity tools like Nmap in a future entry.
+
+            <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+                <p style="margin-left: 10px; opacity: 0.7;">
+                    An open RDP connection can be exploited for credential-stuffing attacks, where attackers use stolen login 
+                    credentials to attempt unauthorized access to a server, or to deliver a ransomware payload once they gain access. 
+                    A Denial of Service (DoS) attack floods a target service with numerous connection requests, overwhelming the server 
+                    and consuming its bandwidth and resources, making it inaccessible to legitimate users. Web service ports are often 
+                    targeted to launch attacks like SQL injection and cross-site request forgery, exploiting weaknesses in the 
+                    web application itself. Man-in-the-middle (MITM) attacks intercept unencrypted data traffic from well-known ports, 
+                    such as email traffic, allowing attackers to collect sensitive information by re-routing the data. 
+                    These exploits highlight the risks associated with open ports and emphasize the importance of securing services 
+                    with proper protocols and encryption. 
+                </p>
+              </div>
+        </p>
+        <p>
+            A great example of an exploted attack was the WannaCry ransomware attack. It affected over 300,000 computers 
+            across 150 countries. It exploited a vulnerability in the SMB protocol on port 445, allowing attackers to 
+            infiltrate systems, encrypt files, and demand a ransom for their release.
+        </p>
+
+        <div class="figure">
+            <img src="media/entrymedia/entry4figure1.png">
+        </div>
+        
+        <p>
+            There are many other ways attackers exploit ports. Among the most frequently targeted are those used for file transfers, remote
+            access, and web services. Port 21, used by FTP (File Transfer Protocol), is known for several vulnerabilities due to its 
+            unencrypted nature. It allows attackers to exploit weak or default passwords through brute-force attacks, gain unauthorized 
+            access using anonymous authentication, and carry out attacks like cross-site scripting, directory traversal, and 
+            man-in-the-middle attacks. As FTP is outdated and insecure, it should not be used for transferring sensitive data. 
+        </p>
+        <p>
+            Port 22 is commonly used for Secure Shell (SSH) connections, providing encrypted remote access and preferred over Telnet 
+            for its enhanced security. It is frequently used for remote management and secure communications. However, it still has 
+            vulnerabilities, including leaked SSH keys, which can allow attackers to bypass passwords if the keys are not properly 
+            secured, and brute-forcing credentials, where attackers can discover open SSH ports and attempt to guess username and 
+            password combinations. 
+        </p>
+        <p>
+            Ports 80, 443, 8080, and 8443 are commonly used for HTTP and HTTPS protocols in web browsing. These web ports are frequent 
+            targets for various cyberattacks, including cross-site scripting (XSS), where attackers inject malicious scripts into 
+            web pages to steal cookies, tokens, or other sensitive data. SQL injections involve inserting malicious SQL code into 
+            input fields to manipulate databases. Cross-site request forgery (CSRF) tricks users into unknowingly performing actions on
+            websites. Additionally, these ports are vulnerable to DDoS (Distributed Denial of Service) attacks, which overwhelm web 
+            servers with traffic to disrupt services. 
+        </p>
+        <br><br>
+
+        <h2>Securing Open Ports</h2>
+        <p>
+            Securing open ports is crucial for reducing cybersecurity risks and preventing unauthorized access. The first step is 
+            to close any unnecessary ports, making sure only essential services are accessible. Regularly auditing network ports 
+            helps identify vulnerabilities and detect unauthorized changes. Tools like Nmap and Zenmap (a graphical interface for 
+            Nmap) allow you to scan networks for open ports, revealing potential security gaps that need to be looked at.
+            Beyond simply closing unused ports, the topic of network segmentation can further enhance security by isolating 
+            sensitive data and critical systems from general network traffic. This reduces the chances of hackers exploiting 
+            open ports to move laterally within the network.  
+        </p>
+        <p>
+            Implementing strong access controls is also essential. Firewalls should be configured to restrict which IP addresses or 
+            networks can access specific ports. Intrusion Detection and Prevention Systems (IDS/IPS) can monitor network activity 
+            and block suspicious traffic attempting to exploit open ports. We discussed these three security mechanisms in a 
+            previous entry. For organizations with remote access needs, using secure alternatives like VPNs and Zero Trust Network Access 
+            (ZTNA) instead of exposing services directly to the internet can greatly reduce risk. Multi-Factor Authentication (MFA) 
+            should also be enforced on any services running on open ports to add an extra layer of protection. 
+            These factors are a big part of being a cybersecurity analyst. You’re constantly checking what vulnerabilities 
+            can be exploited and finding different ways to protect against it. 
+        </p>
+        <br><br>
+
+        <h2>Building a Port Scanner</h2>
+        <p>
+          If you're actually interested in network security, penetration testing, or just curious about how devices communicate 
+          over a network, learning how to build a basic port scanner can be a great starting point.
+          A port scanner is a tool that allows you to scan a range of ports on a particular server or device, 
+          checking if those ports are open or closed. And I've already discussed why that is important.
+          I'll show you how to make a basic port scanner using Python. We're using Python because it's a simple language 
+          that's easy to understand, and since widely used
+          in cybersecurity for scripting and automation. To build this program, we're using the Socket library in Python.
+          It essentially does all the work for us. 
+        </p>
+
+        <p>
+          To start off, this is what the code looks like.
+        </p>
+
+        <pre>
+          <code>
+          import socket
+
+          host = socket.gethostname()
+          target = socket.gethostbyname(host)
+          
+          # Start scanning ports from 1 to 65,535
+          for port in range(1, 65535):
+              s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+              socket.setdefaulttimeout(1)
+          
+              # Check if the port is open
+              result = s.connect_ex((target, port))
+              if result == 0:
+                  print(f"Port {port} is open")
+              
+              s.close()
+          </code>
+        </pre>
+        <p>
+          It uses the socket library which allows us to create network 
+          connections using TCP/IP. By trying to establish a connection to a target device on different ports, 
+          we can determine whether a port is open or closed.
+        </p>
+        <br><br>
+
+        <pre>
+          <code>
+            host = socket.gethostname()
+            target = socket.gethostbyname(host)
+          </code>
+        </pre>
+        <p>
+          <b>socket.gethostname()</b> retrieves the local machine’s hostname (the name of the device running the script).
+          <br>
+          <b>socket.gethostbyname(host)</b> converts the hostname to an IP address.
+        </p>
+        <br><br>
+
+        <pre>
+          <code>
+            for port in range(1, 65535):
+          </code>
+        </pre>
+        <p>
+          This for loop iterates through all the ports from 1 to 65534 (the maximum number of available ports). 
+          Each port will be checked to see if it’s open.
+        </p>
+        <br><br>
+
+        <pre>
+          <code>
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            socket.setdefaulttimeout(1)
+          </code>
+        </pre>
+        <p>
+          socket.socket(socket.AF_INET, socket.SOCK_STREAM) creates a new socket object. AF_INET refers to IPv4 addressing, 
+          and SOCK_STREAM specifies a TCP connection (most common for port scanning). 
+          socket.setdefaulttimeout(1) sets a timeout of 1 second for each connection attempt. 
+          If a connection takes longer than that, it’s considered failed, and the program will move to the next port.
+        </p>
+        <br><br>
+
+        <pre>
+          <code>
+            result = s.connect_ex((target, port))
+            if result == 0:
+                print(f"Port {port} is open")
+          </code>
+        </pre>
+        <p>
+          s.connect_ex((target, port)) attempts to connect to the target at the given port. It returns 0 if the connection is successful, meaning the port is open.
+          if result == 0: checks whether the result is 0, indicating the port is open.
+          If the port is open, the script prints a message: "Port {port} is open".
+        </p>
+        <br><br>
+
+        <pre>
+          <code>
+            s.close()
+          </code>
+        </pre>
+        <p>
+          After checking the port, the socket is closed using s.close(). 
+          This releases the resources used by the socket and prepares for the next iteration.
+        </p>
+        <br><br>
+
+        <p>If the target IP has open ports, the output might look like:</p>
+        <pre>
+          <code>
+            Port 22 is open
+            Port 80 is open
+            Port 443 is open
+            port 5000 is open
+          </code>
+        </pre>
+        <p>
+          This output shows that ports 22 (SSH), 80 (HTTP), and 443 (HTTPS) are open on the target machine.
+        </p>
+        <br><br>
+
+        <p>That is how you make a simple port scanner in Python, using the Socket Library. You can see how simple it is, considering that 
+          the library does all the work for us. You can go ahead and open your code editor of choice, type or copy and paste the code, 
+          and try it our for yourself. See what open ports you have on your home network.
+        </p>
+
+        <h2>The Breach</h2>
+        <p>
+          Network ports are virtual communication endpoints used to distinguish different services and applications on a device, 
+          identified by a 16-bit number ranging from 0 to 65,535. They are categorized into well-known ports (0–1,023) for standard 
+          services like HTTP (80) and SSH (22), registered ports (1,024–49,151) for specific applications, and dynamic ports 
+          (49,152–65,535) for temporary connections. Ports operate using either TCP, which ensures reliable data transfer, or UDP, 
+          which prioritizes speed over reliability. Scanning ports helps with security testing, troubleshooting, and 
+          network monitoring by identifying open ports that could pose vulnerabilities or indicate running services. 
+        </p>
+
+        <p>
+          As a final section for this entry, I did plan on creating a table that contains a full list of all ports on a network.
+          But you can imagine having to table 65,535 ports, so I didn't.
+        </p>
+                   
+      </div>
+    </div>
+  </body>
+
+  <script>
+    document.getElementById("dark").addEventListener("click", function () {
+      let icon = this;
+      let body = document.body;
+      
+      // Toggle dark mode class
+      body.classList.toggle("dark-mode");
+  
+      // Change icon based on mode
+      icon.src = body.classList.contains("dark-mode")
+          ? "media/icons/privacy copy.png"
+          : "media/icons/now copy.png";
+  });
+  </script>
+
+</html>
