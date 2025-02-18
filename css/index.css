@@ -1,124 +1,24 @@
-.header {
+.update-box {
     border: 2px none red;
     display: flex;
-    height: 70px;
-    z-index: 1;
-    align-items: center;
     justify-content: center;
-}
-
-.navbar {
-    border: 2px none rgb(8,188,124);
-    display: flex;
     align-items: center;
-    width: 97%;
     padding: 10px;
-    justify-content: space-between;
-    position: relative;
 }
-
-.latest {
-    border: 2px none yellow;
+.update-box p {
+    padding: 20px;
+    border: .5px solid rgb(7, 224, 148);
+}
+.update-box a {
     text-decoration: none;
-    color: white;
-    font-family: "DM mono", serif;
-    padding: 2px;
-}
-.latest:hover {
-    cursor: pointer;
-    background-color: rgb(234, 234, 234);
-    color: black;
-}
-
-.hamicon{
-    height: 30px;
-    position: relative;
-    opacity: .7;
-}
-.hamicon:hover {
-    opacity: 1;
-    cursor: pointer;
-}
-
-.dropdown {
-    background-color: rgb(15, 15, 15);
-    border: 2px none red;
-    position: absolute;
-    display: none;
-    top: 75%;
-    z-index: 1;
-    overflow-y: auto;
-    height: 350px;
-}
-
-.dropdown-boxes {
-    border: 1px solid rgb(8,188,124);
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin-right: 5px;
-}
-
-.dropdown img {
-    width: 25px;
+    color: rgb(29, 255, 176);
     padding: 5px;
 }
-
-.dropdown a {
-    text-decoration: none;
-    border: 1px none rgb(8,188,124);
-    color: white;
-    padding: 10px;
-    display: block;
-    font-size: 13px;
-}
-.dropdown a:hover {
-    background-color: rgb(8,188,124);
+.update-box a:hover {
+    cursor: pointer;
+    background-color: rgb(7, 224, 148);
     color: black;
-    cursor: pointer;
 }
-
-.hamicon:hover + .dropdown, .dropdown:hover {
-    display: block;
-}
-
-.logogif {
-    border: 2px none yellow;
-    width: auto;
-    height: 40px;
-    margin: 0;
-}
-
-.dark {
-    height: 30px;
-    opacity: .7;
-}
-.dark:hover {
-    cursor: pointer;
-}
-
-@media (max-width: 450px) {
-    .logogif {
-      height: 25px;
-    }
-    .hamicon {
-        height: 25px;
-    }
-    .dark {
-        height: 25px;
-    }
-    .latest {
-        font-size: 13px;
-    }
-    .dropdown a {
-        font-size: 10px;
-    }
-    .dropdown img {
-        width: 20px;
-    }
-}
-
-
 
 .logo-div {
     border: 2px none blue;
@@ -142,8 +42,8 @@
     margin: 50px 10px 10px 10px;
 }
 .newsfeed div {
-    border-top: 1px solid rgb(0, 98, 64);
-    border-bottom: 1px solid rgb(0, 98, 64);
+    border-top: 2px solid rgb(0, 98, 64);
+    border-bottom: 2px solid rgb(0, 98, 64);
     /* border-left: 1px solid rgb(7, 224, 148); */
     align-items: left;
     display: flex;
@@ -163,6 +63,7 @@
     color: rgb(29, 255, 176);
     opacity: 1;
     padding: 2px;
+    /*font-weight: bold;*/
 }
 .newsfeed a:hover {
     background-color: rgb(0, 255, 166);
@@ -198,6 +99,60 @@
     font-size: 10px;
 }
 
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title h1 {
+    color: rgb(7, 224, 148);
+    margin-bottom: 50px;
+    padding: 10px;
+}
+@media (max-width: 450px) {
+    .title h1 {
+        font-size: 23px;
+    }
+}
+
+.grid-div {
+    border: 2px none red;
+    display: flex;
+    justify-content: center;
+}
+.grid {
+    display: grid;
+    padding: 10px;
+    border: 2px none green;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.grid-item {
+    border: 2px solid rgb(7, 224, 148);
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+}
+.grid-item img {
+    width: 200px;
+    border-bottom: 2px solid rgb(7, 224, 148);
+}
+.grid-item a {
+    text-decoration: none;
+    color: rgb(7, 224, 148);
+}
+@media (max-width: 750px) {
+    .grid {
+        grid-template-columns: auto auto;
+    }
+}
+@media (max-width: 500px) {
+    .grid {
+        grid-template-columns: auto;
+    }
+}
+
 
 
 .newsfeed div::-webkit-scrollbar {
@@ -215,24 +170,5 @@ border-radius: 0px;
 }
 /* Handle on hover */
 .newsfeed div::-webkit-scrollbar-thumb:hover {
-background: cyan;
-}
-
-
-
-.dropdown::-webkit-scrollbar {
-    width: 1px;
-}
-  /* Track */
-.dropdown::-webkit-scrollbar-track {
-background: #00000000;
-}
-/* Handle */
-.dropdown::-webkit-scrollbar-thumb {
-background: rgb(0, 255, 166);
-border-radius: 0px;
-}
-/* Handle on hover */
-.dropdown::-webkit-scrollbar-thumb:hover {
 background: cyan;
 }
