@@ -19,14 +19,12 @@
     background-color: rgb(7, 224, 148);
     color: black;
 }
-
 .logo-div {
     border: 2px none blue;
     display: flex;
     margin-top: 20px;
     justify-content: center;
 }
-
 .logo-div img {
     height: 300px;
     border: 2px solid rgb(7, 224, 148); 
@@ -34,12 +32,29 @@
 
 
 
+.news-section {
+    border: 2px none red;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+@media (max-width: 1050px) {
+    .news-section {
+        grid-template-columns: auto;
+    }
+}
+.news-section h1 {
+    color: rgb(7, 224, 148);
+}
 .newsfeed {
     border: 2px none green;
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 50px 10px 10px 10px;
+    margin: 30px 10px 10px 10px;
 }
 .newsfeed div {
     border-top: 2px solid rgb(0, 98, 64);
@@ -55,7 +70,6 @@
     margin-bottom: 30px;
     margin-right: 5px;
 }
-
 .newsfeed a {
     text-decoration: none;
     margin-top: 10px;
@@ -69,12 +83,56 @@
     background-color: rgb(0, 255, 166);
     color: black;
 }
-
 .newsfeed p {
     margin-top: 10px;
     text-align: left;
     color:white;
     opacity: .7;
+}
+.tldr-section {
+    border: 2px none blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px 10px 10px;
+}
+.tldr-section-des {
+    margin-top: -20px;
+    color: rgb(7, 224, 148);
+}
+.tldr {
+    border: 1px solid rgb(0, 98, 64);
+    height: 380px;
+    max-width: 550px;
+    overflow-y: auto;
+    padding: 20px;
+}
+@media (max-width: 1050px) {
+    .tldr {
+        height: auto;
+    }
+}
+.tldr-image {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid white;
+}
+.tldr a {
+    text-decoration: underline;
+    color: rgb(7, 224, 148);
+    padding: 2px;
+}
+.tldr a:hover {
+    cursor: pointer;
+    background-color: rgb(7, 224, 148);
+    color: black;
+}
+.tldr h2 {
+    font-size: 23px;
+}
+.tldr img {
+    height: 20px;
 }
 
 
@@ -103,6 +161,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
 }
 .title h1 {
     color: rgb(7, 224, 148);
@@ -111,6 +170,9 @@
 }
 @media (max-width: 450px) {
     .title h1 {
+        font-size: 23px;
+    }
+    .news-section h1 {
         font-size: 23px;
     }
 }
@@ -156,8 +218,8 @@
 
 
 .newsfeed div::-webkit-scrollbar {
-    width: 1px;
-    height: 1px;
+    width: 2px;
+    height: 2px;
 }
   /* Track */
   .newsfeed div::-webkit-scrollbar-track {
