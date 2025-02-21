@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="media/architecturelogo.png">
+    <title>The CIA Triad</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/entry1.css">
+    <link rel="stylesheet" href="css/header.css">
+
+    <style>
+      body {
+        background-color: rgb(25, 25, 25);
+        color:white;
+        font-family: "DM mono", serif;
+        scroll-behavior: smooth;
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+      }
+      body.dark-mode {
+        background-color: white;
+        color: black;
+      }
+      body.dark-mode p {
+        color: black;
+      }
+      body.dark-mode a {
+        color: rgb(3, 183, 120);
+      }
+      body.dark-mode .dropdown a {
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="navbar">
+        <img src="media/hamicon.png" class="hamicon">
+        <div class="dropdown">
+          <div class="dropdown-boxes">
+            <img src="media/icons/home.png">
+            <a href="https://www.bashbreach.com/">Home</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/about.png">
+            <a href="about.html">About</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/projects.png">
+            <a href="projects.html">Projects</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/github.png">
+            <a href="https://github.com/MNHmomo" target="_blank">Github</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/linkedin.png">
+            <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/resume.png">
+            <a href="resume.html">Resume</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/now.png">
+            <a href="now.html">Now</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/interests.png">
+            <a href="interests.html">Interests</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/architecture.png">
+            <a href="architecture.html">Architecture</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/statboard.png">
+            <a href="statboard.html">Statboard</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/licdis.png">
+            <a href="licdis.html">Lic & Dis</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/privacy.png">
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+        <a href="index.html"><img src="media/logogif.gif" class="logogif"></a>
+
+        <img src="media/icons/now copy.png" class="dark" id="dark">
+      </div>
+    </div>
+
+    <div class="logo-div">
+      <img src="media/entrymedia/entry5logo.png" alt="entry1-logo">
+    </div>
+
+    <div class="title">
+      <h1>The CIA Triad</h1>
+    </div>
+
+    <div class="about-me">
+        <div>
+            <h2>TL;DR</h2>
+            <p>
+                CIA Triad (Confidentiality, Integrity, Availability) is a key principle for data reliability and security for 
+                organizations. Confidentiality ensures sensitive information is only accessible to authorized individuals, 
+                protecting privacy and disallowing unauthorized access. Integrity ensures information is valid, whole, and 
+                not modified by unauthorized users, preserving its integrity. Availability ensures data and assets are accessible 
+                when and where they are needed, even in the event of downtime or cyber-attacks. Organizations use various security 
+                controls, including encryption, safe backups, and continuous monitoring, to protect these elements. 
+                By applying the CIA Triad, institutions can maintain data security, minimize threats, and grant continuous 
+                access to necessary information.
+            </p>
+            <br><br>
+            <h2>Overview</h2>
+            <p> 
+                This entry isn't going to be super long. The CIA Triad is pretty striaght forward and easy to understand.
+                There are three fundamental principles in information security you should know: 
+                Confidentiality, Integrity, and Availability, collectively referred to as the 
+                ‘CIA Triad’. It serves as a guiding model for organizations to ensure their 
+                data is protected by limiting access to authorized users (confidentiality), 
+                maintaining its accuracy and consistency (integrity), and making it readily 
+                available when needed (availability). Knowing and understanding the CIA Triad 
+                is important because it is a core concept in cybersecurity, which can appear 
+                in certification exams, technical interviews, and real-world situations. 
+            </p>
+
+            <div class="figure">
+                <img src="media/entrymedia/entry5figure1.png">
+            </div>
+
+            <p>
+                Think of the CIA Triad like a bank vault protecting valuable assets. 
+                Confidentiality ensures that only authorized individuals, like verified 
+                customers and bank employees, can access specific safety deposit boxes, 
+                blocking unauthorized access with security measures like locked doors and 
+                keycards. Integrity guarantees that the money and documents inside remain 
+                unchanged, using transaction logs and surveillance to prevent fraud. 
+                Availability ensures that when customers need their assets, they are 
+                accessible and can be maintained, avoiding downtime with backup power, 
+                redundant records, and emergency programs. Just as a bank holds the safety 
+                of financial assets, cybersecurity experts protect digital data using the 
+                foundation of the CIA Triad. 
+            </p>
+            <p>
+                The CIA Triad can also be applied to Universities and their students. 
+                Take the University of New Haven for example. It utilizes the CIA Triad 
+                to secure student and faculty information. Confidentiality is supported 
+                by password-protected stduent portals (MyCharger), multi-factor authentication 
+                (MFA), and encrypted databases. Integrity is provided by frequent system audits 
+                and backups of data. Availability is upheld by servers, DDoS protection, and 
+                IT support services, ensuring students can access online courses, email, and 
+                university resources. 
+            </p>
+            <br><br>
+
+            <h2>Confidentiality</h2>
+            <p><b>Who are you? Are you allowed to do this? What are you trying to access?</b></p>
+
+            <p>
+                Confidentiality, which is roughly equivalent to privacy, involves not making 
+                unauthorized disclosures of sensitive information. Information is often classified 
+                based on the degree of damage that would result from its exposure so that 
+                organizations can apply the appropriate level of security controls. 
+            </p>
+
+            <div class="figure">
+                <img src="media/entrymedia/entry5figure2.png">
+            </div>
+
+            <p>
+                For confidentiality, organizations typically provide additional training to the 
+                staff handling sensitive data. This includes risk factor identification, 
+                good password hygiene, and awareness of social engineering attacks that 
+                cyber attackers utilize to exploit human weaknesses. Various technical 
+                safeguards assist with confidentiality. Data encryption protects information 
+                both in transit and in storage, and user authentication processes—such as 
+                passwords, security tokens, biometric scanning, and two-factor authentication 
+                (2FA)—offer extra security. Online banking, for example, requires an account or 
+                routing number, and social media sites require user IDs and passwords to 
+                restrict access. For extremely sensitive data, even more drastic measures 
+                may be necessary, such as storing information on air-gapped systems, offline 
+                storage devices, or holding only hard-copy records. By implementing these 
+                measures, organizations can render unauthorized access more challenging and 
+                reduce the risk of data breaches.<sup><a href="https://www.techtarget.com/whatis/definition/Confidentiality-integrity-and-availability-CIA" target="_blank">1</a></sup>
+
+                <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+                    <p style="margin-left: 10px; opacity: 0.7;">
+                        WashU St. Louis University systems are an example of how an educational 
+                        institution applies the CIA Triad to protect data. Confidentiality is 
+                        maintained through WUSTLKey and WashU 2FA, ensuring that only authorized 
+                        students, faculty, and staff can access university systems. 
+                        Researchers further protect their work by encrypting files, 
+                        using password-protected resources, and restricting access to 
+                        trained team members. These measures help safeguard sensitive 
+                        information, ensuring privacy and reducing the risk of cyber 
+                        threats like ransomware attacks. <sup><a href="https://informationsecurity.wustl.edu/items/confidentiality/ " target="_blank">2</a></sup>
+                    </p>
+                </div>
+            </p>
+            <br><br>
+            <h2>Integrity</h2>
+            <p>
+                The second element of the CIA Triad is integrity, which makes sure that data never changes from its initial accuracy and 
+                consistency, without being modified by legitimate users. When data is faulty or manipulated, organizations may end up 
+                with the wrong users receiving sensitive information or failing to receive critical updates. For example, in the 
+                medical field, patient data must be accurate so that medical updates reach the appropriate people. If a hospital 
+                updates another patient's record inaccurately or makes a diagnosis in the wrong place, it can cause privacy violations 
+                or even medical mistakes. Just like business records, software, games, they all rely on data integrity. Integrity in 
+                cybersecurity is like maintaining fair gameplay in a video game. Imagine you're playing an online multiplayer game 
+                where scores, player stats, and in-game currency must be accurate and protected. If a hacker modifies the game’s 
+                code to give themselves unlimited health or currency, it disrupts the game’s balance and fairness, just like how 
+                data corruption or unauthorized changes can compromise an organization’s integrity. To prevent this, game developers 
+                implement anti-cheat systems, encrypted leaderboards, and secure cloud saves to ensure that data remains 
+                unaltered and legitimate.<sup><a href="https://www.itgovernance.co.uk/blog/what-is-the-cia-triad-and-why-is-it-important" target="_blank">3</a></sup>
+            </p>
+
+            <div class="figure">
+                <img src="media/entrymedia/entry5figure3.png">
+            </div>
+
+            <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+                <p style="margin-left: 10px; opacity: 0.7;">
+                    WashU St. Louis University systems are an example of how an educational 
+                    institution applies the CIA Triad to protect data. Confidentiality is 
+                    maintained through WUSTLKey and WashU 2FA, ensuring that only authorized 
+                    students, faculty, and staff can access university systems. 
+                    Researchers further protect their work by encrypting files, 
+                    using password-protected resources, and restricting access to 
+                    trained team members. These measures help safeguard sensitive 
+                    information, ensuring privacy and reducing the risk of cyber 
+                    threats like ransomware attacks.<sup><a href="https://informationsecurity.wustl.edu/items/confidentiality/ " target="_blank">4</a></sup>
+                </p>
+            </div>
+
+            <br><br>
+            <h2>Availability</h2>
+            <p>
+                The last element of the CIA Triad is availability, which makes sure that data is always accessible to authorized users. 
+                Making sure resources and services are still accessible even in the event of a cyberattack, hardware breakdown, or 
+                natural disaster. As businesses increasingly rely on digital infrastructure, uptime and minimizing disruptions are
+                 now core parts of cybersecurity. Some of the most important measures for availability are continuity and disaster 
+                 recovery plans, impact analyses, and service level agreements (SLAs) that define uptime targets. This is achieved 
+                 by putting in place redundant systems, backup power sources, load balancers, and caches to prevent single points 
+                 of failure. In addition, regular system testing and maintenance guarantee detection of and reaction to possible 
+                 threats before they cause outages. 
+            </p>
+
+            <div class="figure">
+                <img src="media/entrymedia/entry5figure4.png">
+            </div>
+
+            <p>Normal availability threats include power outages, network breakdowns, hardware breakdowns, and cyber threats like DDoS 
+                (Distributed Denial-of-Service) attacks. When a critical server crashes or a website gets bombed with traffic as a 
+                result of an attack, users may fail to access essential services, for instance. Resilient infrastructure and 
+                preventive security controls enable organizations to limit downtime and deliver continued access to data and systems. 
+            </p>
+            <p>
+                For example, in healthcare, hospitals employ electronic health records (EHRs) to provide care to patients. In the event of a 
+                cyberattack like a DDoS (Distributed Denial-of-Service) attack or ransomware and disconnection is caused, the physicians and 
+                nurses may not be able to access critical health information, potentially jeopardizing patients' lives. Similarly, in online shops, 
+                website down time can translate into lost sales as well as angry customers. 
+            </p>
+            <p>
+                In order to be available, organizations make use of server redundancy, cloud storage, load balancing, and cybersecurity measures 
+                to prevent downtime and attacks. Scheduled system maintenance, security updates, and DDoS protection see to it that users can 
+                always view the information and services they need, guaranteeing reliability and trust in electronic systems.<sup><a href="https://www.splunk.com/en_us/blog/learn/cia-triad-confidentiality-integrity-availability.html" target="_blank">5</a></sup>
+            </p>
+
+            <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+                <p style="margin-left: 10px; opacity: 0.7;">
+                    The University of New Haven employs the CIA Triad to protect its information assets to ensure they remain 
+                    available when required. Availability guarantees such critical systems as Blackboard, student portals, 
+                    email services, and research databases are accessible and usable without any disruption. Lack of availability 
+                    would render the activities of a university, from the submission of assignments to accessing courseware, 
+                    completely halted. For assurance of availability, the university implements cybersecurity to assist in warding 
+                    off threats like ransomware attacks that attempt to deny system access until a ransom is paid. Periodic security 
+                    patches, intrusion detection systems, and firewalls assist in warding off attacks as per the view of the 
+                    university's IT department. Students and staff also play their part in guaranteeing availability by reporting 
+                    potential phishing, not clicking on unfamiliar links, and utilizing university-approved storage services like 
+                    OneDrive for saving important documents. All these steps taken by the University of New Haven ensure that 
+                    important academic and research content is available and secure.
+                </p>
+            </div>
+            <br><br>
+
+            <h2>The Breach</h2>
+            <p>
+                This entry wasn't super long, at least compared to the others. That's because the CIA Triad is pretty straight forward. 
+                Confidentiality, Integrity, and Availability, and that's it. the general model applied to secure information within any 
+                institution, including educational institutions like the University of New Haven. Confidentiality ensures that 
+                sensitive data is beyond the reach of unauthorized individuals, thus providing privacy for students, instructors, 
+                and research. Maintaining integrity ensures that data is accurate and avoids unauthorized changes or corruption of 
+                essential information. Lastly, availability ensures that resources and information can be used whenever there is a 
+                need, essential in ensuring the seamless operations of an online infrastructure. Businesses can prevent likely threats of 
+                attack such as cyberattacks by practicing caution like encrypting information, secure backup measures, and real-time 
+                monitoring by users. Utilizing the CIA Triad helps institutions like the University of New Haven create a solid 
+                cybersecurity strategy, where information is secure and accessible, and business continuity and trust are guaranteed.
+            </p>
+
+        </div>
+    </div>
+  </body>
+
+  <script>
+    document.getElementById("dark").addEventListener("click", function () {
+      let icon = this;
+      let body = document.body;
+      
+      // Toggle dark mode class
+      body.classList.toggle("dark-mode");
+  
+      // Change icon based on mode
+      icon.src = body.classList.contains("dark-mode")
+          ? "media/icons/privacy copy.png"
+          : "media/icons/now copy.png";
+  });
+  </script>
+
+</html>
