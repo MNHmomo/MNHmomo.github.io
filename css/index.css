@@ -103,7 +103,7 @@
 }
 .tldr {
     border: 1px solid rgb(0, 98, 64);
-    height: 380px;
+    height: 400px;
     max-width: 550px;
     overflow-y: auto;
     padding: 20px;
@@ -232,5 +232,21 @@ border-radius: 0px;
 }
 /* Handle on hover */
 .newsfeed div::-webkit-scrollbar-thumb:hover {
+background: cyan;
+}
+.tldr::-webkit-scrollbar {
+    width: 1px;
+}
+  /* Track */
+.tldr::-webkit-scrollbar-track {
+background: #00000000;
+}
+/* Handle */
+.tldr::-webkit-scrollbar-thumb {
+background: rgb(0, 255, 166);
+border-radius: 0px;
+}
+/* Handle on hover */
+.tldr::-webkit-scrollbar-thumb:hover {
 background: cyan;
 }
