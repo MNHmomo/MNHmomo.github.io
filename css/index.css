@@ -45,8 +45,9 @@
         grid-template-columns: auto;
     }
 }
-.news-section h1 {
+.news-section h2 {
     color: rgb(7, 224, 148);
+    font-size: 30px;
 }
 .newsfeed {
     border: 2px none green;
@@ -66,9 +67,12 @@
     flex-direction: column;
     box-sizing: inherit;
     padding: 20px 10px 20px 10px;
-    height: 350px;
+    height: 400px;
     margin-bottom: 30px;
     margin-right: 5px;
+}
+.newsfeed h2 {
+    margin-top: 50px;
 }
 .newsfeed a {
     text-decoration: none;
@@ -83,8 +87,7 @@
     background-color: rgb(0, 255, 166);
     color: black;
 }
-.newsfeed p {
-    margin-top: 10px;
+.newsfeed-list p {
     text-align: left;
     color:white;
     opacity: .7;
