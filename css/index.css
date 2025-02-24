@@ -221,7 +221,7 @@
 
 
 .activity-div {
-    border: 2px solid red;
+    border: 2px none red;
     display: flex;
     justify-content: center;
 }
