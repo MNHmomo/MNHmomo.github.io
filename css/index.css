@@ -220,6 +220,14 @@
 
 
 
+.activity-div {
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+
+
 .newsfeed div::-webkit-scrollbar {
     width: 2px;
     height: 2px;
