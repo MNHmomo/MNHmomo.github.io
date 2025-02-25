@@ -12,7 +12,7 @@
 .update-box a {
     text-decoration: none;
     color: rgb(29, 255, 176);
-    padding: 5px;
+    padding: 2px;
 }
 .update-box a:hover {
     cursor: pointer;
@@ -25,9 +25,41 @@
     margin-top: 20px;
     justify-content: center;
 }
-.logo-div img {
-    height: 300px;
+.logo {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+.logo img {
+    width: 300px;
     border: 2px solid rgb(7, 224, 148); 
+}
+.logo p {
+    width: 400px;
+    margin: 0;
+    border-left: 2px solid rgb(0, 127, 83);
+    padding-left: 10px;
+}
+.logo a {
+    text-decoration: none;
+    color: rgb(3, 183, 120);
+}
+.logo a:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+@media (max-width: 850px) {
+    .logo {
+        flex-direction: column;
+    }
+    .logo p {
+        width: 300px;
+        border-left: 2px none rgb(0, 127, 83);
+        border-top: 2px solid rgb(0, 127, 83);
+        margin-top: 10px;
+        padding-top: 10px;
+        font-size: 15px;
+    }
 }
 
 
@@ -66,9 +98,8 @@
     overflow-y: auto;
     flex-direction: column;
     box-sizing: inherit;
-    padding: 20px 10px 20px 10px;
+    padding: 20px;
     height: 400px;
-    margin-bottom: 30px;
     margin-right: 5px;
 }
 .newsfeed h2 {
@@ -92,6 +123,7 @@
     color:white;
     opacity: .7;
 }
+
 .tldr-section {
     border: 2px none blue;
     display: flex;
@@ -146,19 +178,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
-
 .footer img {
     width: 100px;
     margin-bottom: 5px;
 }
-
+.footer img:hover {
+    opacity: .7;
+}
 .footer p {
     margin: 2px;
     font-size: 10px;
 }
+
 
 .title {
     display: flex;
@@ -166,13 +200,13 @@
     align-items: center;
     margin-top: 40px;
 }
-.title h1 {
+.title h2 {
     color: rgb(7, 224, 148);
-    margin-bottom: 50px;
     padding: 10px;
+    font-size: 30px;
 }
 @media (max-width: 450px) {
-    .title h1 {
+    .title h2 {
         font-size: 23px;
     }
     .news-section h1 {
@@ -184,12 +218,13 @@
     border: 2px none red;
     display: flex;
     justify-content: center;
+    margin-bottom: 100px;
 }
 .grid {
     display: grid;
     padding: 10px;
     border: 2px none green;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     column-gap: 10px;
     row-gap: 10px;
 }
@@ -199,31 +234,157 @@
     width: 200px;
     padding: 10px;
 }
+.grid-item:hover {
+    opacity: .7;
+}
 .grid-item img {
     width: 200px;
     border-bottom: 2px solid rgb(7, 224, 148);
 }
 .grid-item a {
     text-decoration: none;
-    color: rgb(7, 224, 148);
+    color: white;
 }
-@media (max-width: 750px) {
+@media (max-width: 1050px) {
     .grid {
         grid-template-columns: auto auto;
     }
 }
 @media (max-width: 500px) {
     .grid {
-        grid-template-columns: auto;
+        grid-template-columns: auto auto;
+    }
+    .grid-item {
+        width: 100px;
+    }
+    .grid-item img{
+        width: 100px;
+    }
+    .grid-item a {
+        font-size: 12px;
     }
 }
 
 
 
-.activity-div {
+.other-div {
     border: 2px none red;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    margin: 30px 10px 10px 10px;
+}
+@media (max-width: 1050px) {
+    .other-div {
+        grid-template-columns: auto;
+    }
+}
+.other-div h2 {
+    color: rgb(7, 224, 148);
+    margin: 0;
+    font-size: 30px;
+}
+.faq-div {
+    border: 2px none green;
+    max-width: 550px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.faq-div h2 {
+    color: rgb(7, 224, 148);
+    margin: 0;
+    font-size: 30px;
+}
+.other-div h3 {
+    margin-bottom: 0;
+}
+.faq-div p {
+    margin: 0;
+    opacity: .9;
+}
+.faq-section-des {
+    margin: 0;
+    color: rgb(7, 224, 148);
+    border-bottom: 2px solid rgb(7, 224, 148);
+    padding-bottom: 5px;
+}
+.faq-div a {
+    text-decoration: underline;
+    margin-top: 30px;
+    color: rgb(7, 224, 148);
+    padding: 2px;
+}
+.faq-div a:hover {
+    opacity: .7;
+}
+
+.quiz-div {
+    border: 1px solid rgb(7, 224, 148);
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -70px;
+    border-radius: 2px;
+    transition: opacity 0.5s ease-in-out;
+}
+@media (max-width: 600px) {
+    .faq-div {
+        margin-bottom: 150px;
+    }
+    .quiz-div {
+        margin-top: 50px;
+    }
+}
+.quiz-div h2 {
+    padding: 15px 15px 0px 10px;
+    color: black;
+}
+.quiz-section-des {
+    margin: 0;
+    color: black;
+    border-bottom: 2px solid rgb(7, 224, 148);
+    padding: 0px 10px 10px 12px;
+}
+.quiz-div h3 {
+    padding: 10px 20px 10px 20px;
+}
+.quiz {
+    background-color: rgb(7, 224, 148);
+}
+.choices-div {
+    border: 2px none blue;
+    display: flex;
+    flex-direction: column;
+}
+.choice {
+    height: 100%;
+    padding: 20px;
+    border: 1px solid rgb(0, 98, 64);
+    opacity: .9;
+    cursor: pointer;
+}
+.choice:hover {
+    padding: 20px;
+    border: 1px solid white;
+}
+.correct {
+    background-color: rgb(87, 130, 87);
+    color: white;
+    pointer-events: none; /* Disable further clicks */
+}
+.incorrect {
+    background-color: rgb(175, 101, 101);
+    color: white;
+    pointer-events: none; /* Disable further clicks on wrong choices */
+}
+.dimmed {
+    opacity: 0.5; /* Dims the container */
+    pointer-events: none; /* Prevents further interaction */
 }
 
 
@@ -238,13 +399,15 @@ background: #00000000;
 }
 /* Handle */
 .newsfeed div::-webkit-scrollbar-thumb {
-background: rgb(0, 255, 166);
+background: rgb(0, 98, 64);
 border-radius: 0px;
 }
 /* Handle on hover */
 .newsfeed div::-webkit-scrollbar-thumb:hover {
 background: cyan;
 }
+
+
 .tldr::-webkit-scrollbar {
     width: 1px;
 }

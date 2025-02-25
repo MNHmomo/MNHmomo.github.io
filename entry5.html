@@ -15,14 +15,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" href="media/architecturelogo.png">
+    <link rel="icon" type="image" href="media/tabicon.png">
     <title>The CIA Triad</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/entry1.css">
+    <link rel="stylesheet" href="css/entry5.css">
     <link rel="stylesheet" href="css/header.css">
 
     <style>
@@ -134,7 +134,7 @@
                 access to necessary information.
             </p>
             <br><br>
-            <h2>Overview</h2>
+            <h2>The CIA Triad</h2>
             <p> 
                 This entry isn't going to be super long. The CIA Triad is pretty striaght forward and easy to understand.
                 There are three fundamental principles in information security you should know: 
@@ -306,7 +306,7 @@
             </div>
             <br><br>
 
-            <h2>The Breach</h2>
+            <h2>Overview</h2>
             <p>
                 This entry wasn't super long, at least compared to the others. That's because the CIA Triad is pretty straight forward. 
                 Confidentiality, Integrity, and Availability, and that's it. the general model applied to secure information within any 
@@ -324,19 +324,6 @@
     </div>
   </body>
 
-  <script>
-    document.getElementById("dark").addEventListener("click", function () {
-      let icon = this;
-      let body = document.body;
-      
-      // Toggle dark mode class
-      body.classList.toggle("dark-mode");
-  
-      // Change icon based on mode
-      icon.src = body.classList.contains("dark-mode")
-          ? "media/icons/privacy copy.png"
-          : "media/icons/now copy.png";
-  });
-  </script>
+  <script src="js/darkmode.js"></script>
 
 </html>

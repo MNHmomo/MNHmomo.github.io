@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image" href="media/architecturelogo.png">
+    <link rel="icon" type="image" href="media/tabicon.png">
     <title>Exploring Network Ports</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -388,8 +388,9 @@
           the library does all the work for us. You can go ahead and open your code editor of choice, type or copy and paste the code, 
           and try it our for yourself. See what open ports you have on your home network.
         </p>
+        <br><br>
 
-        <h2>The Breach</h2>
+        <h2>Overview</h2>
         <p>
           Network ports are virtual communication endpoints used to distinguish different services and applications on a device, 
           identified by a 16-bit number ranging from 0 to 65,535. They are categorized into well-known ports (0–1,023) for standard 
@@ -408,19 +409,6 @@
     </div>
   </body>
 
-  <script>
-    document.getElementById("dark").addEventListener("click", function () {
-      let icon = this;
-      let body = document.body;
-      
-      // Toggle dark mode class
-      body.classList.toggle("dark-mode");
-  
-      // Change icon based on mode
-      icon.src = body.classList.contains("dark-mode")
-          ? "media/icons/privacy copy.png"
-          : "media/icons/now copy.png";
-  });
-  </script>
+  <script src="js/darkmode.js"></script>
 
 </html>
