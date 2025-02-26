@@ -1,0 +1,72 @@
+body {
+    background-color: rgb(25, 25, 25);
+    color:white;
+    font-family: "DM mono", serif;
+    scroll-behavior: smooth;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+body.dark-mode {
+    background-color: white;
+    color: black;
+}
+body.dark-mode h1 {
+    color: rgb(0, 95, 62);
+}
+body.dark-mode h2 {
+    color: rgb(0, 95, 62);
+}
+body.dark-mode p {
+    color: black;
+}
+body.dark-mode a {
+    color: rgb(1, 72, 47);
+}
+body.dark-mode a:hover {
+    color: black;
+}
+body.dark-mode .dropdown a {
+    color: white;
+}
+body.dark-mode div {
+    border-color: rgb(0, 95, 62);
+}
+body.dark-mode p {
+    border-color: rgb(0, 95, 62);
+}
+body.dark-mode img {
+    border-color: rgb(0, 95, 62);
+}
+body.dark-mode .newsfeed a:hover {
+    background-color: rgb(0, 95, 62);
+    color: white;
+}
+body.dark-mode .dropdown {
+    border: 2px solid black;
+    background-color: rgb(244, 244, 244);
+}
+body.dark-mode .dropdown-boxes {
+    border: 1px solid rgb(8,188,124);
+    background-color: rgb(255, 255, 255);
+}
+body.dark-mode .dropdown-boxes a {
+    color: black;
+}
+body.dark-mode pre {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+
+
+/* Handle */
+body.dark-mode .newsfeed div::-webkit-scrollbar-thumb {
+    background: rgb(0, 95, 62);
+    border-radius: 0px;
+}
+/* Handle on hover */
+.newsfeed div::-webkit-scrollbar-thumb:hover {
+background: cyan;
+}

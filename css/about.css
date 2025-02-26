@@ -37,10 +37,10 @@
     color: rgb(3, 183, 120);
 }
 .about-me a:hover {
-    opacity: .7;
+    color: white;
 }
 
-.about-me h1 {
+.about-me h2 {
     color: rgb(7, 224, 148); 
     font-size: 20px;
 }
@@ -53,4 +53,12 @@
     .about-me div {
         padding: 10px;
     }
+}
+
+.profile {
+    width: 150px;
+    border: 2px solid rgb(7, 224, 148);
+    margin-top: 30px;
+    margin-bottom: 100px;
+    box-shadow: 5px 5px 0px rgb(7, 224, 148);
 }

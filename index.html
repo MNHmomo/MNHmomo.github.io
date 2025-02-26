@@ -25,30 +25,9 @@
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/darkmode.css">
 
     <style>
-      body {
-        background-color: rgb(25, 25, 25);
-        color:white;
-        font-family: "DM mono", serif;
-        scroll-behavior: smooth;
-        font-weight: 100;
-        margin: 0;
-        padding: 0;
-      }
-      body.dark-mode {
-        background-color: white;
-        color: black;
-      }
-      body.dark-mode p {
-        color: black;
-      }
-      body.dark-mode a {
-        color: rgb(70, 179, 141);
-      }
-      body.dark-mode .dropdown a {
-        color: white;
-      }
     </style>
   </head>
 
@@ -122,8 +101,7 @@
     </div>
 
     <div class="update-box">
-      <p><b>!Latest:</b> [New Entry]<a href="entry5.html">The CIA Triad</a> | [Updated]<a href="index.html">Home Page</a>
-      </a></p>
+      <p><b>!Latest:</b> <a href="#newsletter">Bashbreach Newsletter!</a></a>
     </div>
 
 
@@ -222,15 +200,21 @@
         </div>
         <h3>What is the 7th Layer of the OSI Model?</h3>
         <div class="choices-div">
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)">Session layer</div>
-          <div class="choice" data-correct="true" onclick="checkAnswer(this)">Application Layer</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)">Network layer</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)">Physical Layer</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Session layer</div>
+          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">Application Layer</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Network layer</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Physical Layer</div>
         </div>
       </div>
     </div>
 
 
+
+    <div class="newsletter-div">
+      <button class="newsletter-button" id="newsletter" onclick="window.open('https://bashbreach.substack.com/subscribe', '_blank')">
+        Subscribe to the Newsletter!
+      </button>
+    </div>
 
     <div class="footer">
       <a href="licdis.html"><img src="media/licdislogo.png" alt="lic & dis logo"></a>
