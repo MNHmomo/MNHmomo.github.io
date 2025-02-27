@@ -74,7 +74,7 @@
     grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
-    column-gap: 50px;
+    column-gap: 30px;
 }
 @media (max-width: 1050px) {
     .news-section {

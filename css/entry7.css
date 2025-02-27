@@ -1,0 +1,127 @@
+
+
+.logo-div {
+    border: 2px none blue;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+.logo-div img {
+    height: 150px;
+    border: 2px solid rgb(7, 224, 148); 
+}
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title h1 {
+    color: rgb(7, 224, 148);
+    margin-bottom: 50px;
+    padding: 10px;
+}
+.about-me h2 {
+    color: rgb(7, 224, 148);
+    font-size: 20px;
+    text-decoration: underline;
+}
+.about-me {
+    border: 2px none red;
+    font-family: "DM mono", serif;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 400px;
+}
+.about-me div {
+    border: 2px none green;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 1000px;
+}
+.about-me a {
+    color: rgb(3, 183, 120);
+}
+.about-me a:hover {
+    color: white;
+}
+.about-me h1 {
+    color: rgb(7, 224, 148); 
+    font-size: 20px;
+}
+.about-me p {
+    font-size: 15px;
+}
+
+.figure {
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.figure img {
+    width: 370px;
+    border: 2px solid rgb(7, 224, 148);
+    margin-top: 30px;
+    margin-bottom: 30px; 
+}
+
+
+@media (max-width: 1000px) {
+    .about-me div {
+        margin-left: 5px;
+        width: auto;
+    }
+}
+@media (max-width: 450px) {
+    .logogif {
+      height: 25px;
+    }
+    .hamicon {
+        height: 25px;
+    }
+    .latest {
+        font-size: 13px;
+    }
+    .dropdown a {
+        font-size: 10px;
+    }
+    .dropdown img {
+        width: 20px;
+    }
+    .about-me div {
+        margin-left: 5px;
+    }
+    .figure img {
+        width: 250px;
+    }
+    .title h1 {
+        font-size: 23px;
+    }
+    .about-me p {
+        font-size: 13px;
+    }
+    .dark {
+        height: 25px;
+    }
+}
+
+
+
+.dropdown::-webkit-scrollbar {
+    width: 1px;
+}
+  /* Track */
+.dropdown::-webkit-scrollbar-track {
+background: #00000000;
+}
+/* Handle */
+.dropdown::-webkit-scrollbar-thumb {
+background: rgb(0, 255, 166);
+border-radius: 0px;
+}
+/* Handle on hover */
+.dropdown::-webkit-scrollbar-thumb:hover {
+background: cyan;
+}

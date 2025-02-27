@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SQ12EXGS4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1SQ12EXGS4');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="media/tabicon.png">
+    <title>Some GitHub Security Repo's</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/entry7.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+
+    <style>
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="navbar">
+        <img src="media/hamicon.png" class="hamicon">
+        <div class="dropdown">
+          <div class="dropdown-boxes">
+            <img src="media/icons/home.png">
+            <a href="https://www.bashbreach.com/">Home</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/about.png">
+            <a href="about.html">About</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/projects.png">
+            <a href="projects.html">Projects</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/github.png">
+            <a href="https://github.com/MNHmomo" target="_blank">Github</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/linkedin.png">
+            <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/resume.png">
+            <a href="resume.html">Resume</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/now.png">
+            <a href="now.html">Now</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/interests.png">
+            <a href="interests.html">Interests</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/architecture.png">
+            <a href="architecture.html">Architecture</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/statboard.png">
+            <a href="statboard.html">Statboard</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/licdis.png">
+            <a href="licdis.html">Lic & Dis</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/privacy.png">
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+        <a href="index.html"><img src="media/logogif.gif" class="logogif"></a>
+
+        <img src="media/icons/now copy.png" class="dark" id="dark">
+      </div>
+    </div>
+
+    <div class="logo-div">
+      <img src="media/entrymedia/entry7logo.png" alt="entry7-logo">
+    </div>
+
+    <div class="title">
+      <h1>Some GitHub Security Repo's</h1>
+    </div>
+
+    <div class="about-me">
+        <div>
+            <h2><a href="https://github.com/sa7mon/S3Scanner" target="_blank">S3Scanner</a></h2>
+            <p>
+                Specific to Amazon AWS, an S3 bucket is a container for storing objects 
+                in Amazon S3, a cloud storage service. Although in general cloud storage, 
+                buckets are similar to folder and are used to manage data. 
+                This GitHub Repo contains an S3Scanner made by <a href="https://github.com/sa7mon" target="_blank">sa7mon</a>, powerful 
+                multi-threaded tool that can scan for publicly accessible buckets on AWS, 
+                DigitalOcean, DreamHost, GCP, Linode, and Scaleway, all of which are cloud 
+                storage services. The purpose of this is to provide insight on the potential 
+                security risk of these services, similar to how a port scanner would find open 
+                ports and vulnerabilities on a network. 
+            </p>
+            <p>
+                By verifying bucket permissions, it identifies read control, write control, 
+                and full control, which alerts security professionals to vulnerabilities. 
+                It provides a feature to store results in a Postgres database, enables 
+                RabbitMQ automation for scanning, and offers Docker support for ease of 
+                deployment. While it primarily verifies anonymous access permissions for 
+                non-AWS services, it focuses on securing cloud storage configurations. 
+                This tool can be employed by organizations to audit their cloud infrastructure 
+                and secure against unauthorized access, strengthening data protection 
+                best practices. Under MIT license, this open-source S3Scanner solution 
+                is a gem for teams wanting to strengthen their cloud security. 
+
+                <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+                    <p style="margin-left: 10px; opacity: 0.7;">
+                        For reference, Postgres is a free, open-source relational database 
+                        management system (RDBMS). RabbitMQ is an open-source message broker 
+                        that helps applications communicate by managing message queues. 
+                        And Docker is an open-source platform that helps developers 
+                        build, run, and manage applications in containers.
+                    </p>
+                </div>
+
+            </p>
+            <br><br>
+
+            <h2><a href="https://github.com/khast3x/Redcloud" target="_blank">Red Cloud</a></h2>
+            <p>
+                Redcloud is a toolbox for quickly deploying a Red Team infrastructure 
+                using Docker. It allows security professionals to self-host and manage 
+                offensive security tools like Metasploit, Empire, and GoPhish with ease. 
+                Featuring a polished web interface, Redcloud supports local and remote 
+                deployment via SSH or Docker Machine, enabling rapid setup of scalable 
+                attack environments. It includes built-in network management, proxy 
+                redirection, and user authentication, making it ideal for penetration 
+                testing, red teaming, and bug bounty hunting. With Redcloud, users can 
+                streamline their workflow, monitor scans, and deploy tools effortlessly 
+                without extensive sysadmin overhead.  
+            </p>
+            <br><br>
+
+            <h2><a href="https://github.com/secureCodeBox/secureCodeBox?tab=readme-ov-file#overview" target="_blank">Secure CodeBox</a></h2>
+            <p>
+                SecureCodeBox addresses penetration testing problems and offers a 
+                real-time application scanning toolchain in an automated manner. 
+                By integrating security testing at the front end of the development 
+                cycle, it allows developers to find and correct common 
+                vulnerabilities before production. This allows penetration testers to 
+                focus on more sophisticated security threats, maximizing resources and 
+                improving overall security coverage.   
+
+                <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+                    <p style="margin-left: 10px; opacity: 0.7;">
+                        Penetration testing is essentially ethical hacking. 
+                        You simulate an attack on a computer system to test its 
+                        security as well as its limitations. 
+                    </p>
+                </div>
+            </p>
+            <p>
+                But I do have to say that SecureCodeBox is not a replacement for 
+                professional penetration testers. Manual security testing by 
+                professional experts is still required to find vulnerabilities. 
+                SecureCodeBox also isn’t a one-click solution to pen testing needs, 
+                it still requires profound knowledge of security principles, proper 
+                scanner configuration, and proper interpretation of scan results. 
+                With continuous security scanning, organizations and businesses 
+                built on technology can enhance their security, reduce threats, 
+                and build a more trusted development pipeline. SecureCodeBox allows 
+                teams to incorporate security into their workflows organically, 
+                so vulnerabilities are caught early and fixed well, without 
+                compromising the need for expert penetration testing. 
+                Again, this doesn’t necessarily make the penetration testing job obsolete. 
+                Just a convenient tool. 
+            </p>
+            <br><br>
+
+            <h2><a href="https://github.com/sqlmapproject/sqlmap" target="_blank">SQLmap</a></h2>
+            <p>
+                SQLMap is an open source penetration test tool that automates the 
+                detection and exploitation of SQL injection flaws, which can basically 
+                allow security professionals to take over database servers efficiently. 
+                It has a powerful detection engine and extensive feature set, so it is an 
+                indispensable utility to have for penetration testers interested in testing 
+                database security. It has the ability to support many database management 
+                systems including MySQL, PostgreSQL, Oracle, Microsoft SQL Server, MariaDB, 
+                SQLite, IBM DB2, and several more, six of which SQL injection techniques 
+                support: boolean-based blind, time-based blind, error-based, UNION query-based, 
+                stacked queries, and out-of-band (OOB) injection.  
+            </p>
+            <p>
+                SQLMap can be used to enumerate databases, get user details, hash 
+                passwords, as well as crack hashes using dictionary-based attacks too. 
+                Besides that, it also enables privilage escalation.  via Metasploit's 
+                Meterpreter get system command and enables out-of-band communication, 
+                which allows attackers to establish a stateful TCP connection to the 
+                target system, execute commands, and even gain remote access via an 
+                interactive command prompt. 
+            </p>
+            <br><br>
+
+            <h2><a href="https://github.com/RustScan/RustScan" target="_blank">Rust Scan</a></h2>
+            <p>
+                RustScan is a modern and faster port scanner designed to drastically 
+                improve upon Nmap scans, bringing a typical 17-minute scan to 19 seconds 
+                and scanning all 65,000 ports in as little as 3 seconds. It also integrates 
+                extremely well with Nmap by piping the results automatically for 
+                additional analysis, along with user-created scripts in Python, 
+                Lua, or Shell for automating post-scan processes like running specific 
+                enumeration tools upon detection of specific ports.   
+            </p>
+            <p>
+                With Adaptive Learning, RustScan adapts itself based on the host operating 
+                system along with the user's behavior, so it’s always pushing for best 
+                performance. It has support for basic features like IPv6, CIDR notation, 
+                and file-based input, making it a highly flexible tool for security 
+                researchers and pentesters. Compared to most of the traditional security tools, 
+                RustScan places a strong emphasis on usability, trying to make the best of 
+                user experience and make it accessible to a broad range of users. 
+                With its clean, intuitive interface and extensive opportunities for 
+                extendability, RustScan offers a powerful, automated tool for quick 
+                and efficient network reconnaissance. 
+            </p>
+            <br><br>
+
+            <h2><a href="https://github.com/qubesos" target="_blank">Qubes OS</a></h2>
+            <p>
+                Qubes OS is an operating system I find really interesting. It uses that 
+                concept of virtualization. The OS is security-focused and uses virtualization 
+                to isolate applications and tasks into separate virtual machines, or "qubes." 
+                Each qube is separate, so if one qube is compromised, the others are not, 
+                which enhances overall system security. Qubes OS also has features to support 
+                an approachable desktop environment where users are able to work with isolated 
+                qubes using an unbroken interface and has tools for safe data management and 
+                network administration.  
+            </p>
+            <br><br>
+
+        </div>
+    </div>
+  </body>
+
+  <script src="js/darkmode.js"></script>
+
+</html>
