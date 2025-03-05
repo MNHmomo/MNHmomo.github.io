@@ -103,7 +103,7 @@
     flex-direction: column;
     box-sizing: inherit;
     padding: 20px;
-    height: 400px;
+    height: 450px;
     margin-right: 5px;
 }
 .newsfeed h2 {
@@ -142,7 +142,7 @@
 }
 .tldr {
     border: 2px solid rgb(7, 224, 148);
-    height: 400px;
+    height: 450px;
     border-radius: 2px;
     max-width: 550px;
     overflow-y: auto;
@@ -155,8 +155,8 @@
 }
 .tldr-image {
     width: 100%;
-    object-fit: cover;
     border: 1px solid white;
+    object-fit: cover;
 }
 .tldr a {
     text-decoration: underline;
@@ -170,9 +170,6 @@
 }
 .tldr h2 {
     font-size: 23px;
-}
-.tldr img {
-    height: 20px;
 }
 
 
@@ -330,11 +327,10 @@
 }
 
 .quiz-div {
-    border: 1px solid rgb(7, 224, 148);
+    border: 2px solid rgb(7, 224, 148);
     max-width: 550px;
     display: flex;
     flex-direction: column;
-    margin-top: -70px;
     border-radius: 2px;
     transition: opacity 0.5s ease-in-out;
 }
@@ -370,14 +366,15 @@
 .choice {
     height: 100%;
     padding: 20px;
-    border: 1px solid rgb(0, 98, 64);
+    border-top: 1px solid rgb(0, 98, 64);
+    border-bottom: 1px solid rgb(0, 98, 64);
     opacity: .9;
     cursor: pointer;
     transition: all 0.2s;
 }
 .choice:hover {
     padding: 20px;
-    border: 1px solid white;
+    border-color: white;
 }
 .correct {
     background-color: rgb(87, 130, 87);
