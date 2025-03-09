@@ -103,7 +103,7 @@
     flex-direction: column;
     box-sizing: inherit;
     padding: 20px;
-    height: 450px;
+    height: 400px;
     margin-right: 5px;
 }
 .newsfeed h2 {
@@ -142,7 +142,7 @@
 }
 .tldr {
     border: 2px solid rgb(7, 224, 148);
-    height: 450px;
+    height: 400px;
     border-radius: 2px;
     max-width: 550px;
     overflow-y: auto;
@@ -157,6 +157,7 @@
     width: 100%;
     border: 1px solid white;
     object-fit: cover;
+    height: 20px;
 }
 .tldr a {
     text-decoration: underline;

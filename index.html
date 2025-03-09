@@ -141,9 +141,9 @@
         <h2>The Breach</h2>
         <p class="tldr-section-des"><i>a TL;DR News Section</i></p>
         <div class="tldr">
-          <h2><a href="https://techcrunch.com/2025/03/04/amazon-is-reportedly-developing-its-own-ai-reasoning-model/?utm_source=tldrai" target="_blank">Amazon developing its own AI ‘reasoning’ model</a></h2>
-          <img src="media/tldrimage.png" alt="news-image" class="tldr-image">
-          <p>Amazon is reportedly developing an AI "reasoning" model under its Nova brand, set to launch as early as June. Similar to OpenAI’s o3-mini and DeepSeek’s R1, the model will take a step-by-step approach to improve reliability in fields like math and science. It is expected to use a hybrid reasoning architecture, combining quick responses with more complex thinking, similar to Anthropic’s Claude 3.7 Sonnet. On top of that, Amazon wants to cost the model lower than everyone else, although it will likely struggle competing against DeepSeek's low prices.</p>
+          <h2><a href="https://www.bleepingcomputer.com/news/security/malicious-chrome-extensions-can-spoof-password-managers-in-new-attack/?utm_source=tldrinfosec" target="_blank">Malicious Chrome extensions can spoof password managers in new attack</a></h2>
+          <img src="tldrimage.png" alt="news-image" class="tldr-image">
+          <p>SquareX Labs discovered a "polymorphic" attack where malicious Chrome extensions morph into legitimate ones like password managers, crypto wallets, and banking apps to steal sensitive data. The attack abuses the 'chrome.management' API or injects scripts into web pages to detect installed extensions. If a targeted extension is found, the malicious one disables it, mimics its appearance, and tricks users into entering credentials via a fake login prompt. Once stolen, the extension reverts to normal, making detection difficult. SquareX has disclosed the attack to Google.</p>
           <!-- <img src="media/icons/info.png" alt="information" class="info"> -->
         </div>
       </div>
@@ -183,14 +183,11 @@
       <div class="faq-div">
         <h2>FAQ</h2>
         <p class="faq-section-des"><i>Today's Frequently Asked Question...</i></p>
-        <h3>What is the difference between a virus and malware?</h3>
+        <h3>What is "fileless malware," and how does it persist?</h3>
         <p>
-          A virus is a specific type of malware (malicious software) that attaches itself to a 
-          file or program and spreads when that file is executed. It often requires user action, 
-          such as opening an infected file, to run. Malware is a broader term that includes all 
-          types of malicious software, such as viruses, worms, trojans, ransomware, spyware, 
-          and adware. While a virus is just one type of malware, other types can spread without 
-          user action, exploit vulnerabilities, or steal data.
+          Fileless malware operates in memory without writing files to disk, often using 
+          PowerShell, registry modifications, or WMI scripts to execute malicious code. 
+          This makes it difficult for traditional antivirus solutions to detect.
         </p>
         <a href="faq.html">full list of frequently asked questions</a>
       </div>
@@ -200,12 +197,12 @@
           <h2>Trivia</h2>
           <p class="quiz-section-des"><i>Brain Teaser</i></p>
         </div>
-        <h3>A Chief Financial Officer (CFO) has been receiving email messages that have suspicious links embedded from unrecognized senders. </h3>
+        <h3>Which of the hash functions listed below offers the highest level of security?</h3>
         <div class="choices-div">
-          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">The CFO is a target of a whaling attack.</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">The CFO is a target of identity fraud.</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">The CFO is receiving spam that got past the mail filters.</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">The CFO experienced a DDoS attack.</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">MD5</div>
+          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">SHA-3</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">RIPEMD-160</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?"> HMAC</div>
         </div>
       </div>
     </div>
