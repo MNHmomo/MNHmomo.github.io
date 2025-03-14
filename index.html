@@ -101,7 +101,7 @@
     </div>
 
     <div class="update-box">
-      <p><b>!Latest: </b><a href="entry8.html">Some More GitHub Security Repos</a></a>
+      <p><b>!Latest: </b><a href="entry9.html">Code Obfuscation</a></a>
     </div>
 
 
@@ -125,6 +125,7 @@
         <h2>Entries</h2>
         <p class="tldr-section-des">Blog Entries</p>
         <div class="newsfeed-list">
+          <p>03/13/2025  <a href="entry9.html">Code Obfuscation</a></p>
           <p>03/05/2025  <a href="entry8.html">Some More GitHub Security Repos</a></p>
           <p>02/27/2025  <a href="entry7.html">Some GitHub Security Repos</a></p>
           <p>02/24/2025  <a href="entry6.html">WEBSITE UPDATE</a></p>
@@ -141,9 +142,9 @@
         <h2>The Breach</h2>
         <p class="tldr-section-des"><i>a TL;DR News Section</i></p>
         <div class="tldr">
-          <h2><a href="https://www.bleepingcomputer.com/news/security/malicious-chrome-extensions-can-spoof-password-managers-in-new-attack/?utm_source=tldrinfosec" target="_blank">Malicious Chrome extensions can spoof password managers in new attack</a></h2>
+          <h2><a href="https://hackread.com/new-obscurebat-malware-targets-users-fake-captchas/?utm_source=tldrinfosec" target="_blank">New OBSCURE#BAT Malware Targets Users with Fake Captchas</a></h2>
           <img src="tldrimage.png" alt="news-image" class="tldr-image">
-          <p>SquareX Labs discovered a "polymorphic" attack where malicious Chrome extensions morph into legitimate ones like password managers, crypto wallets, and banking apps to steal sensitive data. The attack abuses the 'chrome.management' API or injects scripts into web pages to detect installed extensions. If a targeted extension is found, the malicious one disables it, mimics its appearance, and tricks users into entering credentials via a fake login prompt. Once stolen, the extension reverts to normal, making detection difficult. SquareX has disclosed the attack to Google.</p>
+          <p>OBSCURE#BAT is a malware campaign using fake software downloads and social engineering to trick users into running malicious code. It hides itself using a rootkit, modifies system settings for persistence, and uses techniques like fake captchas and disguised apps. The malware targets users in Canada, Germany, the U.S., and the U.K. To protect against it, download software only from trusted sources, use endpoint logging, monitor for unusual activity, and deploy threat detection tools.</p>
           <!-- <img src="media/icons/info.png" alt="information" class="info"> -->
         </div>
       </div>
@@ -183,11 +184,11 @@
       <div class="faq-div">
         <h2>FAQ</h2>
         <p class="faq-section-des"><i>Today's Frequently Asked Question...</i></p>
-        <h3>What is "fileless malware," and how does it persist?</h3>
+        <h3>Can encrypted data be hacked without brute force?</h3>
         <p>
-          Fileless malware operates in memory without writing files to disk, often using 
-          PowerShell, registry modifications, or WMI scripts to execute malicious code. 
-          This makes it difficult for traditional antivirus solutions to detect.
+          Yes, attackers may use <a href="https://www.techtarget.com/searchsecurity/definition/side-channel-attack" target="_blank">side-channel attacks</a> , like power analysis or <a href="https://www.sciencedirect.com/topics/engineering/electromagnetic-leakage" target="_blank">electromagnetic leakage</a> , 
+          to extract cryptographic keys. Additionally, <a href="https://www.dekra.com/en/fault-injection-attacks/" target="_blank">fault injection attacks</a> (such as voltage manipulation) 
+          can disrupt encryption processes, leading to data exposure.
         </p>
         <a href="faq.html">full list of frequently asked questions</a>
       </div>
@@ -197,12 +198,12 @@
           <h2>Trivia</h2>
           <p class="quiz-section-des"><i>Brain Teaser</i></p>
         </div>
-        <h3>Which of the hash functions listed below offers the highest level of security?</h3>
+        <h3>Which type of attack involves an attacker intercepting and modifying communications between two parties without their knowledge?</h3>
         <div class="choices-div">
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">MD5</div>
-          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">SHA-3</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">RIPEMD-160</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?"> HMAC</div>
+          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">Man-in-the-middle (MITM) attack</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Denial-of-service (DoS) attack</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">SQL injection</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Cross-site scripting (XSS)</div>
         </div>
       </div>
     </div>

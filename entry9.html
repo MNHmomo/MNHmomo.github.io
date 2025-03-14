@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SQ12EXGS4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1SQ12EXGS4');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="media/tabicon.png">
+    <title>Code Obfuscation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/entry4.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+
+    <style>
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="navbar">
+
+        <img src="media/hamicon.png" class="hamicon">
+
+        <div class="dropdown">
+          <div class="dropdown-boxes">
+            <img src="media/icons/home.png">
+            <a href="https://www.bashbreach.com/">Home</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/about.png">
+            <a href="about.html">About</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/projects.png">
+            <a href="projects.html">Projects</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/github.png">
+            <a href="https://github.com/MNHmomo" target="_blank">Github</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/linkedin.png">
+            <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/resume.png">
+            <a href="resume.html">Resume</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/now.png">
+            <a href="now.html">Now</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/interests.png">
+            <a href="interests.html">Interests</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/architecture.png">
+            <a href="architecture.html">Architecture</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/statboard.png">
+            <a href="statboard.html">Statboard</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/licdis.png">
+            <a href="licdis.html">Lic & Dis</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/privacy.png">
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+
+        <a href="index.html"><img src="media/logogif.gif" class="logogif"></a>
+
+        <img src="media/icons/now copy.png" class="dark" id="dark">
+
+      </div>
+    </div>
+
+    <div class="logo-div">
+      <img src="media/entrymedia/entry9logo.png" alt="Code-Obfuscation">
+    </div>
+
+    <div class="title">
+      <h1>Code Obfuscation</h1>
+    </div>
+
+    <div class="about-me">
+      <div>
+        <h2>TL;DR</h2>
+        <p>
+            Code obfuscation is a technique used to make source code difficult to understand, primarily to protect 
+            intellectual property and hinder reverse engineering. In cybersecurity, both attackers and defenders 
+            use obfuscation—hackers employ it to conceal malware, bypass security filters, and evade detection, 
+            while developers use it to safeguard software from exploitation. Common methods include renaming 
+            variables to meaningless names, encrypting strings, altering control flow, and inserting redundant 
+            code. This creates an ongoing battle between obfuscation and de-obfuscation, where security 
+            researchers use tools like IDA Pro and Ghidra to analyze obfuscated threats while attackers 
+            continuously refine their techniques.
+        </p>
+        <br><br>
+
+        <h2>Code Obfuscation</h2>
+        <p>
+            Code obfuscation works by modifying source code to enhance its complexity and obfuscate its understanding. 
+            Its process is to basically make source code difficult to understand, for the purpose of hindering analysis 
+            and reverse engineering. This helps improve the software's code security and protect intellectual property 
+            rights. The process involves using a combination of confusing and misleading code expressions, renaming variables 
+            and methods with nonsensical names, and introducing non-essential or redundant code.<sup><a href="https://www.digitalguardian.com/blog/what-code-obfuscation-how-does-it-work" target="_blank">1</a></sup>
+        </p>
+
+        <p>For example, in simple python code: </p>
+        <pre>
+            <code>
+                def add(a, b): 
+                    return a + b 
+            </code>
+        </pre>
+        <p>After obfuscation, it might look like this: </p>
+        <pre>
+            <code>
+                def x1(a1, b2): 
+                    return (lambda x, y: x + y)(a1, b2) 
+            </code>
+        </pre>
+
+        <p>
+            You take the code of a program, and you completely over complicate it. Both programs output the same 
+            result but go about it in different ways. The second being overly complex. Here’s a <a href="https://benkurtovic.com/2014/06/01/obfuscating-hello-world.html" target="_blank">link</a> to another 
+            example of code obfuscation done by a developer, who actually won this 
+            <a href="https://codegolf.stackexchange.com/questions/22533/weirdest-obfuscated-hello-world" target="_blank">Code Golf Contest</a> to create 
+            the weirdest obfuscated program that prints the string “Hello world!”. 
+        </p>
+        <br><br>
+
+        <h2>Code Obfuscation in Cybersecurity</h2>
+        <p>
+            Now code obfuscation can be, and is, widely used in cybersecurity, by both the defender and attacker. 
+            Hackers can use obfuscation to hide the intent of malicious code. Say you wanted to analyze a program 
+            and reverse engineer it to see if it’s malware or not. You’d usually go about it by looking through 
+            the source code, but because of code obfuscation, its functionality isn’t completely apparent. 
+            You’d see inconsistencies in variable names and function names, redundant functions or even useless logic, 
+            all to just throw you off. Code obfuscation can also be used to bypass security filters, like intrusion 
+            detection system (IDS) or email filters. Many cryptojacking scripts and ransomware payloads are heavily 
+            obfuscated to avoid detection and removal.<sup><a href="https://www.hypr.com/security-encyclopedia/obfuscation" target="_blank">2</a></sup>
+        </p>
+        <p>
+            Code obfuscation can also work the other way, in favor of defense. A developer can complicate 
+            their code to the point where only they understand to, to prevent hackers from exploiting any 
+            source code or finding any exploits. 
+        </p>
+        <p>
+            There are many ways code obfuscation can work and how it’s used. Renaming variables and functions replaces 
+            meaningful names with meaningless or misleading ones, such as changing “userData” to “a1B2C3D4”, 
+            making the code less readable. Control flow obfuscation changes the program's execution path using 
+            complex loops, conditional statements, or dummy code paths that confuse attackers while still having 
+            the same functionality. String encryption hides sensitive data like API keys and passwords by 
+            converting them into unreadable formats, decrypting them only at runtime. Dead code insertion 
+            adds redundant, non-functional code to distract and slow down reverse engineers. Control flow 
+            flattening restructures the program’s logic into disjointed, non-linear parts, making it difficult 
+            to trace the execution flow.<sup><a href="https://www.extrahop.com/resources/attacks/malware-obfuscation" target="_blank">3</a></sup>
+        </p>
+        <br><br>
+
+        <h2>Obfuscation and "De-obfuscation"</h2>
+        <p>
+            There is a sort of back and forth between obfuscation and “de-obfuscation”. 
+            Cybersecurity researchers and developers continuously create and use tools to 
+            “de-obfuscate “and analyze malicious code, while hackers/attackers refine their 
+            obfuscation techniques to evade detection. Tools like IDA pro , ghidra , and 
+            hybrid machine learning assist analysts in obfuscated threats.<sup><a href="https://ieeexplore.ieee.org/document/7163054" target="_blank">4</a></sup>
+        </p>
+
+        
+      </div>
+    </div>
+  </body>
+
+  <script src="js/darkmode.js"></script>
+
+</html>
