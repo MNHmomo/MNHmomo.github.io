@@ -77,7 +77,7 @@ pre {
     word-break: break-word;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1055px) {
     .about-me div {
         margin-left: 5px;
         width: auto;

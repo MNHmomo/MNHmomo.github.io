@@ -40,10 +40,6 @@
 
         <div class="dropdown">
           <div class="dropdown-boxes">
-            <img src="media/icons/latest.png">
-            <a href="entry5.html">Latest</a>
-          </div>
-          <div class="dropdown-boxes">
             <img src="media/icons/home.png">
             <a href="https://www.bashbreach.com/">Home</a>
           </div>
@@ -66,10 +62,6 @@
           <div class="dropdown-boxes">
             <img src="media/icons/resume.png">
             <a href="resume.html">Resume</a>
-          </div>
-          <div class="dropdown-boxes">
-            <img src="media/icons/now.png">
-            <a href="now.html">Now</a>
           </div>
           <div class="dropdown-boxes">
             <img src="media/icons/interests.png">
@@ -142,9 +134,9 @@
         <h2>The Breach</h2>
         <p class="tldr-section-des"><i>a TL;DR News Section</i></p>
         <div class="tldr">
-          <h2><a href="https://hackread.com/new-obscurebat-malware-targets-users-fake-captchas/?utm_source=tldrinfosec" target="_blank">New OBSCURE#BAT Malware Targets Users with Fake Captchas</a></h2>
+          <h2><a href="https://www.theverge.com/news/630894/doge-treasury-lawsuit-marko-elez-unencrypted-emails" target="_blank">A DOGE staffer broke Treasury policy by emailing unencrypted personal data</a></h2>
           <img src="tldrimage.png" alt="news-image" class="tldr-image">
-          <p>OBSCURE#BAT is a malware campaign using fake software downloads and social engineering to trick users into running malicious code. It hides itself using a rootkit, modifies system settings for persistence, and uses techniques like fake captchas and disguised apps. The malware targets users in Canada, Germany, the U.S., and the U.K. To protect against it, download software only from trusted sources, use endpoint logging, monitor for unusual activity, and deploy threat detection tools.</p>
+          <p>A Treasury staffer, Marko Elez, violated policy by emailing a spreadsheet with transaction data to two Trump administration officials without encryption or approval. Elez, a former SpaceX employee, resigned in February over racist social media posts but was later rehired at the Social Security Administration. The Treasury claims he did not alter payment systems, but a lawsuit by 19 state attorneys general argues DOGE’s access was mishandled. The court has restricted DOGE’s access, and the government is seeking to modify the order. Critics say the findings highlight a rushed and chaotic onboarding process.</p>
           <!-- <img src="media/icons/info.png" alt="information" class="info"> -->
         </div>
       </div>
@@ -160,20 +152,20 @@
     <div class="grid-div">
       <div class="grid">
         <div class="grid-item">
-          <a href="entry4.html"><img src="media/entrymedia/entry4logo.png" alt="entry4logo"></a>
-          <a href="entry4.html">Exploring Network Ports</a>
+          <a href="entry5.html"><img src="entrymedia/entry5logo.png" alt="CIA-triad"></a>
+          <a href="entry5.html">The CIA Triad</a>
         </div>
         <div class="grid-item">
-          <a href="entry3.html"><img src="media/entrymedia/entry3logo.png" alt="entry3logo"></a>
-          <a href="entry3.html">Know Your OSI Model</a>
+          <a href="entry9.html"><img src="entrymedia/entry9logo.png" alt="Code-Obfuscation"></a>
+          <a href="entry9.html">Code Obfuscation</a>
         </div>
         <div class="grid-item">
-          <a href="entry2.html"><img src="media/entrymedia/entry2logo.png" alt="entry2logo"></a>
-          <a href="entry2.html">Security Mechanisms: Firewalls, IDS, and IPS</a>
+          <a href="entry4.html"><img src="entrymedia/entry4logo.png" alt="network-ports"></a>
+          <a href="entry4.html">Exporing Network Ports</a>
         </div>
         <div class="grid-item">
-          <a href="entry1.html"><img src="media/entrymedia/entry1logo.png" alt="entry1logo"></a>
-          <a href="entry1.html">Understanding Network Sandboxes</a>
+          <a href="entry8.html"><img src="entrymedia/entry8logo.png" alt="github-pixel-logo"></a>
+          <a href="entry8.html">Some More GitHub Security Repos</a>
         </div>
       </div>
     </div>
@@ -184,11 +176,11 @@
       <div class="faq-div">
         <h2>FAQ</h2>
         <p class="faq-section-des"><i>Today's Frequently Asked Question...</i></p>
-        <h3>Can encrypted data be hacked without brute force?</h3>
+        <h3>What is a "supply chain attack," and why is it dangerous?</h3>
         <p>
-          Yes, attackers may use <a href="https://www.techtarget.com/searchsecurity/definition/side-channel-attack" target="_blank">side-channel attacks</a> , like power analysis or <a href="https://www.sciencedirect.com/topics/engineering/electromagnetic-leakage" target="_blank">electromagnetic leakage</a> , 
-          to extract cryptographic keys. Additionally, <a href="https://www.dekra.com/en/fault-injection-attacks/" target="_blank">fault injection attacks</a> (such as voltage manipulation) 
-          can disrupt encryption processes, leading to data exposure.
+          A supply chain attack compromises software, hardware, or services before they reach the end user. Attackers 
+          inject malicious code into trusted updates, developer tools, or hardware components, leading to a widespread attack 
+          (e.g., SolarWinds attack). 
         </p>
         <a href="faq.html">full list of frequently asked questions</a>
       </div>
@@ -198,12 +190,58 @@
           <h2>Trivia</h2>
           <p class="quiz-section-des"><i>Brain Teaser</i></p>
         </div>
-        <h3>Which type of attack involves an attacker intercepting and modifying communications between two parties without their knowledge?</h3>
+        <h3>What is the primary function of a honeypot in cybersecurity?</h3>
         <div class="choices-div">
-          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">Man-in-the-middle (MITM) attack</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Denial-of-service (DoS) attack</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">SQL injection</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Cross-site scripting (XSS)</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">To encrypt sensitive information before transmission</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">To authenticate users before granting network access</div>
+          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?"> To detect and study cyberattacks by luring attackers into a controlled environment</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?"> To act as a backup firewall in case of primary firewall failure</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="title">
+      <h2>All Entries</h2>
+    </div>
+
+
+    <div class="rss-div">
+      <div class="rss">
+        <div class="rss-item">
+          <a href="entry9.html"><img src="entrymedia/entry9logo.png" alt="Code Obfuscation"></a>
+          <a href="entry9.html">Code Obfuscation</a>
+        </div>
+        <div class="rss-item">
+          <a href="entry8.html"><img src="entrymedia/entry8logo.png" alt="github-pixel-logo"></a>
+          <a href="entry8.html">Some More GitHub Security Repos</a>
+        </div>
+        <div class="rss-item">
+          <a href="entry7.html"><img src="entrymedia/entry7logo.png" alt="github-pixel-logo"></a>
+          <a href="entry7.html">Some GitHub Security Repos</a>
+        </div>
+        <div class="rss-item">
+          <a href="entry6.html"><img src="entrymedia/entry6logo.png" alt="exlamation"></a>
+          <a href="entry6.html">Website Update</a>
+        </div>
+        <div class="rss-item">
+          <a href="entry5.html"><img src="entrymedia/entry5logo.png" alt="The CIA Triad"></a>
+          <a href="entry5.html">The CIA Triad</a>
+        </div>
+        <div class="rss-item">
+          <a href="entry4.html"><img src="entrymedia/entry4logo.png" alt="exploring-network-ports"></a>
+          <a href="entry4.html">Exploring Network Ports</a>
+        </div>
+        <div class="rss-item">
+          <a href="entry3.html"><img src="entrymedia/entry3logo.png" alt="OSI-model"></a>
+          <a href="entry3.html">Know Your OSI Model</a>
+        </div>
+        <div class="rss-item">
+          <a href="entry2.html"><img src="entrymedia/entry2logo.png" alt="Security Mechanisms: Firewalls, IDS, and IPS"></a>
+          <a href="entry2.html">Security Mechanisms: Firewalls, IDS, and IPS</a>
+        </div>
+        <div class="rss-item">
+          <a href="entry1.html"><img src="entrymedia/entry1logo.png" alt="network-sandboxes"></a>
+          <a href="entry1.html">Understanding Network Sandboxes</a>
         </div>
       </div>
     </div>
