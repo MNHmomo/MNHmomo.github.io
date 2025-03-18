@@ -211,7 +211,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 200px;
     margin-bottom: 100px;
 }
 .footer img {
@@ -518,6 +518,46 @@
     background-color: rgb(7, 224, 148);
     color: black;
     cursor: pointer;
+}
+
+
+.activitylog-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+.activitylog-title h2 {
+    color: rgb(7, 224, 148);
+    padding: 10px;
+    font-size: 17px;
+}
+.activitylog-div {
+    border: 2px none red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.activitylog {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    border: 2px none blue;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.activitylog-item {
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 1px;
+    cursor: pointer;
+}
+.activitylog-item p{
+    display: none;
 }
 
 
