@@ -103,7 +103,7 @@
     flex-direction: column;
     box-sizing: inherit;
     padding: 20px;
-    height: 400px;
+    height: 600px;
     margin-right: 5px;
 }
 .newsfeed h2 {
@@ -126,6 +126,12 @@
     text-align: left;
     color:white;
     opacity: .7;
+    font-size: 16px
+}
+@media (max-width: 850px) {
+    .newsfeed div {
+        height: 400px;
+    }
 }
 
 .tldr-section {
@@ -171,6 +177,30 @@
 }
 .tldr h2 {
     font-size: 23px;
+}
+.other-news {
+    border: 2px solid rgb(7, 224, 148);
+    max-width: 550px;
+    padding: 0px 20px 0px 20px;
+    margin-top: 10px;
+}
+.other-news h2 {
+    font-size: 20px;
+}
+.other-news a {
+    text-decoration: underline;
+    color: rgb(7, 224, 148);
+    padding: 2px;
+}
+.other-news a:hover {
+    cursor: pointer;
+    background-color: rgb(7, 224, 148);
+    color: black;
+}
+@media (max-width: 500px) {
+    .other-news h2 {
+        font-size: 17px;
+    }
 }
 
 
@@ -249,6 +279,7 @@
 .grid-item a {
     text-decoration: none;
     color: white;
+    font-size: 14px;
 }
 @media (max-width: 1050px) {
     .grid {
@@ -367,15 +398,14 @@
 .choice {
     height: 100%;
     padding: 20px;
-    border-top: 1px solid rgb(0, 98, 64);
-    border-bottom: 1px solid rgb(0, 98, 64);
+    border: 1px solid rgb(0, 98, 64);
     opacity: .9;
     cursor: pointer;
     transition: all 0.2s;
 }
 .choice:hover {
     padding: 20px;
-    border-color: white;
+    opacity: .5;
 }
 .correct {
     background-color: rgb(87, 130, 87);
@@ -426,16 +456,16 @@
 .rss-item a {
     text-decoration: none;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
 }
 @media (max-width: 1050px) {
     .rss {
         grid-template-columns: auto auto auto;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .rss {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
     }
     .rss-item {
         width: 100px;
@@ -445,6 +475,23 @@
     }
     .rss-item a {
         font-size: 12px;
+    }
+}
+@media (max-width: 426px) {
+    .rss {
+        grid-template-columns: auto auto auto;
+    }
+    .rss-item {
+        width: 70px;
+    }
+    .rss-item img{
+        width: 70px;
+    }
+    .rss-item a {
+        font-size: 12px;
+    }
+    .rss-item p {
+        display: none;
     }
 }
 

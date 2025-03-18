@@ -5,7 +5,6 @@ function checkAnswer(choice) {
   if (isCorrect) {
       resetIncorrectChoices(); // Remove red from all wrong choices
       choice.classList.add("correct");
-      disableAllChoices(); // Disable further clicks
 
       // Dim the quiz container after a short delay
       setTimeout(() => {
