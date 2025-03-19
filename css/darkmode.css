@@ -59,6 +59,15 @@ body.dark-mode pre {
     border-color: black;
 }
 
+body.dark-mode .cursor-bar-x {
+    background: rgb(0, 95, 62);
+}
+
+/* Vertical tracking bar */
+body.dark-mode .cursor-bar-y {
+    background: rgb(0, 95, 62);
+}
+
 
 
 /* Handle */

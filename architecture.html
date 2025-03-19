@@ -58,10 +58,6 @@
             <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
           </div>
           <div class="dropdown-boxes">
-            <img src="media/icons/resume.png">
-            <a href="resume.html">Resume</a>
-          </div>
-          <div class="dropdown-boxes">
             <img src="media/icons/interests.png">
             <a href="interests.html">Interests</a>
           </div>
@@ -91,13 +87,98 @@
       <img src="media/architecturelogo.png" class="logogif" alt="architecture-logo">
     </div>
 
+    <div class="title">
+      <h1>ARCHITECTURE.md</h1>
+    </div>
+
     <div class="about-me">
         <div>
             <h1>Architecture</h1>
             <p>
-                The architecture of this website will soon be displayed.
+              When maintaining a large and open project, usually around 10k-200k lines of code, it is suggested 
+              that you add an architecture document. This document discusses the high-level design and structure of a 
+              project, which does help developers in understanding the codebase and functionality. However, this website, 
+              <a href="https://www.bashbreach.com/" target="_blank">bashbreach.com</a>, is nowhere near 10k-200k lines of code. But I still thought understanding a website’s 
+              architecture would be useful. You can read more about <a href="https://matklad.github.io/2021/02/06/ARCHITECTURE.md.html" target="_blank">ARCHITECTURE.md here</a>.
             </p>
-                
+            
+            <p>
+              This website is built and designed through my own custom HTML, CSS, JavaScript, and other web-dev languages. 
+              No ready-to-use templates or third-party website builders are used. <a href="https://www.bashbreach.com/" target="_blank">Bashbreach</a> is statically hosted through 
+              GitHub pages, so builds & Deployments are performed via the traditional deploy-from-a-branch method, rather 
+              than via GitHub Actions. Future enhancements may involve using GitHub Actions to automate builds and optimize 
+              workflow though. DNS for domain name management is done with GoDaddy. So far, this website is meant to be 
+              lightweight, fast, and free of unnecessary dependencies, making it easy to maintain and scale. 
+              That might change later on though. Such as right now media images, like the entry logo’s or the 
+              TLDR News image, are hosted on my local machine. Once more images/files are used on this website, 
+              I will move on to using web services for hosting media and content (which bashbreach will then pull from) 
+              such as AWS or Cloudflare. Regarding tracking and analytics, the website does use Google Analytics, 
+              just so I can see the number of users going on the site, and which pages are popular. 
+            </p>
+
+            <div class="figure">
+              <img src="entrymedia/architecturefigure1.png" alt="Physical Layer">
+            </div>
+
+            <ul>
+              <li><p><strong>Local Machine:</strong></p>
+                <ul>
+                  <li><p>The Website’s content are stored locally on my machine, including media like logos, images, and the actual HTML, CSS, and JavaScript files.</p></li>
+                  <li><p>I can then push these files into GitHub, to statically update the website for all users to see.</p></li>
+                </ul>
+              </li>
+            
+              <li><p><strong>GitHub Pages:</strong></p>
+                <ul>
+                  <li><p>GitHub Pages serves the static website directly from the repository.</p></li>
+                  <li><p>When updates are pushed to GitHub, the GitHub Pages service automatically reflects those changes on the live site. This is done through the branch deploy process, meaning you deploy directly from a specific GitHub branch (e.g., main).</p></li>
+                  <li><p>Later on, as the site becomes bigger, switching to GitHub Action would be the better choice. Quicker and faster.</p></li>
+                </ul>
+              </li>
+            
+              <li><p><strong>GoDaddy (DNS Management):</strong></p>
+                <ul>
+                  <li><p>The website's IP address and DNS is configured and managed on GoDaddy. This makes sure that the domain name, bashbreach.com, points to the GitHub repo the site is hosted on.</p></li>
+                  <li><p>Since the domain name is configured, it is "bashbreach.com", instead of "mnhmomo.github.io"</p></li>
+                </ul>
+              </li>
+            
+              <li><p><strong>User Access (HTTPS & Website):</strong></p>
+                <ul>
+                  <li><p>Users access the website, and the DNS configuration in GoDaddy ensures the request reaches GitHub Pages.</p></li>
+                  <li><p><strong>HTTPS:</strong> Since you want a secure connection, browsers typically use HTTPS, ensuring that the data between the user's browser and the website is encrypted. GitHub Pages supports HTTPS.</p></li>
+                </ul>
+              </li>
+            
+              <li><p><strong>Google Analytics:</strong></p>
+                <ul>
+                  <li><p>Google Analytics is integrated into the website. Once users visit the site, basic activity can be seen, such as how many active users have visited the site and which pages are popular.</p></li>
+                  <li><p>This provides insights into the website's performance, including user behavior and page popularity.</p></li>
+                </ul>
+              </li>
+            </ul>
+
+            <p>
+              The <a href="https://www.bashbreach.com/robots.txt" target="_blank">/robots.txt</a> file allows search engines to index most of the site while restricting administrative and 
+              private directories. It explicitly allows .html pages for proper indexing and includes a reference to the 
+              sitemap.xml file (<a href="https://www.bashbreach.com/sitemap.xml" target="_blank">https://bashbreach.com/sitemap.xml</a>) to help search engines efficiently crawl the site. 
+
+              <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+                <p style="margin-left: 10px; opacity: 0.7;">
+                  A <a href="https://search.gov/indexing/robotstxt.html#:~:text=A%20/robots.,are%20welcome%20on%20the%20site." target="_blank">robots.txt</a> file is a text file that instructs automated web bots 
+                  on how to crawl and/or index a website. Web teams use them to provide 
+                  information about what site directories should or should not be crawled, 
+                  how quickly content should be accessed, and which bots are welcome on the site.
+                </p>
+              </div>
+            </p>
+            <br><br>
+
+            <p>
+              So far, that is the architecture of the website. Bashbreach is still small so there are no heavy
+              dependencies yet, but I'm sure that will change as more updates are made. Once that happens, the architecture will change.
+            </p>
+            
         </div>
     </div>
 

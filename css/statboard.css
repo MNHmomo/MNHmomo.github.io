@@ -17,13 +17,22 @@
 .stats {
     border: 2px none red;
     font-family: "DM mono", serif;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    row-gap: 50px;
     margin-top: 50px;
+}
+@media (max-width: 650px) {
+    .stats {
+        grid-template-columns: auto;
+    }
 }
 
 .stats div {
-    border: 2px solid rgb(178, 178, 178);
+    border: 2px solid rgb(255, 255, 255);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -41,17 +50,62 @@
 .stats h1 {
     color: rgb(7, 224, 148); 
     font-size: 20px;
+    max-width: 300px;
 }
 
 .stats p {
     font-size: 15px;
 }
 
-@media (max-width: 450px) {
-    .stats div {
-        padding: 10px 50px 10px 50px;
-    }
+
+
+.activitylog-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
+.activitylog-title h2 {
+    color: rgb(7, 224, 148);
+    padding: 10px;
+    font-size: 17px;
+    margin: 0;
+}
+.activitylog-title p {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+.activitylog-div {
+    border: 2px none red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.activitylog {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    border: 2px none blue;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.activitylog-item {
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 1px;
+}
+.activitylog-item p{
+    display: none;
+}
+
+
 
 .dropdown::-webkit-scrollbar {
     width: 1px;

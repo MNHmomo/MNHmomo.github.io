@@ -24,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cursor.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/darkmode.css">
 
@@ -32,6 +33,9 @@
   </head>
 
   <body>
+    <div class="cursor-bar-x"></div>
+    <div class="cursor-bar-y"></div>
+    <div class="cursor-coordinates">0, 0</div>
 
     <div class="header">
       <div class="navbar">
@@ -58,10 +62,6 @@
           <div class="dropdown-boxes">
             <img src="media/icons/linkedin.png">
             <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
-          </div>
-          <div class="dropdown-boxes">
-            <img src="media/icons/resume.png">
-            <a href="resume.html">Resume</a>
           </div>
           <div class="dropdown-boxes">
             <img src="media/icons/interests.png">
@@ -93,14 +93,26 @@
     </div>
 
     <div class="update-box">
-      <p><b>!Latest: </b><a href="entry10.html">CompTIA Security+ Exam Practice Questions</a></a>
+      <p><b>!Latest: </b><a href="entry11.html">Website Update</a></a>
     </div>
 
 
 
     <div class="logo-div">
       <div class="logo">
-        <img src="media/indexlogo.png" alt="bashbreach-logo">
+        <div style="display: flex; flex-direction: column;">
+
+          <img src="media/indexlogo.png" alt="bashbreach-logo">
+
+          <!-- Toggle Checkbox -->
+          <label class="custom-checkbox">
+            <input type="checkbox" id="toggleEffect">
+            <span class="checkmark"></span>
+            toggle cursor effect.
+          </label>
+
+        </div>
+        
         <p>
           <a href="https://www.bashbreach.com/">BashBreach</a> is a personal blog and resource center focused on cybersecurity. 
           It features written entries on various cybersecurity topics and trends, with detailed explanations and regular updates. 
@@ -117,6 +129,8 @@
         <h2>Entries</h2>
         <p class="tldr-section-des">Blog Entries</p>
         <div class="newsfeed-list">
+          <p>02/19/2025  <a href="entry11.html">WEBSITE UPDATE</a></p>
+          <p>02/19/2025  <a href="architecture.html">ARCHITECTURE.md</a></p>
           <p>03/18/2025  <a href="entry10.html">CompTIA Security+ Exam Practice Questions</a></p>
           <p>03/14/2025  <a href="entry9.html">Code Obfuscation</a></p>
           <p>03/05/2025  <a href="entry8.html">Some More GitHub Security Repos</a></p>
@@ -142,14 +156,14 @@
         </div>
 
         <div class="other-news">
-          <h2><a href="https://techcrunch.com/2025/03/17/openai-to-start-testing-chatgpt-connectors-for-google-drive-and-slack/?utm_source=tldrnewsletter&guccounter=1" target="_blank">
-            OpenAI to start testing ChatGPT connectors for Google Drive and Slack</a>
+          <h2><a href="https://www.securityweek.com/100-car-dealerships-hit-by-supply-chain-attack/?utm_source=tldrinfosec" target="_blank">
+            100 Car Dealerships Hit by Supply Chain Attack</a>
           </h2>
         </div>
 
         <div class="other-news">
-          <h2><a href="https://hackingthe.cloud/aws/enumeration/whoami/?utm_source=tldrinfosec" target="_blank">
-            Monitered API Call - Whoami, Get Principal Name From Keys</a>
+          <h2><a href="https://securityaffairs.com/175512/security/attackers-use-css-to-create-evasive-phishing-messages.html?utm_source=tldrinfosec" target="_blank">
+            Attackers use CSS to create evasive phishing messages</a>
           </h2>
         </div>
       </div>
@@ -222,6 +236,14 @@
     <div class="rss-div">
       <div class="rss">
         <div class="rss-item">
+          <a href="entry11.html"><img src="entrymedia/entry6logo.png" alt="exclamation"></a>
+          <a href="entry11.html"><p>Website Update</p></a>
+        </div>
+        <div class="rss-item">
+          <a href="architecture.html"><img src="media/architecturelogo.png" alt="architecture"></a>
+          <a href="architecture.html"><p>ARCHITECTURE.md</p></a>
+        </div>
+        <div class="rss-item">
           <a href="entry10.html"><img src="entrymedia/entry10logo.png" alt="CompTIA Security+ Exam Practice Questions"></a>
           <a href="entry10.html"><p>CompTIA Security+ Exam Practice Questions</p></a>
         </div>
@@ -277,6 +299,7 @@
 
     <div class="activitylog-title">
       <h2>Activity Log</h2>
+      <p>March 2025</p>
     </div>
 
     <div class="activitylog-div">
@@ -284,9 +307,9 @@
         
         <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.100);"><p>1</p></div>
         <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.100);"><p>2</p></div>
-        <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.377);" title="FAQ. TLDR News."><p>3</p></div>
+        <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.300);" title="FAQ. TLDR News."><p>3</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>4</p></div>
-        <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.378);" title="FAQ. TLDR News. Trivia."><p>5</p></div>
+        <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.400);" title="FAQ. TLDR News. Trivia."><p>5</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>6</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>7</p></div>
         <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.300);" title="TLDR News."><p>8</p></div>
@@ -295,12 +318,12 @@
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.300);" title="TLDR News."><p>11</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.300);" title="TLDR News."><p>12</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>13</p></div>
-        <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.907);" title="New entry. FAQ. TLDR News. Trivia."><p>14</p></div>
-        <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.258);" title="Image change."><p>15</p></div>
+        <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.900);" title="New entry. FAQ. TLDR News. Trivia."><p>14</p></div>
+        <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.200);" title="Image change."><p>15</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>16</p></div>
-        <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.906);" title="'All Entries' section added"><p>17</p></div>
-        <div class="activitylog-item" style="background-color: rgb(0, 255, 162);" title="New entry. TLDR News update. 'All Entries' section update."><p>18</p></div>
-        <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>19</p></div>
+        <div class="activitylog-item" style="background-color: rgba(0, 255, 162, 0.600);" title="'All Entries' section added"><p>17</p></div>
+        <div class="activitylog-item" style="background-color: rgb(0, 255, 162);" title="New entry. 'All Entries' section update."><p>18</p></div>
+        <div class="activitylog-item" style="background-color: rgb(0, 255, 162); box-shadow: 0 0 10px rgb(0, 255, 162);" title="2 new entries. Activity Log added. TLDR News update. New effects. Minor Fixes"><p>19</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>20</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>21</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>22</p></div>
@@ -323,9 +346,12 @@
       <p>License & Disclaimer</p>
       <p>bash-breach</p>
     </div>
+
+
   </body>
 
   <script src="js/quiz.js"></script>
+  <script src="js/cursor.js"></script>
   <script src="js/darkmode.js"></script>
 
 </html>

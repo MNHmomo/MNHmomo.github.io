@@ -1,0 +1,74 @@
+/* Horizontal tracking bar */
+.cursor-bar-x {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 50px;
+    background: rgb(7, 224, 148);
+    transition: transform 0.1s linear;
+}
+
+/* Vertical tracking bar */
+.cursor-bar-y {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 50px;
+    background: rgb(7, 224, 148);
+    transition: transform 0.1s linear;
+}
+
+/* Coordinates display */
+.cursor-coordinates {
+    position: fixed;
+    font-size: 10px;
+    pointer-events: none;
+    white-space: nowrap;
+    user-select: none;
+    transition: transform 0.05s linear;
+}
+
+@media (max-width: 750px) {
+    .cursor-bar-x, .cursor-bar-y, .cursor-coordinates {
+        display: none !important;
+    }
+}
+
+/* Checkbox container */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Hide default checkbox */
+.custom-checkbox input {
+    display: none;
+}
+
+/* Custom checkmark */
+.custom-checkbox .checkmark {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff00;
+    border: 1px solid rgb(7, 224, 148);
+    border-radius: 0px;
+    margin-right: 8px;
+}
+
+/* When checked, change color */
+.custom-checkbox input:checked + .checkmark {
+    background-color: rgb(7, 224, 148);
+}
+
+@media (max-width: 750px) {
+    .custom-checkbox, .custom-checkbox input, .custom-checkbox .checkmark {
+        display: none !important;
+    }
+}
