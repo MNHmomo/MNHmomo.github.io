@@ -40,8 +40,8 @@
 .logo p {
     width: 400px;
     margin: 0;
-    border-left: 2px solid rgb(0, 127, 83);
-    padding-left: 10px;
+    /*border-left: 2px solid rgb(0, 127, 83);*/
+    padding-left:0px;
 }
 .logo a {
     text-decoration: none;
@@ -101,7 +101,7 @@
     flex-direction: column;
     box-sizing: inherit;
     padding: 20px;
-    height: 600px;
+    height: 530px;
     margin-right: 5px;
 }
 .newsfeed h2 {
@@ -178,12 +178,12 @@
 }
 .other-news {
     border: 2px solid rgb(7, 224, 148);
-    max-width: 550px;
+    width: 550px;
     padding: 0px 20px 0px 20px;
     margin-top: 10px;
 }
 .other-news h2 {
-    font-size: 20px;
+    font-size: 17px;
 }
 .other-news a {
     text-decoration: underline;
@@ -194,6 +194,16 @@
     cursor: pointer;
     background-color: rgb(7, 224, 148);
     color: black;
+}
+@media (max-width: 1115px) {
+    .other-news {
+        max-width: 550px;
+    }
+}
+@media (max-width: 615px) {
+    .other-news {
+        width: auto;
+    }
 }
 @media (max-width: 500px) {
     .other-news h2 {
