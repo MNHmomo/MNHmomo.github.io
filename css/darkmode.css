@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(25, 25, 25);
+    background-color: rgb(10, 10, 10);
     color:white;
     font-family: "DM mono", serif;
     scroll-behavior: smooth;
@@ -8,7 +8,7 @@ body {
     padding: 0;
 }
 body.dark-mode {
-    background-color: white;
+    background-color: rgb(255, 247, 224);
     color: black;
 }
 body.dark-mode h1 {
@@ -31,6 +31,13 @@ body.dark-mode .dropdown a {
 }
 body.dark-mode div {
     border-color: rgb(0, 95, 62);
+}
+body.dark-mode iframe {
+    border-color: rgb(0, 95, 62);
+}
+body.dark-mode button {
+    border-color: rgb(0, 95, 62);
+    color: rgb(0, 95, 62);
 }
 body.dark-mode p {
     border-color: rgb(0, 95, 62);

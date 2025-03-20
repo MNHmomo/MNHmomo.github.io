@@ -19,6 +19,11 @@
 .update-box a:hover {
     cursor: pointer;
 }
+
+
+/*-----------------------------------------------------------*/
+
+
 .logo-div {
     border: 2px none blue;
     display: flex;
@@ -38,10 +43,11 @@
     cursor: crosshair;
 }
 .logo p {
-    width: 400px;
+    width: 300px;
     margin: 0;
     /*border-left: 2px solid rgb(0, 127, 83);*/
     padding-left:0px;
+    font-size: 14px;
 }
 .logo a {
     text-decoration: none;
@@ -60,10 +66,12 @@
         border-left: 2px none rgb(0, 127, 83);
         border-top: 2px none rgb(0, 127, 83);
         padding-top: 10px;
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
+
+/*-----------------------------------------------------------*/
 
 
 .news-section {
@@ -73,8 +81,9 @@
     justify-content: center;
     align-items: center;
     column-gap: 30px;
+    margin-top: 50px;
 }
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
     .news-section {
         grid-template-columns: auto;
     }
@@ -124,13 +133,22 @@
     text-align: left;
     color:white;
     opacity: .7;
-    font-size: 16px
+    font-size: 15px
 }
 @media (max-width: 850px) {
     .newsfeed div {
         height: 400px;
     }
+    .newsfeed-list p {
+        font-size: 14px
+    }
 }
+
+
+
+/*-----------------------------------------------------------*/
+
+
 
 .tldr-section {
     border: 2px none blue;
@@ -176,6 +194,11 @@
 .tldr h2 {
     font-size: 23px;
 }
+.tldr p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
 .other-news {
     border: 2px solid rgb(7, 224, 148);
     width: 550px;
@@ -213,6 +236,10 @@
 
 
 
+/*-----------------------------------------------------------*/
+
+
+
 .footer {
     border: 2px none red;
     display: flex;
@@ -235,6 +262,11 @@
 }
 
 
+
+/*-----------------------------------------------------------*/
+
+
+
 .title {
     display: flex;
     justify-content: center;
@@ -255,6 +287,12 @@
     }
 }
 
+
+
+/*-----------------------------------------------------------*/
+
+
+
 .grid-div {
     border: 2px none red;
     display: flex;
@@ -267,22 +305,23 @@
     border: 2px none green;
     grid-template-columns: auto auto auto auto;
     column-gap: 10px;
-    row-gap: 10px;
+    row-gap: 15px;
 }
 .grid-item {
     border: 2px solid rgb(0, 125, 82);
     text-align: center;
-    opacity: .7;
+    opacity: 1;
     width: 200px;
     padding: 10px;
-    transition: opacity 0.2s;
+    transition: all 0.2s;
 }
 .grid-item:hover {
-    opacity: 1;
+    transform: translateY(-10px);
 }
 .grid-item img {
     width: 200px;
     border-bottom: 2px solid rgb(7, 224, 148);
+    transition: all 0.2s;
 }
 .grid-item a {
     text-decoration: none;
@@ -292,6 +331,15 @@
 @media (max-width: 1050px) {
     .grid {
         grid-template-columns: auto auto;
+    }
+    .grid-item {
+        width: 150px;
+    }
+    .grid-item img{
+        width: 150px;
+    }
+    .grid-item a {
+        font-size: 12px;
     }
 }
 @media (max-width: 500px) {
@@ -311,13 +359,17 @@
 
 
 
+/*-----------------------------------------------------------*/
+
+
+
 .other-div {
     border: 2px none red;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
-    column-gap: 50px;
+    column-gap: 200px;
     margin: 30px 10px 10px 10px;
 }
 @media (max-width: 1050px) {
@@ -349,6 +401,7 @@
 .faq-div p {
     margin: 0;
     opacity: .9;
+    font-size: 14px;
 }
 .faq-section-des {
     margin: 0;
@@ -365,6 +418,12 @@
 .faq-div a:hover {
     color: white;
 }
+
+
+
+/*-----------------------------------------------------------*/
+
+
 
 .quiz-div {
     border: 2px solid rgb(7, 224, 148);
@@ -409,6 +468,7 @@
     border: 1px solid rgb(0, 98, 64);
     opacity: .9;
     cursor: pointer;
+    font-size: 14px;
     transition: all 0.2s;
 }
 .choice:hover {
@@ -431,31 +491,38 @@
 }
 
 
+
+/*-----------------------------------------------------------*/
+
+
+
+
 .rss-div {
     margin-top: 0px;
     border: 2px none red;
     display: flex;
     justify-content: center;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 .rss {
     display: grid;
     padding: 10px;
     border: 2px none green;
-    grid-template-columns: auto auto auto auto auto;
-    column-gap: 10px;
-    row-gap: 10px;
+    grid-template-columns: auto auto auto auto auto auto;
+    column-gap: 15px;
+    row-gap: 15px;
 }
 .rss-item {
     border: 2px solid rgb(0, 125, 82);
     text-align: center;
-    opacity: .7;
+    opacity: 1;
     width: 150px;
     padding: 10px;
-    transition: opacity 0.2s;
+    transition: all 0.2s;
 }
 .rss-item:hover {
     opacity: 1;
+    transform: translateY(-10px);
 }
 .rss-item img {
     width: 150px;
@@ -465,6 +532,11 @@
     text-decoration: none;
     color: white;
     font-size: 14px;
+}
+@media (max-width: 1185px) {
+    .rss {
+        grid-template-columns: auto auto auto auto;
+    }
 }
 @media (max-width: 1050px) {
     .rss {
@@ -485,7 +557,7 @@
         font-size: 12px;
     }
 }
-@media (max-width: 426px) {
+@media (max-width: 440px) {
     .rss {
         grid-template-columns: auto auto auto;
     }
@@ -502,6 +574,175 @@
         display: none;
     }
 }
+
+
+
+/*-----------------------------------------------------------*/
+
+
+
+
+.cyber-div {
+    border: 2px none red;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 150px;
+}
+.cyber-div h2 {
+    color: rgb(7, 224, 148);
+    font-size: 25px;
+}
+@media (max-width: 1570px) {
+    .cyber-div {
+        grid-template-columns: auto;
+    }
+    .github-div {
+        margin-top: 100px;
+    }
+}
+.cybermap-div {
+    border: 2px none blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cybermap-div iframe {
+    border: 2px solid rgb(7, 224, 148);
+    width: 680px;
+    height: 580px;
+    
+}
+@media (max-width: 900px) {
+    .cybermap-div iframe {
+        width: 450px;
+        height: 450px;
+    }
+}
+@media (max-width: 500px) {
+    .cybermap-div iframe {
+        width: 250px;
+        height: 350px;
+    }
+}
+
+.cybermap-div a {
+    text-decoration: underline;
+    color: white;
+    font-size: 14px;
+    opacity: .5;
+}
+.cybermap-div a:hover {
+    color: rgb(7, 224, 148);
+    cursor: pointer;
+}
+
+
+
+/*-----------------------------------------------------------*/
+
+
+
+
+.github-div {
+    border: 2px none blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.github-disclaimer {
+    text-decoration: none;
+    color: white;
+    opacity: .5;
+    font-size: 10px;
+    width: 650px;
+}
+.github-div a:hover {
+    color: rgb(7, 224, 148);
+    cursor: pointer;
+}
+.github-highlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 580px;
+    border: 2px solid rgb(7, 224, 148);
+    max-width: 680px;
+    overflow-y: auto;
+}
+@media (max-width: 900px) {
+    .github-highlight {
+        height: auto;
+        max-width: 450px;
+    }
+    .github-disclaimer {
+        width: 450px;
+    }
+}
+@media (max-width: 900px) {
+    .github-highlight {
+        height: auto;
+        max-width: 450px;
+    }
+    .github-disclaimer {
+        width: 450px;
+    }
+    .github-div {
+        padding: 20px;
+    }
+}
+@media (max-width: 505px) {
+    .github-highlight {
+        height: 550px;
+        max-width: 450px;
+        width: auto;
+    }
+    .github-disclaimer {
+        width: auto;
+    }
+    .github-highlight img {
+        height: 180px;
+        width: auto;
+    }
+}
+.github-highlight h3 {
+    font-size: 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.100);
+    width: 90%;
+    padding-bottom: 5px;
+    font-weight: 100;
+}
+.github-highlight a {
+    text-decoration: none;
+    color: rgb(7, 224, 148);
+}
+.github-highlight a:hover {
+    color: black;
+    background-color: rgb(7, 224, 148);
+    cursor: pointer;
+}
+.github-highlight img {
+    height: 180px;
+    object-fit: cover;
+    width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.100);
+}
+.github-highlight p {
+    text-align: left;
+    width: 90%;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+
+/*-----------------------------------------------------------*/
+
 
 
 .newsletter-div {
@@ -527,6 +768,11 @@
     color: black;
     cursor: pointer;
 }
+
+
+
+/*-----------------------------------------------------------*/
+
 
 
 .activitylog-title {
@@ -576,6 +822,11 @@
 }
 
 
+
+/*-----------------------------------------------------------*/
+
+
+
 .newsfeed div::-webkit-scrollbar {
     width: 2px;
     height: 2px;
@@ -609,5 +860,22 @@ border-radius: 0px;
 }
 /* Handle on hover */
 .tldr::-webkit-scrollbar-thumb:hover {
+background: cyan;
+}
+
+.github-highlight::-webkit-scrollbar {
+    width: 1px;
+}
+  /* Track */
+.github-highlight::-webkit-scrollbar-track {
+background: #00000000;
+}
+/* Handle */
+.github-highlight::-webkit-scrollbar-thumb {
+background: rgb(0, 255, 166);
+border-radius: 0px;
+}
+/* Handle on hover */
+.github-highlight::-webkit-scrollbar-thumb:hover {
 background: cyan;
 }

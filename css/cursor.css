@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    height: 2px;
+    height: 5px;
     width: 50px;
     background: rgb(7, 224, 148);
     transition: transform 0.1s linear;
@@ -14,7 +14,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 2px;
+    width: 5px;
     height: 50px;
     background: rgb(7, 224, 148);
     transition: transform 0.1s linear;

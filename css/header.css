@@ -94,6 +94,7 @@
 .dark {
     height: 30px;
     opacity: .7;
+    margin-bottom: 10px;
 }
 .dark:hover {
     cursor: pointer;
