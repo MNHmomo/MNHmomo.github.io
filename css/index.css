@@ -653,6 +653,9 @@
     justify-content: center;
     align-items: center;
 }
+.github-div h2 {
+    text-align: center;
+}
 .github-disclaimer {
     text-decoration: none;
     color: white;
