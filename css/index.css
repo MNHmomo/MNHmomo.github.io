@@ -673,6 +673,7 @@
     border: 2px solid rgb(7, 224, 148);
     max-width: 680px;
     overflow-y: auto;
+    margin-bottom: 10px;
 }
 @media (max-width: 900px) {
     .github-highlight {
