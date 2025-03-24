@@ -1,5 +1,5 @@
 function calculateSiteAge() {
-    const launchDate = new Date("2025-01-25");
+    const launchDate = new Date("2025-01-24");
     const today = new Date();
     
     let years = today.getFullYear() - launchDate.getFullYear();
