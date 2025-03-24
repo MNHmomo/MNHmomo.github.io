@@ -78,9 +78,10 @@
 .daily-note {
     background-color: rgb(7, 224, 148);
     color: black;
-    padding: 5px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     width: 280px;
-    margin-top: 5px;
     border: 2px solid black;
     font-size: 14px;
     margin-top: 0;

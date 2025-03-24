@@ -58,6 +58,13 @@
 }
 
 
+.activity-div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
 
 .activitylog-title {
     display: flex;
