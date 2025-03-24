@@ -92,25 +92,33 @@
 
     <div class="logo-div">
       <div class="logo">
+
         <div style="display: flex; flex-direction: column;">
-
           <img src="media/indexlogo.png" alt="bashbreach-logo">
-
           <!-- Toggle Checkbox -->
           <label class="custom-checkbox">
             <input type="checkbox" id="toggleEffect">
             <span class="checkmark"></span>
             toggle cursor effect.
           </label>
-
         </div>
         
-        <p>
-          <a href="https://www.bashbreach.com/">BashBreach</a> is a personal blog and resource center focused on cybersecurity. 
-          It features written entries on various cybersecurity topics and trends, with detailed explanations and regular updates. 
-          Created by a cybersecurity student, <a href="https://www.bashbreach.com/">BashBreach</a> serves as both a 
-          learning tool and a reference for others interested in the field.
-        </p>
+        <div class="daily-note-div">
+
+          <p class="blog-intro">
+            <a href="https://www.bashbreach.com/">BashBreach</a> is a personal blog and resource center focused on cybersecurity. 
+            It features written entries on various cybersecurity topics and trends, with detailed explanations and regular updates. 
+            Created by a cybersecurity student, <a href="https://www.bashbreach.com/">BashBreach</a> serves as both a 
+            learning tool and a reference for others interested in the field.
+          </p>
+
+          <p class="daily-note">
+            <b>Daily Note:</b> This website is featured in <a href="https://shellsharks.com/" target="_blank">shellsharks.com</a>'s 
+            "<i><a href="https://shellsharks.com/infosec-blogs" target="_blank">Boutique Security Blogs</a></i>", as well as in it's <br>
+            <a href="https://shellsharks.com/scrolls/scroll/2025-03-07#cybersecurity" target="_blank">"Discovered IndieSec Blogs"</a>
+          </p>
+
+        </div>
       </div>
     </div>
 
@@ -141,21 +149,21 @@
         <h2>/The Breach</h2>
         <p class="tldr-section-des"><i>a TL;DR News Section</i></p>
         <div class="tldr">
-          <h2><a href="https://www.bleepingcomputer.com/news/security/microsoft-new-rat-malware-used-for-crypto-theft-reconnaissance/?utm_source=tldrinfosec" target="_blank">Microsoft Uncovers New StilachiRAT Malware</a></h2>
+          <h2><a href="https://techcrunch.com/2025/03/21/russian-zero-day-seller-is-offering-up-to-4-million-for-telegram-exploits/?utm_source=tldrinfosec" target="_blank">Russian zero-day seller is offering up to $4 million for Telegram exploits</a></h2>
           <img src="tldrimage.png" alt="news-image" class="tldr-image">
-          <p>Microsoft has discovered StilachiRAT, a sophisticated remote access trojan (RAT) designed to evade detection, persist on systems, and steal sensitive data. It targets browser credentials, cryptocurrency wallets, clipboard data, and system information, with capabilities for lateral movement via RDP, privilege escalation, and command execution. StilachiRAT also features anti-forensics techniques, like clearing event logs and detecting sandboxes. While not widespread, Microsoft has shared indicators of compromise and advises using official software sources and security tools to mitigate risks.</p>
+          <p>Operation Zero, a company that sells zero-day exploits exclusively to the Russian government and local companies, is offering up to $4 million for vulnerabilities in Telegram, a popular messaging app in Russia and Ukraine. The company is seeking one-click and zero-click remote code execution (RCE) exploits, with prices reflecting their value in covert cyber operations. This suggests a strong interest from Russian government agencies in exploiting Telegram, especially given Ukraine’s ban on the app for government personnel due to security concerns. Experts note that these prices may be lower than the actual resale value, as Operation Zero is likely to charge significantly more when selling the exploits to its clients.</p>
           <!-- <img src="media/icons/info.png" alt="information" class="info"> -->
         </div>
 
         <div class="other-news">
-          <h2><a href="https://www.philvenables.com/post/turning-the-security-flywheel?utm_source=tldrinfosec" target="_blank">
-            Risk & Cybersecurity: Turning the Security Flywheel</a>
+          <h2><a href="https://www.securityweek.com/ransomware-group-claims-attacks-on-ascom-jaguar-land-rover/?utm_source=tldrinfosec" target="_blank">
+            Ransomware Group Attacks on Ascom, Jaguar Land Rover</a>
           </h2>
         </div>
 
         <div class="other-news">
-          <h2><a href="https://doublepulsar.com/use-one-virtual-machine-to-own-them-all-active-exploitation-of-esxicape-0091ccc5bdfc" target="_blank">
-            Active exploitation of VMware ESX, ESXicape</a>
+          <h2><a href="https://www.bleepingcomputer.com/news/security/critical-cisco-smart-licensing-utility-flaws-now-exploited-in-attacks/?utm_source=tldrinfosec" target="_blank">
+            Cisco Licensing Utility flaws exploited in attacks</a>
           </h2>
         </div>
       </div>
@@ -195,12 +203,11 @@
       <div class="faq-div">
         <h2>FAQ</h2>
         <p class="faq-section-des"><i>Today's Frequently Asked Question...</i></p>
-        <h3>What is a hardware implant attack, and how does it differ from traditional malware?</h3>
+        <h3>What are air-gapped attacks, and how do they work?</h3>
         <p>
-          A hardware implant attack involves physically modifying or adding a malicious component to a 
-          device (e.g., motherboard chips, USB devices) to intercept, alter, or obstain data. 
-          Unlike software malware, hardware implants persist across reboots and cannot be removed 
-          with traditional antivirus tools.
+          Air-gapped attacks target systems that are physically isolated from networks. 
+          Attackers use techniques like electromagnetic emissions, ultrasonic signals, 
+          or compromised USB devices to extract data.
         </p>
         <a href="faq.html">full list of frequently asked questions</a>
       </div>
@@ -210,12 +217,12 @@
           <h2>Trivia</h2>
           <p class="quiz-section-des"><i>Brain Teaser</i></p>
         </div>
-        <h3>What does the acronym “TTP” stand for in cybersecurity threat analysis?</h3>
+        <h3>What was the first known ransomware attack, and how was it distributed?</h3>
         <div class="choices-div">
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Threat, Tactics, and Persistence</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Threat, Tracking, and Prevention</div>
-          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">Techniques, Tactics, and Procedures</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Tools, Tactics, and Penetration</div>
+          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">Side-channel attack</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Man-in-the-middle attack</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">SQL injection</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Credential stuffing</div>
         </div>
       </div>
     </div>
@@ -358,7 +365,7 @@
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>21</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>22</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>23</p></div>
-        <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>24</p></div>
+        <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.400);" title="TLDR News. FAQ. Trivia. Daily Note."><p>24</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>25</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>26</p></div>
         <div class="activitylog-item" style="background-color: rgb(0, 255, 162, 0.100);"><p>27</p></div>

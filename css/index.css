@@ -33,6 +33,7 @@
 .logo {
     display: flex;
     justify-content: center;
+    align-items: start;
     column-gap: 10px;
 }
 .logo img {
@@ -42,12 +43,17 @@
 .logo img:hover {
     cursor: crosshair;
 }
-.logo p {
+.daily-note-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.blog-intro {
     width: 300px;
-    margin: 0;
     /*border-left: 2px solid rgb(0, 127, 83);*/
-    padding-left:0px;
     font-size: 14px;
+    margin-top: 0;
 }
 .logo a {
     text-decoration: none;
@@ -69,7 +75,24 @@
         font-size: 14px;
     }
 }
-
+.daily-note {
+    background-color: rgb(7, 224, 148);
+    color: black;
+    padding: 5px;
+    width: 280px;
+    margin-top: 5px;
+    border: 2px solid black;
+    font-size: 14px;
+    margin-top: 0;
+}
+.daily-note a {
+    text-decoration: underline;
+    color: black;
+}
+.daily-note a:hover {
+    cursor: pointer;
+    color: white;
+}
 
 /*-----------------------------------------------------------*/
 
@@ -623,7 +646,13 @@
 }
 @media (max-width: 500px) {
     .cybermap-div iframe {
-        width: 250px;
+        width: 350px;
+        height: 450px;
+    }
+}
+@media (max-width: 385px) {
+    .cybermap-div iframe {
+        width: 300px;
         height: 350px;
     }
 }
