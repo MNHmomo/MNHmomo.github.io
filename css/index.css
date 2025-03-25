@@ -92,7 +92,6 @@
 }
 .daily-note a:hover {
     cursor: pointer;
-    color: white;
 }
 
 /*-----------------------------------------------------------*/
@@ -613,6 +612,7 @@
     justify-content: center;
     align-items: center;
     column-gap: 150px;
+    margin-bottom: 200px;
 }
 .cyber-div h2 {
     color: rgb(7, 224, 148);
@@ -779,6 +779,68 @@
 
 
 
+.map-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.map-title h2 {
+    color: rgb(7, 224, 148);
+    padding: 10px;
+    font-size: 25px;
+    margin: 0;
+}
+.map-title p {
+    font-size: 13px;
+    margin: 0;
+}
+@media (max-width: 370px) {
+    .map-title p {
+        font-size: 10px;
+    }
+}
+.map-title a {
+    font-size: 12px;
+    opacity: .7;
+    text-decoration: underline;
+    color: white;
+    text-align: center;
+}
+@media (max-width: 650px) {
+    .map-title a {
+        display: none;
+    }
+}
+.activity-map-div {
+    border: 2px none red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.activity-map {
+    width: 100%; 
+    height: 500px; 
+    border: 2px none blue;
+}
+@media (max-width: 840px) {
+    .activity-map-div {
+        overflow-x: auto;
+    }
+}
+
+
+
+
+
+/*-----------------------------------------------------------*/
+
+
+
 .newsletter-div {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -841,18 +903,51 @@
     column-gap: 10px;
     row-gap: 10px;
 }
-.activitylog-item {
-    font-size: 10px;
+.activitylog-item-level1 p{
+    display: none;
+}
+.activitylog-item-level2 p{
+    display: none;
+}
+.activitylog-item-level3 p{
+    display: none;
+}
+.activitylog-item-level4 p{
+    display: none;
+}
+.activitylog-item-level5 p{
+    display: none;
+}
+.activitylog-item-level1 {
     width: 15px;
     height: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     border-radius: 1px;
+    background-color: rgba(0, 255, 162, 0.100);
 }
-.activitylog-item p{
-    display: none;
+.activitylog-item-level2 {
+    width: 15px;
+    height: 15px;
+    border-radius: 1px;
+    background-color: rgba(0, 255, 162, 0.300);
+}
+.activitylog-item-level3 {
+    width: 15px;
+    height: 15px;
+    border-radius: 1px;
+    background-color: rgba(0, 255, 162, 0.600);
+}
+.activitylog-item-level4 {
+    width: 15px;
+    height: 15px;
+    border-radius: 1px;
+    background-color: rgba(0, 255, 162);
+}
+.activitylog-item-level5 {
+    width: 15px;
+    height: 15px;
+    border-radius: 1px;
+    background-color: rgb(0, 255, 162); 
+    box-shadow: 0 0 10px rgb(0, 255, 162);
 }
 
 
@@ -897,6 +992,8 @@ border-radius: 0px;
 background: cyan;
 }
 
+
+
 .github-highlight::-webkit-scrollbar {
     width: 1px;
 }
@@ -911,5 +1008,25 @@ border-radius: 0px;
 }
 /* Handle on hover */
 .github-highlight::-webkit-scrollbar-thumb:hover {
+background: cyan;
+}
+
+
+
+.activity-map-div::-webkit-scrollbar {
+    width: 1px;
+    height: 2px;
+}
+  /* Track */
+.activity-map-div::-webkit-scrollbar-track {
+background: #00000000;
+}
+/* Handle */
+.activity-map-div::-webkit-scrollbar-thumb {
+background: rgb(0, 255, 166);
+border-radius: 0px;
+}
+/* Handle on hover */
+.activity-map-div::-webkit-scrollbar-thumb:hover {
 background: cyan;
 }

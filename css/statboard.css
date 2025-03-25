@@ -60,12 +60,18 @@
 
 .activity-div {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
-    column-gap: 50px;
+    margin-bottom: 200px;
+    column-gap: 100px;
+    row-gap: 20px;
 }
-
+@media (max-width: 600px) {
+    .activity-div {
+        grid-template-columns: auto;
+    }
+}
 .activitylog-title {
     display: flex;
     justify-content: center;
@@ -98,18 +104,51 @@
     column-gap: 10px;
     row-gap: 10px;
 }
-.activitylog-item {
-    font-size: 10px;
+.activitylog-item-level1 p{
+    display: none;
+}
+.activitylog-item-level2 p{
+    display: none;
+}
+.activitylog-item-level3 p{
+    display: none;
+}
+.activitylog-item-level4 p{
+    display: none;
+}
+.activitylog-item-level5 p{
+    display: none;
+}
+.activitylog-item-level1 {
     width: 15px;
     height: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     border-radius: 1px;
+    background-color: rgba(0, 255, 162, 0.100);
 }
-.activitylog-item p{
-    display: none;
+.activitylog-item-level2 {
+    width: 15px;
+    height: 15px;
+    border-radius: 1px;
+    background-color: rgba(0, 255, 162, 0.300);
+}
+.activitylog-item-level3 {
+    width: 15px;
+    height: 15px;
+    border-radius: 1px;
+    background-color: rgba(0, 255, 162, 0.600);
+}
+.activitylog-item-level4 {
+    width: 15px;
+    height: 15px;
+    border-radius: 1px;
+    background-color: rgba(0, 255, 162);
+}
+.activitylog-item-level5 {
+    width: 15px;
+    height: 15px;
+    border-radius: 1px;
+    background-color: rgb(0, 255, 162); 
+    box-shadow: 0 0 10px rgb(0, 255, 162);
 }
 
 
