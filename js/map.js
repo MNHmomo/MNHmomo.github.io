@@ -35,13 +35,13 @@ function drawRegionsMap(isDarkMode) {
   // 🔹 Update this manually with countries + user density
   const activeCountries = [
       ["United States", 10],  // Numeric values for color mapping
-      ["Germany", 25],
-      ["China", 40],
-      ["Canada", 50],
-      ["Russia", 70],
-      ["United Kingdom", 80],
-      ["Singapore", 100],
-      ["Sweden", 100]
+      ["China", 20],
+      ["Germany", 30],
+      ["Canada", 40],
+      ["Russia", 50],
+      ["United Kingdom", 60],
+      ["Singapore", 70],
+      ["India", 80]
   ];
   
   // Prepare data with plus sign display
