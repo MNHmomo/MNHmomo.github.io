@@ -1,0 +1,204 @@
+
+
+.logo-div {
+  border: 2px none blue;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.logo-div img {
+  height: 150px;
+  border: 2px solid rgb(7, 224, 148); 
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title h1 {
+  color: rgb(7, 224, 148);
+  padding: 10px;
+}
+.title h2 {
+  font-size: 20px;
+  color: rgb(7, 224, 148);
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 100;
+  padding: 10px;
+}
+
+
+
+.about-me h2 {
+  color: rgb(7, 224, 148);
+  font-size: 20px;
+}
+.about-me {
+  border: 2px none red;
+  font-family: "DM mono", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 400px;
+  margin-top: 100px;
+}
+.about-me div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 1000px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+.about-me a {
+  text-decoration: none;
+  color: rgb(7, 224, 148);
+}
+.about-me a:hover {
+  color: black;
+  background-color: rgb(7, 224, 148);
+  cursor: pointer;
+}
+.about-me h1 {
+  color: rgb(7, 224, 148); 
+  font-size: 20px;
+}
+.about-me p {
+  font-size: 15px;
+}
+.about-me img {
+  width: 100%;
+  border: 1px solid white;
+  object-fit: cover;
+  height: 50px;
+}
+
+
+
+
+.rss-feed-div {
+  border: 2px none red;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+#news {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+}
+.news-item {
+  border: 2px solid white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+.news-item h2 {
+  color: rgb(7, 224, 148);
+  font-size: 20px;
+  margin-top: 0;
+}
+.news-item a {
+  font-size: 18px;
+  color: rgb(7, 224, 148);
+  text-decoration: underline;
+}
+.news-item a:hover {
+  color: black;
+  background-color: rgb(7, 224, 148);
+}
+.news-item p {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+
+@media (max-width: 1055px) {
+  .about-me div {
+      margin-left: 5px;
+      width: auto;
+  }
+}
+@media (max-width: 450px) {
+  .logogif {
+    height: 25px;
+  }
+  .hamicon {
+      height: 25px;
+  }
+  .latest {
+      font-size: 13px;
+  }
+  .dropdown a {
+      font-size: 10px;
+  }
+  .dropdown img {
+      width: 20px;
+  }
+  .about-me div {
+      margin-left: 5px;
+  }
+  .figure img {
+      width: 250px;
+  }
+  .title h1 {
+      font-size: 23px;
+  }
+  .title h2 {
+    font-size: 18px;
+}
+  .about-me p {
+      font-size: 13px;
+  }
+  .dark {
+      height: 25px;
+  }
+}
+
+
+
+.dropdown::-webkit-scrollbar {
+  width: 1px;
+}
+/* Track */
+.dropdown::-webkit-scrollbar-track {
+background: #00000000;
+}
+/* Handle */
+.dropdown::-webkit-scrollbar-thumb {
+background: rgb(0, 255, 166);
+border-radius: 0px;
+}
+/* Handle on hover */
+.dropdown::-webkit-scrollbar-thumb:hover {
+background: cyan;
+}
+
+
+
+.rss-feed-div::-webkit-scrollbar {
+  width: 1px;
+  height: 4px;
+}
+/* Track */
+.rss-feed-div::-webkit-scrollbar-track {
+background: #00000000;
+}
+/* Handle */
+.rss-feed-div::-webkit-scrollbar-thumb {
+background: rgb(0, 255, 166);
+border-radius: 0px;
+}
+/* Handle on hover */
+.rss-feed-div::-webkit-scrollbar-thumb:hover {
+background: white;
+cursor: pointer;
+}
