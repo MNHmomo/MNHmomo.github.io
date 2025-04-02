@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SQ12EXGS4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1SQ12EXGS4');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="media/tabicon.png">
+    <title>Qubes OS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="entrycss/entry12.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+
+    <style>
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="navbar">
+
+        <img src="media/hamicon.png" class="hamicon">
+
+        <div class="dropdown">
+          <div class="dropdown-boxes">
+            <img src="media/icons/home.png">
+            <a href="https://www.bashbreach.com/">Home</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/about.png">
+            <a href="about.html">About</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/linkedin.png">
+            <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/architecture.png">
+            <a href="architecture.html">Architecture</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/statboard.png">
+            <a href="statboard.html">Statboard</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/licdis.png">
+            <a href="licdis.html">Lic & Dis</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/privacy.png">
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+
+        <a href="index.html"><img src="media/logogif.gif" class="logogif"></a>
+
+        <img src="media/icons/now copy.png" class="dark" id="dark">
+
+      </div>
+    </div>
+
+    <div class="logo-div">
+      <img src="entrymedia2/entry12logo.png" alt="qubes-os">
+    </div>
+
+    <div class="title">
+      <h1>Qubes OS</h1>
+    </div>
+
+    <div class="about-me">
+      <div>
+        <h2>TL;DR</h2>
+        <p>
+          Qubes OS is a security-focused operating system that isolates applications and tasks into separate virtual machines (qubes) 
+          to contain potential threats. It supports multiple operating systems, uses a template system for efficient updates, 
+          and allows for disposable qubes that self-destruct upon closure. With features like Whonix integration for anonymity, 
+          device isolation to prevent hardware attacks, Split GPG for secure key management, and CTAP Proxy for safer two-factor 
+          authentication, Qubes OS offers a highly compartmentalized and secure computing environment.
+        </p>
+        <br><br>
+
+        <h2>Qubes OS</h2>
+        <p>
+          Out of all the operating systems out there that claim to be safe and secure against all types of attacks, Qubes OS just might be the most secure. 
+          Qubes OS is a free and open-source operating system. It achieves its security by implementing compartmentalization, the division of something 
+          into sections or categories. This operating system does quite literally that, divides its software and applications into separates processes. 
+          It uses virtualization to create and manage isolated compartments, known as “qubes”, each operating in a different virtual machine. <br><br>
+
+          Qubes OS basically runs each instance of a program in its own virtual machine (VM). For example, if you open a web browser, it 
+          launches within a dedicated VM. Opening another instance of the same browser creates an entirely separate VM, completely 
+          separate from the other web browser. <br><br>
+
+          The interesting thing about the OS is if you need to manage multiple virtual environments efficiently, it categorizes VMs based on their purpose. 
+          You can designate specific VMs for different aspects of your digital life, such as a "Work" browser for professional tasks and a "Personal" browser 
+          for private use. Each category operates independently, preventing data leaks and cross-contamination between activities. 
+          This compartmentalization extends beyond browsers to applications like email clients, messaging apps, and document editors, 
+          providing a secure and organized computing experience.<sup><a href="https://forum.qubes-os.org/t/how-does-qubes-os-work/20333" target="_blank">1</a></a></sup>
+        </p>
+
+        <div class="figure">
+          <img src="entrymedia2/entry12figure1.png" alt="qubes-os-screenshot">
+        </div>
+        <div class="figure">
+          <img src="entrymedia2/entry12figure2.png" alt="qubes-os-screenshot">
+        </div>
+        <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+          <p style="margin-left: 10px; opacity: 0.7;">
+            "In this example, the word processor runs in the “work” domain, which has been assigned the “blue” label. It is fully 
+            isolated from other domains, such as the “untrusted” domain (assigned the “red” label – “Watch out!”, “Danger!”) 
+            used for random Web browsing, news reading, as well as from the “work-web” domain (assigned the “yellow” label), which 
+            is used for work-related Web browsing that is not security critical. Apps from different domains run in different AppVMs 
+            and have different X servers, filesystems, etc. Notice the different color frames (labels) and VM names in the titlebars. 
+            These are drawn by the trusted Window Manager running in Dom0, and apps running in domains cannot fake them."
+          </p>
+        </div>
+        <br><br>
+
+        <p>
+          QubesOS runs with the assumption that your application will be compromised. So, the idea of total virtualization 
+          helps in a situation where if an application or VM gets exposed and compromises, you or the OS can simply shut it 
+          down, and then start a whole new VM application, as if nothing happened. Nothing else is infected either because the 
+          VM’s having no connection or contact with each other. Qubes OS provides an advanced infrastructure for programming 
+          inter-VM services, such as a PDF converter for untrusted files (which is described in 
+          <a href="https://blog.invisiblethings.org/2013/02/21/converting-untrusted-pdfs-into-trusted.html" target="_blank">this article</a>). 
+          It even provides a dedicated firewall that itself runs in an isolated Firewall VM. 
+        </p>
+
+        <div class="figure">
+          <img src="https://www.qubes-os.org/attachment/doc/qubes-schema-v2.png" alt="qubes-os-architecture-diagram">
+        </div>
+        <div style="border-left: 1px solid rgb(7, 224, 148); padding: 2px;">
+          <p style="margin-left: 10px; opacity: 0.7;">
+            Qubes lets the user define many secure compartments known as qubes, which are implemented as lightweight virtual machines (VMs). 
+            For example, the user can have “personal,” “work,” “shopping,” “bank,” and “random” app qubes and can use the applications within 
+            those qubes just as if they were executing on the local machine. At the same time, however, these applications are well isolated 
+            from each other. Qubes also supports secure copy-and-paste and file sharing between qubes, of course. 
+            <sup><a href="https://www.qubes-os.org/doc/architecture/" target="_blank">2</a></a></sup>
+          </p>
+        </div>
+        <br><br>
+
+        <p>
+          You can run various operating systems concurrently, including Fedora, Debian, and Windows, within each VM application. 
+          The OS also supports disposable qubes that self-destruct upon shutdown, which can be ideal for handling untrusted content. 
+          Say you get infected, you can just shut it down like nothing happened. For enhanced privacy, Qubes OS integrates with Whonix, 
+          routing network traffic through the Tor network. Device isolation further strengthens security by isolating network cards and 
+          USB controllers, mitigating hardware-level attacks. Additional features like Split GPG protect private keys by keeping them 
+          separate from the domains where they are used, while the CTAP Proxy enables secure two-factor authentication without exposing 
+          the web browser to the full USB stack.<sup><a href="https://www.linkedin.com/pulse/exploring-qubes-os-secure-isolated-operating-system-siddharthan-rajan-gvxxf/" target="_blank">3</a></sup>
+        </p>
+        <br><br>
+
+        <h2>Architecture</h2>
+        <p>
+          QubesOS deploys the Xen Hypervisor to allow all its virtualization. Xen is able to create and manage the multiple VM’s a user creates. 
+          And as just a quick side note, a hypervisor is a computer software that allows an operating system to actually achieve virtualization. 
+          Windows uses Microsoft’s own hypervisor to allow users to use virtual machines, and MacOS has its own hypervisor.
+          <sup><a href="https://www.nutanix.com/en_gb/info/hypervisor#whyuse" target="_blank">4</a></a></sup>
+
+          <br><br>
+
+          Its architecture can be described with 3 distinctive layers. It starts off with Dom0 (Domain Zero, or Administrative Domain). 
+          This privileged domain has direct access to the hardware and is responsible for managing the graphical user interface (GUI) and 
+          coordinating other qubes. To minimize security risks, Dom0 is intentionally isolated from network access. Dom0 is the first domain 
+          that boots and manages the Xen host, including other virtual machines.
+          <sup><a href="https://wiki.xenproject.org/wiki/Dom0" target="_blank">5</a></a></sup>
+
+          <br><br>
+
+          The next two are the App Qubes (Application Domains) and the Serive Qubes. The App Qubes are user-created VMs designated for specific tasks or applications, 
+          such as personal browsing, work-related activities, or financial transactions. Each App Qube operates independently, ensuring that a compromise in one does not 
+          affect others. The Service Qubes are dedicated to handling specific system services like networking and USB device management, these qubes further isolate critical 
+          functionalities from the user environment. 
+        </p>
+
+        <p>
+          <b>Some key architecture features include:</b>
+          <ul>
+            <li>Based on a secure bare-metal hypervisor (Xen)</li>
+            <li>Networking code sand-boxed in an unprivileged VM (using IOMMU/VT-d)</li>
+            <li>USB stacks and drivers sand-boxed in an unprivileged VM (currently experimental feature)</li>
+            <li>No networking code in the privileged domain (dom0)</li>
+            <li>All user applications run in “app qubes,” lightweight VMs based on Linux</li>
+            <li>Centralized updates of all app qubes based on the same template</li>
+            <li>Qubes GUI virtualization presents applications as if they were running locally</li>
+            <li>Qubes GUI provides isolation between apps sharing the same desktop</li>
+            <li>Secure system boot based (optional)</li>
+            <li>For those interested in the history of the project, <a href="https://www.qubes-os.org/attachment/wiki/QubesArchitecture/arch-spec-0.3.pdf" target="_blank">Architecture Spec v0.3 [PDF]</a> is the original 2009 document that started this all. Please note that this document is for historical interest only.</li>
+          </ul>        
+        </p>
+        <br><br>
+
+        <h2>Overview</h2>
+        <p>
+          In terms of security, Qubes OS does stand out. The technology it uses is really outstanding and the premise of having multiple
+          virtual machines running different and completely seperate processes is really interesting. It runs on the assumption that you
+          can and most certainly will be compromised. And if you do, it's okay because Qubes OS knows what to do.
+          This is an OS I heavily recommend to be used, not only just to play around with, but also as a solid operating system to work on.
+          Download and try out Qubes OS in your VM, <br> <a href="https://www.qubes-os.org/downloads/" target="_blank">https://www.qubes-os.org/downloads/</a>
+        </p>
+        <br><br>
+
+
+
+        <h2>References</h2>
+        <ol>
+            <li value="1"><a href="https://forum.qubes-os.org/t/how-does-qubes-os-work/20333" target="_blank"><i>How does Qubes OS work?</i></a></li>
+            <li><a href="https://forum.qubes-os.org/t/how-does-qubes-os-work/20333" target="_blank"><i>Developer documentation / System / Architecture</i></a></li>
+            <li><a href="https://www.linkedin.com/pulse/exploring-qubes-os-secure-isolated-operating-system-siddharthan-rajan-gvxxf/" target="_blank"><i>Exploring Qubes OS: A Secure, Isolated Operating System</i></a></li>
+            <li><a href="https://www.nutanix.com/en_gb/info/hypervisor#whyuse" target="_blank"><i>What a Hypervisor Does.</i></a></li>
+            <li><a href="https://wiki.xenproject.org/wiki/Dom0" target="_blank"><i>The Xen Hypervisor</i></a></li>
+        </ol>
+        
+      </div>
+    </div>
+  </body>
+
+  <script src="js/darkmode.js"></script>
+
+</html>

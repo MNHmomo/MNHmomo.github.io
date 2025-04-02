@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SQ12EXGS4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1SQ12EXGS4');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="media/tabicon.png">
+    <title>The Breach</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/tldr.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+
+    <style>
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="navbar">
+        <img src="media/hamicon.png" class="hamicon">
+        <div class="dropdown">
+          <div class="dropdown-boxes">
+            <img src="media/icons/home.png">
+            <a href="https://www.bashbreach.com/">Home</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/about.png">
+            <a href="about.html">About</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/linkedin.png">
+            <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/architecture.png">
+            <a href="architecture.html">Architecture</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/statboard.png">
+            <a href="statboard.html">Statboard</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/licdis.png">
+            <a href="licdis.html">Lic & Dis</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/privacy.png">
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+        <a href="index.html"><img src="media/logogif.gif" class="logogif"></a>
+
+        <img src="media/icons/now copy.png" class="dark" id="dark">
+      </div>
+    </div>
+
+    <div class="logo-div">
+      <img src="media/tldrlogo.png" alt="tldr-news">
+    </div>
+
+    <div class="title">
+      <h1>The Breach</h1>
+      <h2>A TL;DR News Section</h2>
+    </div>
+
+    <div class="rss-feed-div">
+        <div id="news"></div>
+    </div>
+
+    <div class="about-me">
+      <div>
+        <h2>
+          <a href="https://thehackernews.com/2025/04/enterprise-gmail-users-can-now-send-end.html" target="_blank">
+            Enterprise Gmail Users Can Now Send End-to-End Encrypted Emails to Any Platform
+          </a>
+        </h2>
+        <p>04/01/25</p>
+        <img src="tldrimage.png" alt="news-image" class="tldr-image">
+        <p>
+          Google has announced a major update to Gmail that allows enterprise users to send end-to-end encrypted (E2EE) emails to any inbox, 
+          starting with Gmail users within the same organization and expanding to all Gmail users and other email inboxes later this year. 
+          This update eliminates the need for custom software or encryption certificates, using client-side encryption (CSE) to encrypt 
+          emails before they are transmitted or stored. When sending E2EE emails to non-Gmail users, they will receive an invitation to 
+          view the message in a secure, restricted version of Gmail. This approach provides enhanced privacy and security while simplifying 
+          the encryption process for both IT teams and end users. The encryption keys are managed in the cloud, allowing organizations to 
+          control, revoke, and monitor access to the encrypted content.
+        </p>
+      </div>
+
+      <div>
+        <h2>
+          <a href="https://www.forbes.com/sites/zakdoffman/2025/03/31/nsa-warns-iphone-android-users-change-message-settings/" target="_blank">
+            NSA Warning—Change Your iPhone And Android Message Settings
+          </a>
+        </h2>
+        <p>03/31/25</p>
+        <p>
+          The NSA warning stemmed from Russia’s GRU exploiting Linked Devices and Group Links in secure messaging apps like Signal, WhatsApp, and Telegram, 
+          allowing unauthorized access. While not flaws in the apps themselves, these features were manipulated to gain control over accounts. 
+          To mitigate risks, users should regularly check and remove unknown linked devices, disable group links in Signal, restrict group additions in 
+          WhatsApp, and avoid clicking unexpected links. Secure messaging depends not just on encryption but also on device security, making regular 
+          updates, cautious link-clicking, and strong PIN settings essential. While Signal remains the gold standard for private communication, 
+          WhatsApp’s widespread use, raises additional concerns about privacy and work-life boundaries.
+        </p>
+      </div>
+
+      <div>
+        <h2>
+          <a href="http://thehackernews.com/2025/03/150000-sites-compromised-by-javascript.html?utm_source=tldrinfosec" target="_blank">
+            150,000 Sites Compromised by JavaScript Injection Promoting Chinese Gambling Platforms
+          </a>
+        </h2>
+        <p>03/28/25</p>
+        <p>
+          A cyber campaign has compromised around 150,000 websites, injecting malicious JavaScript to redirect visitors to Chinese-language gambling platforms via iframe injections 
+          that display full-screen overlays. The attack uses JavaScript payloads hosted on domains like "zuizhongyj[.]com" and includes variants that impersonate legitimate betting 
+          sites like Bet365. This reflects a growing trend of client-side attacks with increased obfuscation to avoid detection. Additionally, a long-running malware operation, 
+          "DollyWay World Domination," has targeted over 20,000 websites, mostly WordPress sites, since 2016. It employs a distributed network of compromised sites to redirect 
+          visitors to scam pages using Traffic Direction System (TDS) nodes, leveraging traffic broker networks like VexTrio, and injecting PHP code to disable security plugins 
+          and steal admin credentials. Despite recent infrastructure changes, DollyWay remains adaptive, continuing to disrupt and evolve its attack methods.
+        </p>
+      </div>
+
+      <div>
+        <h2>
+          <a href="https://nyunews.com/news/2025/03/22/nyu-website-hacked-data-leak/?utm_source=tldrinfosec" target="_blank">
+            Over 3 million applicants’ data leaked on NYU’s website
+          </a>
+        </h2>
+        <p>03/25/25</p>
+        <p>
+          A hacker gained access to NYU’s website for at least two hours on Saturday morning, exposing personal data of over 3 million applicants, including names, test scores, majors, zip codes, family details, and financial aid information dating back to 1989. The breached page displayed charts with NYU’s average admitted SAT scores, ACT scores, and GPAs, claiming the university continued affirmative action despite the 2023 Supreme Court ruling. The page also included four accessible CSV files with admissions data, demographic information, citizenship status, and Common Application data. NYU’s IT team quickly halted the breach, and law enforcement was notified. This follows a similar 2023 hack by a group called “Computer Niggy Exploitation,” which leaked over 7 million social security numbers from the University of Minnesota. This incident is part of a growing trend of data breaches at universities, including incidents at Stanford and Georgetown. NYU had previously condemned the Supreme Court’s affirmative action ruling, noting a decrease in enrollment of underrepresented minorities.
+        </p>
+      </div>
+
+      <div>
+        <h2>
+          <a href="https://techcrunch.com/2025/03/21/russian-zero-day-seller-is-offering-up-to-4-million-for-telegram-exploits/?utm_source=tldrinfosec&utm_medium=email" target="_blank">
+            Russian zero-day seller is offering up to $4 million for Telegram exploits
+          </a>
+        </h2>
+        <p>03/21/25</p>
+        <p>
+          Operation Zero, a company that sells zero-day exploits exclusively to the Russian government and local companies, offers up to $4 million for vulnerabilities in Telegram, a popular messaging app in Russia and Ukraine. The company seeks one-click and zero-click remote code execution (RCE) exploits, with prices reflecting their value in covert cyber operations. This suggests a strong interest from Russian government agencies in exploiting Telegram, especially given Ukraine’s ban on the app for government personnel due to security concerns. Experts note that these prices may be lower than the actual resale value, as Operation Zero is likely to charge significantly more when selling the exploits to its clients.    
+        </p>
+      </div>
+
+    </div>
+  </body>
+
+  <script src="js/darkmode.js"></script>
+
+<script>
+    async function fetchCyberNews() {
+        const url = "https://api.rss2json.com/v1/api.json?rss_url=https://thehackernews.com/feeds/posts/default";
+        
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            let output = "";
+            data.items.slice(0, 6).forEach(article => {
+                output += `
+                    <div class="news-item">
+                        <h2>
+                            <a href="${article.link}" target="_blank">
+                                ${article.title}
+                            </a>
+                        </h2>
+                        <p>${article.description.substring(0, 200)}...</p>
+                    </div>
+                `;
+            });
+
+            document.getElementById("news").innerHTML = output;
+        } catch (error) {
+            console.error("Error fetching news:", error);
+            document.getElementById("news").innerHTML = "<p>Failed to load news. Please try again later.</p>";
+        }
+    }
+
+    // Load news on page load
+    fetchCyberNews();
+</script>
+
+</html>
