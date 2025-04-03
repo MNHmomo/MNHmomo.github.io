@@ -79,12 +79,17 @@
 
 
 
-
+.rss-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .rss-feed-div {
   border: 2px none red;
   display: flex;
   align-items: center;
   overflow-x: auto;
+  max-width: 1300px;
 }
 #news {
   display: flex;
@@ -118,6 +123,20 @@
   color: white;
   font-size: 15px;
   margin-bottom: 0;
+}
+@media (max-width: 770px) {
+  .news-item h2 {
+    font-size: 15px;
+  }
+  .news-item p {
+    font-size: 13px;
+  }
+  .about-me h2 {
+    font-size: 17px;
+  }
+  .about-me p {
+    font-size: 14px;
+  }
 }
 
 
@@ -186,7 +205,7 @@ background: cyan;
 
 .rss-feed-div::-webkit-scrollbar {
   width: 1px;
-  height: 4px;
+  height: 7px;
 }
 /* Track */
 .rss-feed-div::-webkit-scrollbar-track {
@@ -199,6 +218,6 @@ border-radius: 0px;
 }
 /* Handle on hover */
 .rss-feed-div::-webkit-scrollbar-thumb:hover {
-background: white;
+background: rgb(27, 232, 255);
 cursor: pointer;
 }

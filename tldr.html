@@ -80,11 +80,34 @@
       <h2>A TL;DR News Section</h2>
     </div>
 
-    <div class="rss-feed-div">
+    <div class="rss-div">
+      <div class="rss-feed-div">
         <div id="news"></div>
+      </div>
     </div>
 
     <div class="about-me">
+      <div>
+        <h2>
+          <a href="https://hackread.com/canon-printer-drivers-flaw-hackers-run-malicious-code/?utm_source=tldrinfosec" target="_blank">
+            Canon Printer Drivers Flaw Could Let Hackers Run Malicious Code
+          </a>
+        </h2>
+        <p>04/03/25</p>
+        <img src="tldrimage.png" alt="news-image" class="tldr-image">
+        <p>
+          A critical vulnerability has been discovered in Canon printer drivers 
+          (v3.12 and earlier), affecting Generic Plus PCL6, UFR II, LIPS4, LIPSLX, and PS drivers. 
+          The flaw, found in EMF Recode processing, allows attackers to execute arbitrary code by 
+          exploiting an out-of-bounds memory access. This issue is particularly dangerous due to its 
+          potential use in Bring Your Own Vulnerable Driver (BYOVD) attacks, enabling privilege 
+          escalation and security bypasses. Canon has acknowledged the risk and is releasing 
+          patched drivers via its official websites. Users should update their drivers immediately 
+          and implement security measures such as network segmentation and Endpoint Detection and 
+          Response (EDR) solutions to mitigate potential threats.
+        </p>
+      </div>
+
       <div>
         <h2>
           <a href="https://thehackernews.com/2025/04/enterprise-gmail-users-can-now-send-end.html" target="_blank">
@@ -92,7 +115,6 @@
           </a>
         </h2>
         <p>04/01/25</p>
-        <img src="tldrimage.png" alt="news-image" class="tldr-image">
         <p>
           Google has announced a major update to Gmail that allows enterprise users to send end-to-end encrypted (E2EE) emails to any inbox, 
           starting with Gmail users within the same organization and expanding to all Gmail users and other email inboxes later this year. 
