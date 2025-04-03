@@ -1,0 +1,51 @@
+
+
+.logo-div {
+    border: 2px none blue;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  .logo-div img {
+    height: 150px;
+    border: 2px solid rgb(7, 224, 148); 
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .title h1 {
+    color: rgb(7, 224, 148);
+    margin-bottom: 50px;
+    padding: 10px;
+  }
+  .title p {
+    font-size: 15px;
+  }
+  .title a {
+    text-decoration: underline;
+    font-size: 15px;
+    color: rgb(7, 224, 148);
+  }
+  
+  
+  
+  @media (max-width: 1055px) {
+    .about-me div {
+        margin-left: 5px;
+        width: auto;
+    }
+  }
+  @media (max-width: 450px) {
+    .figure img {
+        width: 250px;
+    }
+    .title h1 {
+        font-size: 23px;
+    }
+    .dark {
+        height: 25px;
+    }
+  }

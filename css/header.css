@@ -22,7 +22,6 @@
     text-decoration: none;
     color: white;
     font-family: "DM mono", serif;
-    padding: 2px;
 }
 .latest:hover {
     cursor: pointer;
@@ -41,13 +40,11 @@
 }
 
 .dropdown {
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(8,188,124);
     position: absolute;
     display: none;
     top: 70%;
     z-index: 1;
-    overflow-y: auto;
-    height: 350px;
 }
 
 .dropdown-boxes {
@@ -56,7 +53,6 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    margin-right: 5px;
     padding: 5px;
     width: 200px;
 }
