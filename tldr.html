@@ -184,42 +184,26 @@
         </p>
       </div>
 
+      <div>
+        <h2>
+          <a href="https://www.securityweek.com/100-car-dealerships-hit-by-supply-chain-attack/" target="_blank">
+            100 Car Dealerships Hit by Supply Chain Attack
+          </a>
+        </h2>
+        <p>03/18/25</p>
+        <p>
+          Over 100 car dealership websites were compromised in a supply chain attack via LES Automotive, 
+          a shared video service. The attackers used the ClickFix technique, tricking users into executing 
+          malicious commands by faking reCAPTCHA prompts. This led to the deployment of SectopRAT malware 
+          via PowerShell. The attack, linked to Russian-speaking cybercriminals, dynamically injected 
+          malicious scripts while sometimes serving benign versions.
+        </p>
+      </div>
+
     </div>
   </body>
 
   <script src="js/darkmode.js"></script>
-
-<script>
-    async function fetchCyberNews() {
-        const url = "https://api.rss2json.com/v1/api.json?rss_url=https://thehackernews.com/feeds/posts/default";
-        
-        try {
-            const response = await fetch(url);
-            const data = await response.json();
-
-            let output = "";
-            data.items.slice(0, 6).forEach(article => {
-                output += `
-                    <div class="news-item">
-                        <h2>
-                            <a href="${article.link}" target="_blank">
-                                ${article.title}
-                            </a>
-                        </h2>
-                        <p>${article.description.substring(0, 200)}...</p>
-                    </div>
-                `;
-            });
-
-            document.getElementById("news").innerHTML = output;
-        } catch (error) {
-            console.error("Error fetching news:", error);
-            document.getElementById("news").innerHTML = "<p>Failed to load news. Please try again later.</p>";
-        }
-    }
-
-    // Load news on page load
-    fetchCyberNews();
-</script>
+  <script src="js/rssfeed.js"></script>
 
 </html>
