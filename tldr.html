@@ -88,9 +88,26 @@
 
     <div class="about-me">
       <div>
+        <h2><a href="https://cybernews.com/security/google-chrome-fixes-purple-links-history-leaks/" target="_blank">Google Chrome fixes browsing history leaks by purple “visited” links</a></h2>
+        <p>04/14/25</p>
+        <img src="tldrimage.png" alt="news-image" class="tldr-image">
+        <p>
+          For over 20 years, websites could exploit the “:visited” CSS selector (purple links) to check which 
+          links a user had clicked—essentially leaking parts of your browsing history. 
+          Chrome 136 (currently in beta) fixes this privacy flaw by partitioning visited 
+          link data by site and frame origin. Now, only the website where you clicked a link 
+          will know it was visited. So, if you clicked a link on Website A, it turns purple only 
+          on Website A—not on shady or unrelated sites trying to track you. This eliminates a 
+          longstanding privacy issue used by attackers to spy on your history. 
+          Chrome is the first browser to roll out this protection, and others are expected to follow.
+          If you want the fix now, enable the flag: <br>
+          <a href="chrome://flags/#partition-visited-link-database-with-self-links" target="_blank">chrome://flags/#partition-visited-link-database-with-self-links</a>
+        </p>
+      </div>
+
+      <div>
         <h2><a href="https://cybernews.com/security/ummc-lawsuit-cyberstalking/" target="_blank">UMMC facing class action lawsuit for enabling cyberstalking campaign</a></h2>
         <p>04/09/25</p>
-        <img src="tldrimage.png" alt="news-image" class="tldr-image">
         <p>
           A pharmacist at the University of Maryland Medical Center is accused of running a decade-long cyberstalking campaign against 80 
           coworkers by using keyloggers and spyware on 400 hospital computers. He allegedly accessed private data and spied on victims 

@@ -145,14 +145,19 @@
         <h2>/The Breach</h2>
         <p class="tldr-section-des"><i><a href="tldr.html">a TL;DR News Section</a></i></p>
         <div class="tldr">
-          <h2><a href="https://cybernews.com/security/ummc-lawsuit-cyberstalking/" target="_blank">UMMC facing class action lawsuit for enabling cyberstalking campaign</a></h2>
+          <h2><a href="https://cybernews.com/security/google-chrome-fixes-purple-links-history-leaks/" target="_blank">Google Chrome fixes browsing history leaks by purple “visited” links</a></h2>
           <img src="tldrimage.png" alt="news-image" class="tldr-image">
           <p>
-            A pharmacist at the University of Maryland Medical Center is accused of running a decade-long cyberstalking campaign against 80 
-            coworkers by using keyloggers and spyware on 400 hospital computers. He allegedly accessed private data and spied on victims 
-            via hacked home and work cameras. A lawsuit claims UMMC failed basic cybersecurity protections, 
-            enabling the breach. The hospital is cooperating with federal investigators and says it's "deeply disappointed" and 
-            hopes the suspect is held accountable.
+            For over 20 years, websites could exploit the “:visited” CSS selector (purple links) to check which 
+            links a user had clicked—essentially leaking parts of your browsing history. 
+            Chrome 136 (currently in beta) fixes this privacy flaw by partitioning visited 
+            link data by site and frame origin. Now, only the website where you clicked a link 
+            will know it was visited. So, if you clicked a link on Website A, it turns purple only 
+            on Website A—not on shady or unrelated sites trying to track you. This eliminates a 
+            longstanding privacy issue used by attackers to spy on your history. 
+            Chrome is the first browser to roll out this protection, and others are expected to follow.
+            If you want the fix now, enable the flag: <br>
+            <a href="chrome://flags/#partition-visited-link-database-with-self-links" target="_blank">chrome://flags/#partition-visited-link-database-with-self-links</a>
           </p>
         </div>
 
@@ -199,11 +204,11 @@
       <div class="faq-div">
         <h2>FAQ</h2>
         <p class="faq-section-des"><i>Today's Frequently Asked Question...</i></p>
-        <h3>What is "typosquatting" in software repositories, and how does it target developers?</h3>
+        <h3>What is a "cold boot attack," and can it affect modern encrypted systems?</h3>
         <p>
-          Typosquatting involves uploading malicious packages to public repositories (like PyPI or npm) with names similar to popular packages 
-          (e.g., requets instead of requests). Developers who mistype the package name unknowingly install the malicious version. <br>
-          <b>Prevention:</b> Use tools like dependency scanners, lock files, and package signing to verify the authenticity of your dependencies.
+          A cold boot attack exploits the residual data left in RAM (volatile memory) after a system is shut 
+          down or rebooted. Attackers with physical access can quickly reboot a device and use special tools 
+          to extract encryption keys or other sensitive data from RAM.
         </p>
         <a href="faq.html">full list of frequently asked questions</a>
       </div>
@@ -213,13 +218,14 @@
           <h2>Trivia</h2>
           <p class="quiz-section-des"><i>Brain Teaser</i></p>
         </div>
-        <h3>What is the main purpose of a Canary Token?</h3>
+        <h3>Which technique is used by malware to remain hidden by modifying system-level APIs at runtime?</h3>
         <div class="choices-div">
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">To block malicious IP addresses in real-time</div>
-          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">To detect insider threats by mimicking sensitive data</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">To encrypt logs on a honeypot system</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">To sandbox suspicious files for analysis</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Keylogging</div>
+          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">API hooking</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Phishing</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Brute forcing</div>
         </div>
+
       </div>
     </div>
 
@@ -375,7 +381,7 @@
         <div class="activitylog-item-level1"><p>11</p></div>
         <div class="activitylog-item-level1"><p>12</p></div>
         <div class="activitylog-item-level1"><p>13</p></div>
-        <div class="activitylog-item-level1"><p>14</p></div>
+        <div class="activitylog-item-level2" title="TLDR News. FAQ. Trivia"><p>14</p></div>
         <div class="activitylog-item-level1"><p>15</p></div>
         <div class="activitylog-item-level1"><p>16</p></div>
         <div class="activitylog-item-level1"><p>17</p></div>
