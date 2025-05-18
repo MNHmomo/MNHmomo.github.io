@@ -81,7 +81,7 @@
     </div>
 
     <div class="update-box">
-      <p><b>!Latest: </b><a href="entry12.html">Qubes OS</a></a>
+      <p><b>!Latest: </b><a href="entry12.html">Steganography in Audio</a></a>
     </div>
 
 
@@ -107,16 +107,19 @@
             Created by a cybersecurity student, <a href="https://www.bashbreach.com/">BashBreach</a> serves as both a 
             learning tool and a reference for others interested in the field.
           </p>
-
-          <p class="daily-note">
-            <b>Daily Note:</b> This website is featured in <a href="https://shellsharks.com/" target="_blank">shellsharks.com</a>'s 
-            <a href="https://shellsharks.com/scrolls/scroll/2025-03-07#cybersecurity" target="_blank">"Discovered IndieSec Blogs"</a>
-          </p>
-
         </div>
       </div>
     </div>
 
+    <div class="inbox-div">
+      <div class="inbox">
+        <img src="media/mail.png" alt="mail-logo">
+        <p>
+          This website is featured in <a href="https://shellsharks.com/" target="_blank">shellsharks.com</a>'s 
+          <a href="https://shellsharks.com/scrolls/scroll/2025-03-07#cybersecurity" target="_blank">"Discovered IndieSec Blogs"</a>
+        </p>
+      </div>
+    </div>
 
 
     <div class="news-section">
@@ -124,6 +127,7 @@
         <h2>/Entries</h2>
         <p class="tldr-section-des">Blog Entries</p>
         <div class="newsfeed-list">
+          <p>05/03/2025  <a href="entry13.html">Steganography in Audio</a></p>
           <p>04/01/2025  <a href="entry12.html">Qubes OS</a></p>
           <p>03/19/2025  <a href="entry11.html">WEBSITE UPDATE</a></p>
           <p>03/19/2025  <a href="architecture.html">ARCHITECTURE.md</a></p>
@@ -145,19 +149,14 @@
         <h2>/The Breach</h2>
         <p class="tldr-section-des"><i><a href="tldr.html">a TL;DR News Section</a></i></p>
         <div class="tldr">
-          <h2><a href="https://cybernews.com/security/google-chrome-fixes-purple-links-history-leaks/" target="_blank">Google Chrome fixes browsing history leaks by purple “visited” links</a></h2>
+          <h2><a href="https://www.sentinelone.com/labs/top-tier-target-what-it-takes-to-defend-a-cybersecurity-company-from-todays-adversaries/" target="_blank">What It Takes to Defend a Cybersecurity Company from Today’s Adversaries</a></h2>
           <img src="tldrimage.png" alt="news-image" class="tldr-image">
           <p>
-            For over 20 years, websites could exploit the “:visited” CSS selector (purple links) to check which 
-            links a user had clicked—essentially leaking parts of your browsing history. 
-            Chrome 136 (currently in beta) fixes this privacy flaw by partitioning visited 
-            link data by site and frame origin. Now, only the website where you clicked a link 
-            will know it was visited. So, if you clicked a link on Website A, it turns purple only 
-            on Website A—not on shady or unrelated sites trying to track you. This eliminates a 
-            longstanding privacy issue used by attackers to spy on your history. 
-            Chrome is the first browser to roll out this protection, and others are expected to follow.
-            If you want the fix now, enable the flag: <br>
-            <a href="chrome://flags/#partition-visited-link-database-with-self-links" target="_blank">chrome://flags/#partition-visited-link-database-with-self-links</a>
+            SentinelOne’s report “Top Tier Target” highlights how cybersecurity companies themselves have become prime targets for a diverse range of 
+            sophisticated attackers—including nation-state actors, ransomware groups, and insider threats—who exploit recruitment processes and 
+            probe for vulnerabilities. The report stresses the need for proactive, intelligence-driven defenses, such as collaborating with 
+            hiring teams to identify suspicious candidates early, and continuous adaptation of security strategies based on real-world attack 
+            insights to effectively protect against these evolving threats.
           </p>
         </div>
 
@@ -204,12 +203,14 @@
       <div class="faq-div">
         <h2>FAQ</h2>
         <p class="faq-section-des"><i>Today's Frequently Asked Question...</i></p>
-        <h3>What is a "cold boot attack," and can it affect modern encrypted systems?</h3>
+        <h3>What is a "bit-flipping attack" in encrypted communications?</h3>
         <p>
-          A cold boot attack exploits the residual data left in RAM (volatile memory) after a system is shut 
-          down or rebooted. Attackers with physical access can quickly reboot a device and use special tools 
-          to extract encryption keys or other sensitive data from RAM.
+          A bit-flipping attack targets encrypted data by altering bits in the ciphertext without needing to decrypt it. 
+          If the encryption algorithm is vulnerable (like in some modes of AES), an attacker can manipulate specific bits 
+          to change the decrypted plaintext in predictable ways — potentially injecting commands or altering messages 
+          without knowing the original content.
         </p>
+
         <a href="faq.html">full list of frequently asked questions</a>
       </div>
 
@@ -218,14 +219,13 @@
           <h2>Trivia</h2>
           <p class="quiz-section-des"><i>Brain Teaser</i></p>
         </div>
-        <h3>Which technique is used by malware to remain hidden by modifying system-level APIs at runtime?</h3>
+        <h3>Which technique involves disguising malicious code within seemingly harmless files like images or audio?</h3>
         <div class="choices-div">
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Keylogging</div>
-          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">API hooking</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Phishing</div>
-          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Brute forcing</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">Cryptojacking</div>
+          <div class="choice" data-correct="true" onclick="checkAnswer(this)" title="maybe?">Steganography</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">SQL Injection</div>
+          <div class="choice" data-correct="false" onclick="checkAnswer(this)" title="maybe?">DDoS Attack</div>
         </div>
-
       </div>
     </div>
 
@@ -236,6 +236,10 @@
 
     <div class="rss-div">
       <div class="rss">
+        <div class="rss-item">
+          <a href="entry13.html"><img src="entrymedia2/entry13logo.png" alt="Steganography-in-Audio"></a>
+          <a href="entry13.html"><p>Steganography in Audio</p></a>
+        </div>
         <div class="rss-item">
           <a href="entry12.html"><img src="entrymedia2/entry12logo.png" alt="Qubes-OS"></a>
           <a href="entry12.html"><p>Qubes OS</p></a>
@@ -362,26 +366,26 @@
 
     <div class="activitylog-title">
       <h2>Activity Log</h2>
-      <p>April 2025</p>
+      <p>May 2025</p>
     </div>
 
     <div class="activitylog-div">
 
       <div class="activitylog">
-        <div class="activitylog-item-level4" title="New entry. Expanded TLDR News entry added"><p>1</p></div>
-        <div class="activitylog-item-level2" title="TLDR News. FAQ. Trivia"><p>2</p></div>
-        <div class="activitylog-item-level2" title="TLDR News."><p>3</p></div>
+        <div class="activitylog-item-level4"><p>1</p></div>
+        <div class="activitylog-item-level2"><p>2</p></div>
+        <div class="activitylog-item-level4" title="New Entry."><p>3</p></div>
         <div class="activitylog-item-level1"><p>4</p></div>
         <div class="activitylog-item-level1"><p>5</p></div>
         <div class="activitylog-item-level1"><p>6</p></div>
         <div class="activitylog-item-level1"><p>7</p></div>
         <div class="activitylog-item-level1"><p>8</p></div>
-        <div class="activitylog-item-level2" title="TLDR News. FAQ."><p>9</p></div>
+        <div class="activitylog-item-level2"><p>9</p></div>
         <div class="activitylog-item-level1"><p>10</p></div>
         <div class="activitylog-item-level1"><p>11</p></div>
         <div class="activitylog-item-level1"><p>12</p></div>
         <div class="activitylog-item-level1"><p>13</p></div>
-        <div class="activitylog-item-level2" title="TLDR News. FAQ. Trivia"><p>14</p></div>
+        <div class="activitylog-item-level2"><p>14</p></div>
         <div class="activitylog-item-level1"><p>15</p></div>
         <div class="activitylog-item-level1"><p>16</p></div>
         <div class="activitylog-item-level1"><p>17</p></div>

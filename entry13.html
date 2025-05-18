@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SQ12EXGS4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1SQ12EXGS4');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="media/tabicon.png">
+    <title>Steganography in Audio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="entrycss/entry12.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/darkmode.css">
+
+    <style>
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <div class="navbar">
+
+        <img src="media/hamicon.png" class="hamicon">
+
+        <div class="dropdown">
+          <div class="dropdown-boxes">
+            <img src="media/icons/home.png">
+            <a href="https://www.bashbreach.com/">Home</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/about.png">
+            <a href="about.html">About</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/linkedin.png">
+            <a href="https://www.linkedin.com/in/mohamed-benaissa-a45786342/" target="_blank">LinkedIn</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/architecture.png">
+            <a href="architecture.html">Architecture</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/statboard.png">
+            <a href="statboard.html">Statboard</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/licdis.png">
+            <a href="licdis.html">Lic & Dis</a>
+          </div>
+          <div class="dropdown-boxes">
+            <img src="media/icons/privacy.png">
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+
+        <a href="index.html"><img src="media/logogif.gif" class="logogif"></a>
+
+        <img src="media/icons/now copy.png" class="dark" id="dark">
+
+      </div>
+    </div>
+
+    <div class="logo-div">
+      <img src="entrymedia2/entry13logo.png" alt="qubes-os">
+    </div>
+
+    <div class="title">
+      <h1>Steganography in Audio</h1>
+    </div>
+
+    <div class="about-me">
+      <div>
+        <h2>TL;DR</h2>
+        <p>
+          Audio steganography hides secret messages within audio files by subtly altering their data, making the hidden info 
+          inaudible to humans but detectable by computers. Common techniques include Least Significant Bit (LSB) 
+          insertion and phase coding. It’s used in cybersecurity to covertly transmit data, sometimes maliciously. 
+          Tools like MP3Stego embed messages during audio compression but require uncompressed WAV files in a specific format. 
+          Proper audio preparation and careful embedding preserve sound quality while concealing data effectively. 
+        </p>
+        <br><br>
+
+        <h2>Overview</h2>
+        <p>
+          Steganography is concealing piece of information within another message or physical object, usually to avoid detection. 
+          It’s similar to cryptography, but unlike obscuring a message, it blatantly hides it completely within something. 
+          You can combine both steganography and encryption to create that extra step of hiding or protecting information. 
+          Regarding the use of it in cybersecurity, it’s involved in hiding malicious content or instructions, 
+          that a computer can then recognize and execute, within seemingly innocent files like images, audio, or text, 
+          making it difficult for security tools to detect. To better understand it, think of it as hiding a secret QR 
+          code within an image, that someone like you and I would not be able to see or even recognize. However, the computer can.  
+          It can then execute whatever the “QR code” instructs. 
+          You can see how this can be exploited.<sup><a href="https://www.kaspersky.com/resource-center/definitions/what-is-steganography" target="_blank">1</a></a></sup>
+        </p>
+        <br><br>
+
+        <h2>Types of Steganography</h2>
+        <p>
+          <b>Text Steganography</b>
+          <ul>
+            <li>
+              With text steganography, a secret message is hidden within a text message. 
+              The first letter of each sentence could be used to create the secret message 
+              in the most basic type of text steganography. Additional text steganography 
+              methods could involve encoding information with punctuation or introducing 
+              relevant errors.<sup><a href="https://www.eccouncil.org/cybersecurity-exchange/ethical-hacking/what-is-steganography-guide-meaning-types-tools/" target="_blank">2</a></sup>
+            </li>
+          </ul>
+          <b>Image Steganography</b>
+          <ul>
+            <li>
+              Image steganography is the process of encoding confidential data into a digital picture. 
+              This method is predicated on the fact that subtle variations in image color or noise are 
+              extremely hard for the human eye to pick up on. For instance, one image can be buried 
+              inside another by representing the hidden image with the least important bits of each 
+              pixel in the original image. Or like the analogy mentioned before, it’s like hiding a QR code in an image. 
+            </li>
+          </ul>
+          <b>Video Steganography</b>
+          <ul>
+            <li>
+              A more advanced form of image steganography that can encrypt whole videos is called video steganography. 
+              Each video frame can convey a distinct image since digital videos are portrayed as a series of sequential images, 
+              making a coherent video invisible. 
+            </li>
+          </ul>
+          <b>Audio Steganography</b>
+          <ul>
+            <li>
+              This is a type of steganography we'll be specifically looking at in this entry.Similar to pictures and videos, audio files can be utilized to hide information. "Backmasking," a straightforward type of audio steganography, 
+              involves playing secret messages backwards on a tape, requiring the listener to play the entire track backwards. 
+              Similar to image steganography, more advanced methods may use the least important bits of each byte in the audio file. 
+            </li>
+          </ul>
+          <b>Network Steganography</b>
+          <ul>
+            <li>
+              Finally, network steganography is an ingenious digital steganography method that conceals data within network traffic. 
+              For instance, information may be hidden in network packet payloads or TCP/IP headers. Even the time interval between 
+              sending packets can be used by the sender to convey information. 
+              Based on the intervals between transmitting various packets, the sender can potentially transmit information. 
+            </li>
+          </ul>
+        </p>
+        <p>
+          It’s important to note: <b>steganography itself does not execute code.</b> It’s simply the method of hiding data. 
+          However, what’s hidden—such as malware, shellcode, or malicious URLs—can be extracted and executed by 
+          other programs. The true danger lies in its ability to evade detection, not execute by itself. 
+        </p>
+        <br><br>
+
+        <h2>Audio Steganography</h2>
+        <p>
+          <ol>
+            <li>
+              <strong>Least Significant Bit (LSB) Insertion</strong><br>
+              LSB insertion is one of the simplest and most commonly used methods. It involves modifying the least 
+              significant bits of audio samples to encode the secret data. Since these bits contribute minimally to the 
+              overall sound, their alteration typically goes unnoticed by listeners. For example, in a 16-bit audio sample, 
+              changing the last bit from 0 to 1 alters the sample value insignificantly, preserving audio quality. 
+              <sup><a href="https://svenruppert.com/2024/04/17/audio-steganography-in-more-detail/" target="_blank">3</a></sup>
+            </li>
+            <br>
+            <li>
+              <strong>Phase Coding</strong><br>
+              This technique embeds information by altering the phase components of the audio signal. 
+              The human auditory system is less sensitive to phase changes, making this method effective for 
+              hiding data without affecting perceived sound quality. Phase coding is more robust against common 
+              audio processing operations like compression.
+            </li>
+            <br>
+            <li>
+              <strong>Echo Hiding</strong><br>
+              Echo hiding introduces short echoes into the audio signal to represent hidden data. 
+              By carefully controlling the delay and amplitude of these echoes, the method ensures 
+              that they are imperceptible to listeners while still encoding information. 
+              This technique offers greater resistance to signal processing attacks compared to LSB insertion.
+            </li>
+            <br>
+            <li>
+              <strong>Spread Spectrum</strong><br>
+              In spread spectrum steganography, the secret data is distributed across a wide frequency range 
+              of the audio signal. This approach minimizes the impact on any single frequency component, 
+              making the hidden data less detectable and more resilient to noise and compression. 
+              <sup><a href="https://www.ijera.com/papers/Vol4_issue6/Version%205/P0460594100.pdf" target="_blank">4</a></sup>
+            </li>
+            <br>
+            <li>
+              <strong>Backmasking</strong><br>
+              Backmasking involves recording messages in reverse within an audio track. When played forward, 
+              the message is hidden; playing the track backward reveals the concealed information. While more 
+              of a novelty, this method has been used in music and media to embed hidden messages. 
+              <sup><a href="https://www.eccouncil.org/cybersecurity-exchange/ethical-hacking/what-is-steganography-guide-meaning-types-tools/" target="_blank">5</a></sup>
+            </li>
+          </ol>
+        </p>
+        <p>
+          Audio steganography is executed through a structured process that hides digital data within audio signals in a way that remains 
+          inaudible to the human ear. It begins with selecting a cover audio file, typically in an uncompressed format like WAV, because 
+          it offers more predictable bit patterns. The secret message is then converted into a binary stream. One common technique used 
+          is Least Significant Bit (LSB) insertion, where each bit of the secret message replaces the least significant bit of an audio 
+          sample—this subtle change has minimal impact on audio quality. Other advanced methods include phase coding, which alters the 
+          phase of the audio signal to carry information, and echo hiding, where controlled echoes are introduced to encode data. 
+          Once the embedding is complete, the modified audio file is saved, preserving both the audio fidelity and the embedded information. 
+          Extraction works in reverse—by scanning specific bits or signal features to recover the hidden message. Tools like Steghide 
+          and MP3Stego automate these steps, embedding messages during compression or post-processing.
+        </p>
+        <p>
+          You can try out some cool tools that help with audio steganography here:
+          <ul>
+            <li><a href="https://github.com/fabienpe/MP3Stego" target="_blank">MP3Stego</a></li>
+            <li><a href="https://steghide.sourceforge.net/" target="_blank">Steghide</a></li>
+          </ul>
+        </p>
+        <br><br>
+        
+      </div>
+    </div>
+  </body>
+
+  <script src="js/darkmode.js"></script>
+
+</html>

@@ -81,6 +81,77 @@
 
     <div class="about-me">
       <div>
+        <h2>What is a "bit-flipping attack" in encrypted communications?</h2>
+        <p>05/17/25</p>
+        <p>
+          A bit-flipping attack targets encrypted data by altering bits in the ciphertext without needing to decrypt it. 
+          If the encryption algorithm is vulnerable (like in some modes of AES), an attacker can manipulate specific bits 
+          to change the decrypted plaintext in predictable ways — potentially injecting commands or altering messages 
+          without knowing the original content.
+        </p>
+      </div>
+
+      <div>
+        <h2>What is "DLL sideloading" and how is it abused by malware?</h2>
+        <p>05/12/25</p>
+        <p>
+          DLL sideloading is a technique where attackers place a malicious DLL with the same name as a legitimate one 
+          in a directory where an application searches for dependencies. If the application loads the malicious DLL first, 
+          the attacker gains control — often used to bypass security tools and persist in the system.
+        </p>
+      </div>
+
+      <div>
+        <h2>What is a "Timestomping" technique in cyber attacks?</h2>
+        <p>05/15/25</p>
+        <p>
+          Timestomping is a method used by attackers to alter the timestamps (created, modified, accessed) of files to 
+          avoid detection. By modifying these attributes, malware can blend in with legitimate files and evade forensic analysis.
+        </p>
+      </div>
+      
+      <div>
+        <h2>What is "format string vulnerability" in software applications?</h2>
+        <p>05/10/25</p>
+        <p>
+          A format string vulnerability occurs when user input is improperly handled by functions like <code>printf()</code> in C/C++. 
+          If input is used directly as a format string, an attacker can manipulate it to read memory, cause crashes, or even execute arbitrary code. 
+          This type of flaw is often overlooked but can be critical in systems with poor input validation.
+        </p>
+
+      </div>
+
+      <div>
+        <h2>What is "DLL sideloading" and how do attackers exploit it?</h2>
+        <p>05/08/25</p>
+        <p>
+          DLL sideloading is a technique where attackers exploit how Windows applications load Dynamic Link Libraries (DLLs). 
+          By placing a malicious DLL with the same name as a legitimate one in a directory where the application searches first, 
+          attackers can trick the application into loading and executing the rogue code. It’s commonly used in targeted attacks to evade detection.
+        </p>
+      </div>
+
+      <div>
+        <h2>What is a "firmware rootkit" and how is it different from other malware?</h2>
+        <p>05/07/25</p>
+        <p>
+          A firmware rootkit is a type of stealthy malware that infects the firmware of hardware components like the BIOS, UEFI, or network interface cards. 
+          Unlike typical malware that resides on the operating system or software level, firmware rootkits persist even after OS reinstallation or disk replacement, 
+          making them extremely difficult to detect and remove. They can silently control or monitor a system at a very low level.
+        </p>
+      </div>
+
+      <div>
+        <h2>What is a "shadow attack" in PDF files?</h2>
+        <p>05/03/25</p>
+        <p>
+          A shadow attack is a stealthy method of manipulating digitally signed PDF documents. Attackers exploit the structure 
+          of PDF files to insert hidden content that becomes visible only after the file is signed or when viewed in certain PDF readers. 
+          This allows them to alter or forge document content without invalidating the original digital signature.
+        </p>
+      </div>
+
+      <div>
         <h2>What is a "cold boot attack," and can it affect modern encrypted systems?</h2>
         <p>04/14/25</p>
         <p>

@@ -43,12 +43,6 @@
 .logo img:hover {
     cursor: crosshair;
 }
-.daily-note-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-}
 .blog-intro {
     width: 300px;
     /*border-left: 2px solid rgb(0, 127, 83);*/
@@ -75,27 +69,47 @@
         font-size: 14px;
     }
 }
-.daily-note {
-    background-color: rgb(7, 224, 148);
-    color: black;
-    padding-left: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 250px;
+
+
+/*-----------------------------------------------------------*/
+
+
+
+.inbox-div {
+    border: 2px none red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+.inbox {
     border: 2px solid black;
+    background-color: rgb(7, 224, 148);
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inbox img {
+    width: 30px;
+    margin-right: 5px;
+}
+.inbox p {
     font-size: 14px;
-    margin-top: 0;
-}
-.daily-note a {
-    text-decoration: underline;
-    color: black;
-}
-.daily-note a:hover {
-    cursor: pointer;
     color: black;
 }
 
+.inbox a {
+    text-decoration: underline;
+    color: black;
+}
+
+
+
 /*-----------------------------------------------------------*/
+
 
 
 .news-section {
